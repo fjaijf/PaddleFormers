@@ -1,0 +1,6 @@
+{
+  "parameter_dtypes": [
+    "paddle.float32"
+  ],
+  "trainable_parameters": 19988480
+}

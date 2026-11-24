@@ -1,0 +1,26 @@
+{
+  "steps": 20,
+  "samples": 10,
+  "epochs": 2,
+  "trainable_parameters": 19988480,
+  "lora_modules": 224,
+  "initial_lora_equal": true,
+  "all_actual_batches_equal": true,
+  "first_step": {
+    "paddle": 2.8029143810272217,
+    "swift": 2.802910089492798,
+    "abs_diff": 4.291534423828125e-06
+  },
+  "last_step": {
+    "paddle": 2.745792865753174,
+    "swift": 2.7457902431488037,
+    "abs_diff": 2.6226043701171875e-06
+  },
+  "mean_loss": {
+    "paddle": 3.231217074394226,
+    "swift": 3.2312176704406737
+  },
+  "max_abs_loss_diff": 2.47955322265625e-05,
+  "mean_abs_loss_diff": 8.988380432128907e-06,
+  "rmse_loss_diff": 1.0967513786239607e-05
+}

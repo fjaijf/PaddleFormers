@@ -1,0 +1,33 @@
+{
+  "backend": "paddle",
+  "dtype": "float32",
+  "input_length": 31,
+  "logits_shape": [
+    1,
+    20,
+    103168
+  ],
+  "generated_ids": [
+    [
+      941,
+      818,
+      2088,
+      4277,
+      560,
+      777,
+      3696,
+      454,
+      7076,
+      5494
+    ]
+  ],
+  "generated_text": [
+    " they will build models that can understand and generate images"
+  ],
+  "versions": {
+    "paddle": "3.4.0.post20260728+8a1040b3d08"
+  },
+  "parameter_dtypes": [
+    "paddle.float32"
+  ]
+}

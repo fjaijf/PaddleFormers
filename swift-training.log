@@ -1,0 +1,582 @@
+run sh: `/data/envs/ms-swift/bin/python /data/envs/ms-swift/lib/python3.9/site-packages/swift/cli/sft.py --model /data/models/InternLM-7B --model_type internlm --train_type lora --lora_rank 8 --lora_alpha 16 --lora_dropout 0 --target_modules q_proj k_proj v_proj o_proj gate_proj up_proj down_proj --torch_dtype float32 --attn_impl eager --dataset /root/pr4495-validation/swift-dataset.jsonl --template internlm_paddle_alignment --external_plugins /root/pr4495-validation/swift-plugin.py --split_dataset_ratio 0 --dataset_shuffle false --train_dataloader_shuffle false --dataset_num_proc 1 --dataloader_num_workers 0 --max_length 512 --max_steps 20 --per_device_train_batch_size 1 --gradient_accumulation_steps 1 --learning_rate 1e-4 --lr_scheduler_type constant --warmup_steps 0 --weight_decay 0 --adam_beta1 0.9 --adam_beta2 0.999 --adam_epsilon 1e-8 --max_grad_norm 0 --gradient_checkpointing false --bf16 false --fp16 false --tf32 false --seed 23 --data_seed 23 --logging_steps 1 --save_strategy no --eval_strategy no --report_to none --optim adamw_torch --disable_tqdm true --output_dir /root/pr4495-validation/swift-training-output`
+/home/vipuser/anaconda3/lib/python3.9/site-packages/torchvision/datapoints/__init__.py:12: UserWarning: The torchvision.datapoints and torchvision.transforms.v2 namespaces are still Beta. While we do not expect major breaking changes, some APIs may still change according to user feedback. Please submit any feedback you may have in this issue: https://github.com/pytorch/vision/issues/6753, and you can also check out https://github.com/pytorch/vision/issues/7319 to learn more about the APIs that we suspect might involve future changes. You can silence this warning by calling torchvision.disable_beta_transforms_warning().
+  warnings.warn(_BETA_TRANSFORMS_WARNING)
+/home/vipuser/anaconda3/lib/python3.9/site-packages/torchvision/transforms/v2/__init__.py:54: UserWarning: The torchvision.datapoints and torchvision.transforms.v2 namespaces are still Beta. While we do not expect major breaking changes, some APIs may still change according to user feedback. Please submit any feedback you may have in this issue: https://github.com/pytorch/vision/issues/6753, and you can also check out https://github.com/pytorch/vision/issues/7319 to learn more about the APIs that we suspect might involve future changes. You can silence this warning by calling torchvision.disable_beta_transforms_warning().
+  warnings.warn(_BETA_TRANSFORMS_WARNING)
+[INFO:swift] Successfully registered `/data/envs/ms-swift/lib/python3.9/site-packages/swift/llm/dataset/data/dataset_info.json`.
+[INFO:swift] Successfully imported external_plugins: ['/root/pr4495-validation/swift-plugin.py'].
+[INFO:swift] rank: -1, local_rank: -1, world_size: 1, local_world_size: 1
+[INFO:swift] Loading the model using model_dir: /data/models/InternLM-7B
+[INFO:swift] Setting args.split_dataset_ratio: 0.0
+[INFO:swift] Setting args.lazy_tokenize: False
+/data/envs/ms-swift/lib/python3.9/site-packages/transformers/training_args.py:1575: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+[INFO:swift] output_dir: /root/pr4495-validation/swift-training-output/v1-20261124-084205
+[INFO:swift] Global seed set to 23
+[INFO:swift] args: TrainArguments(
+_n_gpu=-1,
+acc_steps=1,
+acc_strategy=token,
+accelerator_config={'dispatch_batches': False},
+adafactor=False,
+adalora_beta1=0.85,
+adalora_beta2=0.85,
+adalora_deltaT=1,
+adalora_init_r=12,
+adalora_orth_reg_weight=0.5,
+adalora_target_r=8,
+adalora_tfinal=0,
+adalora_tinit=0,
+adam_beta1=0.9,
+adam_beta2=0.999,
+adam_epsilon=1e-08,
+adapter_act=gelu,
+adapter_length=128,
+adapters=[],
+add_version=True,
+agent_template=None,
+attn_impl=eager,
+auto_find_batch_size=False,
+average_tokens_across_devices=False,
+batch_eval_metrics=False,
+bf16=False,
+bf16_full_eval=False,
+bnb_4bit_compute_dtype=torch.float32,
+bnb_4bit_quant_storage=None,
+bnb_4bit_quant_type=nf4,
+bnb_4bit_use_double_quant=True,
+boft_block_num=0,
+boft_block_size=4,
+boft_dropout=0.0,
+boft_n_butterfly_factor=1,
+check_model=True,
+ckpt_dir=None,
+columns={},
+create_checkpoint_symlink=False,
+custom_dataset_info=[],
+custom_register_path=[],
+data_seed=23,
+dataloader_drop_last=False,
+dataloader_num_workers=0,
+dataloader_persistent_workers=False,
+dataloader_pin_memory=True,
+dataloader_prefetch_factor=None,
+dataset=['/root/pr4495-validation/swift-dataset.jsonl'],
+dataset_num_proc=1,
+dataset_shuffle=False,
+ddp_backend=None,
+ddp_broadcast_buffers=None,
+ddp_bucket_cap_mb=None,
+ddp_find_unused_parameters=None,
+ddp_timeout=1800,
+debug=None,
+deepspeed=None,
+device_map=None,
+disable_tqdm=True,
+dispatch_batches=None,
+do_eval=False,
+do_predict=False,
+do_train=False,
+download_mode=reuse_dataset_if_exists,
+eval_accumulation_steps=None,
+eval_datasets=[],
+eval_datasets_args=None,
+eval_delay=0,
+eval_do_concat_batches=True,
+eval_generation_config=None,
+eval_limit=None,
+eval_on_start=False,
+eval_steps=None,
+eval_strategy=no,
+eval_use_evalscope=False,
+eval_use_gather_object=False,
+evaluation_strategy=no,
+external_plugins=['/root/pr4495-validation/swift-plugin.py'],
+fourier_n_frequency=2000,
+fourier_scaling=300.0,
+fp16=False,
+fp16_backend=auto,
+fp16_full_eval=False,
+fp16_opt_level=O1,
+freeze_aligner=True,
+freeze_llm=False,
+freeze_parameters=[],
+freeze_parameters_ratio=0.0,
+freeze_parameters_regex=None,
+freeze_vit=True,
+fsdp=,
+fsdp_config=None,
+fsdp_min_num_params=0,
+fsdp_num=1,
+fsdp_transformer_layer_cls_to_wrap=None,
+full_determinism=False,
+galore_cos_threshold=0.4,
+galore_gamma_proj=2,
+galore_optim_per_parameter=False,
+galore_proj_bits=4,
+galore_proj_group_size=256,
+galore_proj_quant=False,
+galore_proj_type=std,
+galore_quantization=False,
+galore_queue_size=5,
+galore_rank=128,
+galore_scale=1.0,
+galore_target_modules=None,
+galore_update_proj_gap=50,
+galore_with_embedding=False,
+generation_config=None,
+generation_max_length=None,
+generation_num_beams=None,
+gradient_accumulation_steps=1,
+gradient_checkpointing=False,
+gradient_checkpointing_kwargs=None,
+greater_is_better=False,
+group_by_length=False,
+half_precision_backend=auto,
+hqq_axis=None,
+hub_always_push=False,
+hub_model_id=None,
+hub_private_repo=None,
+hub_strategy=every_save,
+hub_token=<HUB_TOKEN>,
+ignore_args_error=False,
+ignore_data_skip=False,
+include_for_metrics=[],
+include_inputs_for_metrics=False,
+include_num_input_tokens_seen=False,
+include_tokens_per_second=False,
+init_strategy=None,
+init_weights=True,
+interleave_prob=None,
+jit_mode_eval=False,
+label_names=None,
+label_smoothing_factor=0.0,
+lazy_tokenize=False,
+learning_rate=0.0001,
+length_column_name=length,
+lisa_activated_layers=0,
+lisa_step_interval=20,
+llamapro_num_groups=None,
+llamapro_num_new_blocks=4,
+load_args=False,
+load_best_model_at_end=False,
+load_data_args=False,
+load_from_cache_file=False,
+local_rank=-1,
+local_repo_path=None,
+log_level=passive,
+log_level_replica=warning,
+log_on_each_node=True,
+logging_dir=/root/pr4495-validation/swift-training-output/v1-20261124-084205/runs,
+logging_first_step=True,
+logging_nan_inf_filter=True,
+logging_steps=1,
+logging_strategy=steps,
+logprobs=False,
+lora_alpha=16,
+lora_bias=none,
+lora_dropout=0.0,
+lora_dtype=None,
+lora_ga_batch_size=2,
+lora_ga_direction=ArB2r,
+lora_ga_iters=2,
+lora_ga_max_length=1024,
+lora_ga_scale=stable,
+lora_ga_stable_gamma=16,
+lora_modules=[],
+lora_rank=8,
+lorap_lr_ratio=None,
+loss_scale=default,
+loss_type=None,
+lr_scheduler_kwargs=None,
+lr_scheduler_type=constant,
+max_epochs=None,
+max_grad_norm=0.0,
+max_length=512,
+max_memory={},
+max_new_tokens=64,
+max_pixels=None,
+max_steps=20,
+metric=None,
+metric_for_best_model=loss,
+metric_warmup_step=0,
+model=/data/models/InternLM-7B,
+model_author=[None, None],
+model_kwargs={},
+model_name=[None, None],
+model_revision=None,
+model_type=internlm,
+modules_to_save=[],
+mp_parameters=,
+neftune_noise_alpha=None,
+no_cuda=False,
+norm_bbox=None,
+num_beams=1,
+num_labels=None,
+num_train_epochs=3.0,
+optim=adamw_torch,
+optim_args=None,
+optim_target_modules=None,
+optimizer=None,
+output_dir=/root/pr4495-validation/swift-training-output/v1-20261124-084205,
+overwrite_output_dir=False,
+packing=False,
+padding_side=right,
+past_index=-1,
+per_device_eval_batch_size=1,
+per_device_train_batch_size=1,
+predict_with_generate=False,
+prediction_loss_only=False,
+problem_type=None,
+push_to_hub=False,
+push_to_hub_model_id=None,
+push_to_hub_organization=None,
+push_to_hub_token=<PUSH_TO_HUB_TOKEN>,
+quant_bits=None,
+quant_method=None,
+ray_scope=last,
+reft_args=None,
+reft_intervention_type=LoreftIntervention,
+reft_layer_key=None,
+reft_layers=None,
+reft_rank=4,
+remove_unused_columns=True,
+repetition_penalty=None,
+report_to=['none'],
+response_prefix=None,
+restore_callback_states_from_checkpoint=False,
+resume_from_checkpoint=None,
+resume_only_model=False,
+rope_scaling=None,
+run_name=/root/pr4495-validation/swift-training-output/v1-20261124-084205,
+save_on_each_node=False,
+save_only_model=False,
+save_safetensors=True,
+save_steps=500,
+save_strategy=no,
+save_total_limit=None,
+seed=23,
+sequence_parallel_size=1,
+shuffle_buffer_size=1000,
+skip_memory_metrics=True,
+sortish_sampler=False,
+split_batches=None,
+split_dataset_ratio=0.0,
+stop_words=[],
+stopping_strategy=first_exhausted,
+stream=False,
+streaming=False,
+strict=False,
+swanlab_exp_name=None,
+swanlab_mode=cloud,
+swanlab_project=None,
+swanlab_token=<SWANLAB_TOKEN>,
+swanlab_workspace=None,
+system=None,
+target_modules=['q_proj', 'k_proj', 'v_proj', 'o_proj', 'gate_proj', 'up_proj', 'down_proj'],
+target_regex=None,
+task_type=causal_lm,
+temperature=0.0,
+template=internlm_paddle_alignment,
+template_backend=swift,
+tf32=False,
+top_k=None,
+top_logprobs=None,
+top_p=None,
+torch_compile=False,
+torch_compile_backend=None,
+torch_compile_mode=None,
+torch_dtype=torch.float32,
+torch_empty_cache_steps=None,
+torchdynamo=None,
+tpu_metrics_debug=False,
+tpu_num_cores=None,
+train_dataloader_shuffle=False,
+train_type=lora,
+trainable_parameters=[],
+trainable_parameters_regex=None,
+truncation_strategy=delete,
+tuner_backend=peft,
+use_chat_template=True,
+use_cpu=False,
+use_dora=False,
+use_galore=False,
+use_hf=False,
+use_ipex=False,
+use_legacy_prediction_loop=False,
+use_liger_kernel=False,
+use_mps_device=False,
+use_rslora=False,
+use_swift_lora=False,
+val_dataset=[],
+val_dataset_shuffle=False,
+vera_d_initial=0.1,
+vera_dropout=0.0,
+vera_projection_prng_key=0,
+vera_rank=256,
+warmup_ratio=0.0,
+warmup_steps=0,
+weight_decay=0.0,
+zero_hpz_partition_size=None,
+)
+[INFO:swift] Loading the model using model_dir: /data/models/InternLM-7B
+[INFO:swift] attn_impl: eager
+[INFO:swift] model_kwargs: {'device_map': 'cuda:0'}
+
+Loading checkpoint shards:   0%|          | 0/8 [00:00<?, ?it/s]
+Loading checkpoint shards:  12%|█▎        | 1/8 [00:02<00:18,  2.63s/it]
+Loading checkpoint shards:  25%|██▌       | 2/8 [00:04<00:12,  2.07s/it]
+Loading checkpoint shards:  38%|███▊      | 3/8 [00:06<00:09,  1.91s/it]
+Loading checkpoint shards:  50%|█████     | 4/8 [00:07<00:07,  1.75s/it]
+Loading checkpoint shards:  62%|██████▎   | 5/8 [00:09<00:04,  1.66s/it]
+Loading checkpoint shards:  75%|███████▌  | 6/8 [00:10<00:03,  1.61s/it]
+Loading checkpoint shards:  88%|████████▊ | 7/8 [00:12<00:01,  1.58s/it]
+Loading checkpoint shards: 100%|██████████| 8/8 [00:12<00:00,  1.30s/it]
+Loading checkpoint shards: 100%|██████████| 8/8 [00:12<00:00,  1.59s/it]
+[INFO:swift] model.hf_device_map: {'': device(type='cuda', index=0)}
+[INFO:swift] model_info: ModelInfo(model_type='internlm', model_dir='/data/models/InternLM-7B', torch_dtype=torch.float32, max_model_len=2048, quant_method=None, quant_bits=None, rope_scaling=None, config=InternLMConfig {
+  "_attn_implementation_autoset": true,
+  "_name_or_path": "/data/models/InternLM-7B",
+  "architectures": [
+    "InternLMForCausalLM"
+  ],
+  "auto_map": {
+    "AutoConfig": "configuration_internlm.InternLMConfig",
+    "AutoModel": "modeling_internlm.InternLMForCausalLM",
+    "AutoModelForCausalLM": "modeling_internlm.InternLMForCausalLM"
+  },
+  "bias": true,
+  "bos_token_id": 1,
+  "eos_token_id": 2,
+  "hidden_act": "silu",
+  "hidden_size": 4096,
+  "initializer_range": 0.02,
+  "intermediate_size": 11008,
+  "keys_to_ignore_at_inference": [
+    "past_key_values"
+  ],
+  "max_position_embeddings": 2048,
+  "model_type": "internlm",
+  "num_attention_heads": 32,
+  "num_hidden_layers": 32,
+  "pad_token_id": 2,
+  "rms_norm_eps": 1e-06,
+  "rotary": {
+    "base": 10000,
+    "type": "dynamic"
+  },
+  "tie_word_embeddings": false,
+  "torch_dtype": "float32",
+  "transformers_version": "4.48.3",
+  "use_cache": true,
+  "vocab_size": 103168
+}
+, task_type='causal_lm', num_labels=None)
+[INFO:swift] model.generation_config: GenerationConfig {
+  "bos_token_id": 1,
+  "eos_token_id": 2,
+  "max_new_tokens": 64,
+  "pad_token_id": 2
+}
+
+[INFO:swift] default_system: None
+[INFO:swift] response_prefix: ''
+[INFO:swift] agent_template: react_en
+[INFO:swift] max_length: 512
+[INFO:swift] norm_bbox: norm1000
+[INFO:swift] Start time of running main: 2026-11-24 08:42:19.387252
+
+Map:   0%|          | 0/10 [00:00<?, ? examples/s]
+Map: 100%|██████████| 10/10 [00:00<00:00, 2381.64 examples/s]
+[INFO:swift] train_dataset: Dataset({
+    features: ['messages'],
+    num_rows: 10
+})
+[INFO:swift] val_dataset: None
+/data/envs/ms-swift/lib/python3.9/site-packages/dill/_dill.py:414: PicklingWarning: Cannot locate reference to <class 'sys.version_info'>.
+  StockPickler.save(self, obj, save_persistent_id)
+/data/envs/ms-swift/lib/python3.9/site-packages/dill/_dill.py:414: PicklingWarning: Cannot pickle <class 'sys.version_info'>: sys.version_info has recursive self-references that trigger a RecursionError.
+  StockPickler.save(self, obj, save_persistent_id)
+Parameter 'function'=(<bound method RowPreprocessor.batched_preprocess of <swift.llm.dataset.utils.EncodePreprocessor object at 0x7f0040e86490>>, "class EncodePreprocessor(RowPreprocessor):\n\n    def __init__(self, template: 'Template'):\n        super().__init__()\n        self.template = template\n\n    def preprocess(self, row: Dict[str, Any]) -> Optional[Dict[str, Any]]:\n        return self.template.encode(row)\n") of the transform datasets.arrow_dataset.Dataset._map_single couldn't be hashed properly, a random hash was used instead. Make sure your transforms and parameters are serializable with pickle or dill for the dataset fingerprinting and caching to work. If you reuse this transform, the caching mechanism will consider it to be different from the previous calls and recompute everything. This warning is only showed once. Subsequent hashing failures won't be showed.
+
+Map:   0%|          | 0/10 [00:00<?, ? examples/s]
+Map: 100%|██████████| 10/10 [00:00<00:00, 988.41 examples/s]
+[INFO:swift] [INPUT_IDS] [34038, 334, 262, 68460, 67487, 68075, 68698, 90659, 68697, 69579, 99157, 2, 364, 5771, 11353, 334, 312, 281, 262, 69795, 68320, 67593, 99157, 364, 314, 281, 262, 83768, 68697, 99157, 364, 308, 281, 262, 68776, 60378, 83349, 68304, 99157, 364, 319, 281, 262, 67816, 60378, 68432, 99157, 364, 317, 281, 262, 67707, 73007, 80337, 99157, 2, 364, 2]
+[INFO:swift] [INPUT]  Human: 针对产品发布提出五种营销策略。</s> 
+Assistant:1. 社交媒体活动。
+2. 电子邮件营销。
+3. 在线和离线广告。
+4. 推荐和评论。
+5. 合作名人推销。</s> 
+</s>
+[INFO:swift] [LABELS_IDS] [-100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, 312, 281, 262, 69795, 68320, 67593, 99157, 364, 314, 281, 262, 83768, 68697, 99157, 364, 308, 281, 262, 68776, 60378, 83349, 68304, 99157, 364, 319, 281, 262, 67816, 60378, 68432, 99157, 364, 317, 281, 262, 67707, 73007, 80337, 99157, 2, 364, 2]
+[INFO:swift] [LABELS] [-100 * 16] 1. 社交媒体活动。
+2. 电子邮件营销。
+3. 在线和离线广告。
+4. 推荐和评论。
+5. 合作名人推销。</s> 
+</s>
+
+Map:   0%|          | 0/10 [00:00<?, ? examples/s]
+Map: 100%|██████████| 10/10 [00:00<00:00, 2672.89 examples/s]
+[INFO:swift] Dataset Token Length: 50.700000±21.688937, min=24.000000, max=83.000000, size=10
+[INFO:swift] The TrainArguments will be saved in: /root/pr4495-validation/swift-training-output/v1-20261124-084205/args.json
+[INFO:swift] lora_config: LoraConfig(task_type='CAUSAL_LM', peft_type=<PeftType.LORA: 'LORA'>, auto_mapping=None, base_model_name_or_path='/data/models/InternLM-7B', revision=None, inference_mode=False, r=8, target_modules={'up_proj', 'down_proj', 'gate_proj', 'o_proj', 'q_proj', 'k_proj', 'v_proj'}, exclude_modules=None, lora_alpha=16, lora_dropout=0.0, fan_in_fan_out=False, bias='none', use_rslora=False, modules_to_save=[], init_lora_weights=True, layers_to_transform=None, layers_pattern=None, rank_pattern={}, alpha_pattern={}, megatron_config=None, megatron_core='megatron.core', loftq_config={}, eva_config=None, use_dora=False, layer_replication=None, runtime_config=LoraRuntimeConfig(ephemeral_gpu_offload=False), lora_bias=False, lora_dtype=None, lorap_lr_ratio=None, lorap_emb_lr=1e-06)
+[INFO:swift] model: PeftModelForCausalLM(
+  (base_model): LoraModel(
+    (model): InternLMForCausalLM(
+      (model): InternLMModel(
+        (embed_tokens): Embedding(103168, 4096, padding_idx=2)
+        (layers): ModuleList(
+          (0-31): 32 x InternLMDecoderLayer(
+            (self_attn): InternLMAttention(
+              (q_proj): lora.Linear(
+                (base_layer): Linear(in_features=4096, out_features=4096, bias=True)
+                (lora_dropout): ModuleDict(
+                  (default): Identity()
+                )
+                (lora_A): ModuleDict(
+                  (default): Linear(in_features=4096, out_features=8, bias=False)
+                )
+                (lora_B): ModuleDict(
+                  (default): Linear(in_features=8, out_features=4096, bias=False)
+                )
+                (lora_embedding_A): ParameterDict()
+                (lora_embedding_B): ParameterDict()
+                (lora_magnitude_vector): ModuleDict()
+              )
+              (k_proj): lora.Linear(
+                (base_layer): Linear(in_features=4096, out_features=4096, bias=True)
+                (lora_dropout): ModuleDict(
+                  (default): Identity()
+                )
+                (lora_A): ModuleDict(
+                  (default): Linear(in_features=4096, out_features=8, bias=False)
+                )
+                (lora_B): ModuleDict(
+                  (default): Linear(in_features=8, out_features=4096, bias=False)
+                )
+                (lora_embedding_A): ParameterDict()
+                (lora_embedding_B): ParameterDict()
+                (lora_magnitude_vector): ModuleDict()
+              )
+              (v_proj): lora.Linear(
+                (base_layer): Linear(in_features=4096, out_features=4096, bias=True)
+                (lora_dropout): ModuleDict(
+                  (default): Identity()
+                )
+                (lora_A): ModuleDict(
+                  (default): Linear(in_features=4096, out_features=8, bias=False)
+                )
+                (lora_B): ModuleDict(
+                  (default): Linear(in_features=8, out_features=4096, bias=False)
+                )
+                (lora_embedding_A): ParameterDict()
+                (lora_embedding_B): ParameterDict()
+                (lora_magnitude_vector): ModuleDict()
+              )
+              (o_proj): lora.Linear(
+                (base_layer): Linear(in_features=4096, out_features=4096, bias=True)
+                (lora_dropout): ModuleDict(
+                  (default): Identity()
+                )
+                (lora_A): ModuleDict(
+                  (default): Linear(in_features=4096, out_features=8, bias=False)
+                )
+                (lora_B): ModuleDict(
+                  (default): Linear(in_features=8, out_features=4096, bias=False)
+                )
+                (lora_embedding_A): ParameterDict()
+                (lora_embedding_B): ParameterDict()
+                (lora_magnitude_vector): ModuleDict()
+              )
+              (rotary_emb): InternLMDynamicNTKScalingRotaryEmbedding()
+            )
+            (mlp): InternLMMLP(
+              (gate_proj): lora.Linear(
+                (base_layer): Linear(in_features=4096, out_features=11008, bias=False)
+                (lora_dropout): ModuleDict(
+                  (default): Identity()
+                )
+                (lora_A): ModuleDict(
+                  (default): Linear(in_features=4096, out_features=8, bias=False)
+                )
+                (lora_B): ModuleDict(
+                  (default): Linear(in_features=8, out_features=11008, bias=False)
+                )
+                (lora_embedding_A): ParameterDict()
+                (lora_embedding_B): ParameterDict()
+                (lora_magnitude_vector): ModuleDict()
+              )
+              (down_proj): lora.Linear(
+                (base_layer): Linear(in_features=11008, out_features=4096, bias=False)
+                (lora_dropout): ModuleDict(
+                  (default): Identity()
+                )
+                (lora_A): ModuleDict(
+                  (default): Linear(in_features=11008, out_features=8, bias=False)
+                )
+                (lora_B): ModuleDict(
+                  (default): Linear(in_features=8, out_features=4096, bias=False)
+                )
+                (lora_embedding_A): ParameterDict()
+                (lora_embedding_B): ParameterDict()
+                (lora_magnitude_vector): ModuleDict()
+              )
+              (up_proj): lora.Linear(
+                (base_layer): Linear(in_features=4096, out_features=11008, bias=False)
+                (lora_dropout): ModuleDict(
+                  (default): Identity()
+                )
+                (lora_A): ModuleDict(
+                  (default): Linear(in_features=4096, out_features=8, bias=False)
+                )
+                (lora_B): ModuleDict(
+                  (default): Linear(in_features=8, out_features=11008, bias=False)
+                )
+                (lora_embedding_A): ParameterDict()
+                (lora_embedding_B): ParameterDict()
+                (lora_magnitude_vector): ModuleDict()
+              )
+              (act_fn): SiLU()
+            )
+            (input_layernorm): InternLMRMSNorm()
+            (post_attention_layernorm): InternLMRMSNorm()
+          )
+        )
+        (norm): InternLMRMSNorm()
+      )
+      (lm_head): Linear(in_features=4096, out_features=103168, bias=False)
+    )
+  )
+)
+[INFO:swift] model_parameter_info: PeftModelForCausalLM: 7341.9366M Params (19.9885M Trainable [0.2723%]), 16.7793M Buffers.
+/data/envs/ms-swift/lib/python3.9/site-packages/swift/trainers/mixin.py:89: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `Seq2SeqTrainer.__init__`. Use `processing_class` instead.
+  super().__init__(
+Detected kernel version 5.4.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+[INFO:swift] The logging file will be saved in: /root/pr4495-validation/swift-training-output/v1-20261124-084205/logging.jsonl
+{'loss': 2.80291009, 'token_acc': 0.57142857, 'learning_rate': 0.0001, 'memory(GiB)': 28.22, 'train_speed(iter/s)': 0.225305, 'epoch': 0.1, 'global_step/max_steps': '1/20', 'percentage': '5.00%', 'elapsed_time': '4s', 'remaining_time': '1m 19s'}
+{'loss': 3.20606661, 'token_acc': 0.45, 'learning_rate': 0.0001, 'memory(GiB)': 28.74, 'train_speed(iter/s)': 0.426106, 'epoch': 0.2, 'global_step/max_steps': '2/20', 'percentage': '10.00%', 'elapsed_time': '4s', 'remaining_time': '39s'}
+{'loss': 5.04870033, 'token_acc': 0.4, 'learning_rate': 0.0001, 'memory(GiB)': 28.74, 'train_speed(iter/s)': 0.613154, 'epoch': 0.3, 'global_step/max_steps': '3/20', 'percentage': '15.00%', 'elapsed_time': '4s', 'remaining_time': '26s'}
+{'loss': 3.15781903, 'token_acc': 0.48979592, 'learning_rate': 0.0001, 'memory(GiB)': 28.88, 'train_speed(iter/s)': 0.780998, 'epoch': 0.4, 'global_step/max_steps': '4/20', 'percentage': '20.00%', 'elapsed_time': '4s', 'remaining_time': '19s'}
+{'loss': 4.43825388, 'token_acc': 0.44444444, 'learning_rate': 0.0001, 'memory(GiB)': 28.88, 'train_speed(iter/s)': 0.939001, 'epoch': 0.5, 'global_step/max_steps': '5/20', 'percentage': '25.00%', 'elapsed_time': '5s', 'remaining_time': '15s'}
+{'loss': 3.67721844, 'token_acc': 0.52941176, 'learning_rate': 0.0001, 'memory(GiB)': 28.88, 'train_speed(iter/s)': 1.081776, 'epoch': 0.6, 'global_step/max_steps': '6/20', 'percentage': '30.00%', 'elapsed_time': '5s', 'remaining_time': '12s'}
+{'loss': 3.11342239, 'token_acc': 0.49152542, 'learning_rate': 0.0001, 'memory(GiB)': 28.88, 'train_speed(iter/s)': 1.206982, 'epoch': 0.7, 'global_step/max_steps': '7/20', 'percentage': '35.00%', 'elapsed_time': '5s', 'remaining_time': '10s'}
+{'loss': 5.99146128, 'token_acc': 0.45454545, 'learning_rate': 0.0001, 'memory(GiB)': 28.88, 'train_speed(iter/s)': 1.331919, 'epoch': 0.8, 'global_step/max_steps': '8/20', 'percentage': '40.00%', 'elapsed_time': '5s', 'remaining_time': '8s'}
+{'loss': 2.58640003, 'token_acc': 0.47692308, 'learning_rate': 0.0001, 'memory(GiB)': 28.98, 'train_speed(iter/s)': 1.438989, 'epoch': 0.9, 'global_step/max_steps': '9/20', 'percentage': '45.00%', 'elapsed_time': '5s', 'remaining_time': '7s'}
+{'loss': 3.6451509, 'token_acc': 0.7, 'learning_rate': 0.0001, 'memory(GiB)': 28.98, 'train_speed(iter/s)': 1.550316, 'epoch': 1.0, 'global_step/max_steps': '10/20', 'percentage': '50.00%', 'elapsed_time': '6s', 'remaining_time': '6s'}
+{'loss': 2.07113957, 'token_acc': 0.76190476, 'learning_rate': 0.0001, 'memory(GiB)': 28.98, 'train_speed(iter/s)': 1.651571, 'epoch': 1.1, 'global_step/max_steps': '11/20', 'percentage': '55.00%', 'elapsed_time': '6s', 'remaining_time': '5s'}
+{'loss': 2.55867481, 'token_acc': 0.56666667, 'learning_rate': 0.0001, 'memory(GiB)': 28.98, 'train_speed(iter/s)': 1.73499, 'epoch': 1.2, 'global_step/max_steps': '12/20', 'percentage': '60.00%', 'elapsed_time': '6s', 'remaining_time': '4s'}
+{'loss': 3.03433061, 'token_acc': 0.66666667, 'learning_rate': 0.0001, 'memory(GiB)': 28.98, 'train_speed(iter/s)': 1.827444, 'epoch': 1.3, 'global_step/max_steps': '13/20', 'percentage': '65.00%', 'elapsed_time': '6s', 'remaining_time': '3s'}
+{'loss': 2.5008018, 'token_acc': 0.6122449, 'learning_rate': 0.0001, 'memory(GiB)': 28.98, 'train_speed(iter/s)': 1.911284, 'epoch': 1.4, 'global_step/max_steps': '14/20', 'percentage': '70.00%', 'elapsed_time': '7s', 'remaining_time': '3s'}
+{'loss': 2.71851754, 'token_acc': 0.77777778, 'learning_rate': 0.0001, 'memory(GiB)': 28.98, 'train_speed(iter/s)': 1.993894, 'epoch': 1.5, 'global_step/max_steps': '15/20', 'percentage': '75.00%', 'elapsed_time': '7s', 'remaining_time': '2s'}
+{'loss': 2.19275904, 'token_acc': 0.88235294, 'learning_rate': 0.0001, 'memory(GiB)': 28.98, 'train_speed(iter/s)': 2.073427, 'epoch': 1.6, 'global_step/max_steps': '16/20', 'percentage': '80.00%', 'elapsed_time': '7s', 'remaining_time': '1s'}
+{'loss': 2.87958956, 'token_acc': 0.47457627, 'learning_rate': 0.0001, 'memory(GiB)': 28.98, 'train_speed(iter/s)': 2.133156, 'epoch': 1.7, 'global_step/max_steps': '17/20', 'percentage': '85.00%', 'elapsed_time': '7s', 'remaining_time': '1s'}
+{'loss': 3.88546181, 'token_acc': 0.72727273, 'learning_rate': 0.0001, 'memory(GiB)': 28.98, 'train_speed(iter/s)': 2.197541, 'epoch': 1.8, 'global_step/max_steps': '18/20', 'percentage': '90.00%', 'elapsed_time': '7s', 'remaining_time': '0s'}
+{'loss': 2.36988544, 'token_acc': 0.53846154, 'learning_rate': 0.0001, 'memory(GiB)': 28.98, 'train_speed(iter/s)': 2.251933, 'epoch': 1.9, 'global_step/max_steps': '19/20', 'percentage': '95.00%', 'elapsed_time': '8s', 'remaining_time': '0s'}
+{'loss': 2.74579024, 'token_acc': 0.9, 'learning_rate': 0.0001, 'memory(GiB)': 28.98, 'train_speed(iter/s)': 2.315609, 'epoch': 2.0, 'global_step/max_steps': '20/20', 'percentage': '100.00%', 'elapsed_time': '8s', 'remaining_time': '0s'}
+{'train_runtime': 8.3823, 'train_samples_per_second': 2.386, 'train_steps_per_second': 2.386, 'train_loss': 3.23121767, 'epoch': 2.0, 'global_step/max_steps': '20/20', 'percentage': '100.00%', 'elapsed_time': '8s', 'remaining_time': '0s'}
+[WARNING:swift] No training was carried out, which may be due to the dataset being too small or incorrect usage of resume_from_checkpoint.
+[INFO:swift] last_model_checkpoint: None
+[INFO:swift] best_model_checkpoint: None
+[INFO:swift] End time of running main: 2026-11-24 08:42:29.679873
