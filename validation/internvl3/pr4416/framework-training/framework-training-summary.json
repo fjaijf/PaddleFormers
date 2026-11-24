@@ -1,0 +1,57 @@
+{
+  "model": "InternVL3-1B",
+  "code_commit": "abaa61909ab2328500e5d4bde41a447c82c3ccdc",
+  "steps": 20,
+  "dtype": "float32",
+  "batch_size": 1,
+  "gradient_accumulation_steps": 1,
+  "trainable_parameters": 629697920,
+  "learning_rate": 1e-06,
+  "optimizer": "AdamW",
+  "scheduler": "constant",
+  "weight_decay": 0.0,
+  "gradient_clipping": false,
+  "freeze_vision": true,
+  "freeze_aligner": true,
+  "vision_drop_path_rate": 0.0,
+  "tf32": false,
+  "flash_attention": false,
+  "mean_absolute_loss_diff": 1.2271106243133544e-06,
+  "max_absolute_loss_diff": 6.67572021484375e-06,
+  "all_batches_equal": true,
+  "validation_scope": "20-step native-framework training smoke test, not full convergence",
+  "paddle": {
+    "first_loss": 1.4193826913833618,
+    "last_loss": 0.16019423305988312,
+    "mean_loss": 0.7709331821650267,
+    "first_five_mean_loss": 1.3591683149337768,
+    "last_five_mean_loss": 0.4699812322854996,
+    "all_losses_finite": true,
+    "model_info": {
+      "parameter_dtypes": [
+        "paddle.float32"
+      ],
+      "trainable_parameters": 629697920,
+      "vision_drop_path_rate": 0.0
+    }
+  },
+  "torch": {
+    "first_loss": 1.4193837642669678,
+    "last_loss": 0.16019578278064728,
+    "mean_loss": 0.7709332782775163,
+    "first_five_mean_loss": 1.359169316291809,
+    "last_five_mean_loss": 0.4699816569685936,
+    "all_losses_finite": true,
+    "model_info": {
+      "parameter_dtypes": [
+        "torch.float32"
+      ],
+      "trainable_parameters": 629697920,
+      "vision_drop_path_rate": 0.0
+    }
+  },
+  "exit_codes": {
+    "paddle": 0,
+    "torch": 0
+  }
+}

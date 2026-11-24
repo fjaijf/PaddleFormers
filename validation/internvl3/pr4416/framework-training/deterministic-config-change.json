@@ -1,0 +1,15 @@
+{
+  "source": "/data/models/internvl3_1b",
+  "validation_model": "/root/pr4416-validation/framework-training/model-deterministic",
+  "change": {
+    "vision_config.drop_path_rate": {
+      "original": 0.1,
+      "validation": 0.0
+    },
+    "vision_config.use_flash_attn": {
+      "original": true,
+      "validation": false
+    }
+  },
+  "reason": "Disable stochastic depth for numerical comparison during native train mode; checkpoint weights unchanged."
+}

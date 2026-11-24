@@ -1,0 +1,682 @@
+run sh: `/data/envs/ms-swift/bin/python /data/envs/ms-swift/lib/python3.9/site-packages/swift/cli/sft.py --model /root/pr4416-validation/framework-training/model-deterministic --model_type internvl3 --train_type full --torch_dtype float32 --attn_impl eager --dataset /root/pr4416-validation/framework-training/swift-dataset.jsonl --template internvl3_paddle_alignment --external_plugins /root/pr4416-validation/framework-training/swift-plugin.py --split_dataset_ratio 0 --dataset_shuffle false --train_dataloader_shuffle false --dataset_num_proc 1 --dataloader_num_workers 0 --max_length 4096 --max_steps 20 --per_device_train_batch_size 1 --gradient_accumulation_steps 1 --learning_rate 1e-6 --lr_scheduler_type constant --warmup_steps 0 --weight_decay 0 --adam_beta1 0.9 --adam_beta2 0.999 --adam_epsilon 1e-8 --max_grad_norm 0 --gradient_checkpointing false --freeze_vit true --freeze_aligner true --freeze_llm false --bf16 false --fp16 false --tf32 false --seed 23 --data_seed 23 --logging_steps 1 --save_strategy no --eval_strategy no --report_to none --optim adamw_torch --disable_tqdm true --output_dir /root/pr4416-validation/framework-training/swift-output`
+/home/vipuser/anaconda3/lib/python3.9/site-packages/torchvision/datapoints/__init__.py:12: UserWarning: The torchvision.datapoints and torchvision.transforms.v2 namespaces are still Beta. While we do not expect major breaking changes, some APIs may still change according to user feedback. Please submit any feedback you may have in this issue: https://github.com/pytorch/vision/issues/6753, and you can also check out https://github.com/pytorch/vision/issues/7319 to learn more about the APIs that we suspect might involve future changes. You can silence this warning by calling torchvision.disable_beta_transforms_warning().
+  warnings.warn(_BETA_TRANSFORMS_WARNING)
+/home/vipuser/anaconda3/lib/python3.9/site-packages/torchvision/transforms/v2/__init__.py:54: UserWarning: The torchvision.datapoints and torchvision.transforms.v2 namespaces are still Beta. While we do not expect major breaking changes, some APIs may still change according to user feedback. Please submit any feedback you may have in this issue: https://github.com/pytorch/vision/issues/6753, and you can also check out https://github.com/pytorch/vision/issues/7319 to learn more about the APIs that we suspect might involve future changes. You can silence this warning by calling torchvision.disable_beta_transforms_warning().
+  warnings.warn(_BETA_TRANSFORMS_WARNING)
+[INFO:swift] Successfully registered `/data/envs/ms-swift/lib/python3.9/site-packages/swift/llm/dataset/data/dataset_info.json`.
+[INFO:swift] Successfully imported external_plugins: ['/root/pr4416-validation/framework-training/swift-plugin.py'].
+[INFO:swift] rank: -1, local_rank: -1, world_size: 1, local_world_size: 1
+[INFO:swift] Loading the model using model_dir: /root/pr4416-validation/framework-training/model-deterministic
+[INFO:swift] Setting args.split_dataset_ratio: 0.0
+[INFO:swift] freeze_parameters: ['vision_model', 'mlp1']
+[INFO:swift] Setting args.lazy_tokenize: True
+/data/envs/ms-swift/lib/python3.9/site-packages/transformers/training_args.py:1575: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+[INFO:swift] output_dir: /root/pr4416-validation/framework-training/swift-output/v0-20261124-074932
+[INFO:swift] Global seed set to 23
+[INFO:swift] args: TrainArguments(
+_n_gpu=-1,
+acc_steps=1,
+acc_strategy=token,
+accelerator_config={'dispatch_batches': False},
+adafactor=False,
+adalora_beta1=0.85,
+adalora_beta2=0.85,
+adalora_deltaT=1,
+adalora_init_r=12,
+adalora_orth_reg_weight=0.5,
+adalora_target_r=8,
+adalora_tfinal=0,
+adalora_tinit=0,
+adam_beta1=0.9,
+adam_beta2=0.999,
+adam_epsilon=1e-08,
+adapter_act=gelu,
+adapter_length=128,
+adapters=[],
+add_version=True,
+agent_template=None,
+attn_impl=eager,
+auto_find_batch_size=False,
+average_tokens_across_devices=False,
+batch_eval_metrics=False,
+bf16=False,
+bf16_full_eval=False,
+bnb_4bit_compute_dtype=torch.float32,
+bnb_4bit_quant_storage=None,
+bnb_4bit_quant_type=nf4,
+bnb_4bit_use_double_quant=True,
+boft_block_num=0,
+boft_block_size=4,
+boft_dropout=0.0,
+boft_n_butterfly_factor=1,
+check_model=True,
+ckpt_dir=None,
+columns={},
+create_checkpoint_symlink=False,
+custom_dataset_info=[],
+custom_register_path=[],
+data_seed=23,
+dataloader_drop_last=False,
+dataloader_num_workers=0,
+dataloader_persistent_workers=False,
+dataloader_pin_memory=True,
+dataloader_prefetch_factor=None,
+dataset=['/root/pr4416-validation/framework-training/swift-dataset.jsonl'],
+dataset_num_proc=1,
+dataset_shuffle=False,
+ddp_backend=None,
+ddp_broadcast_buffers=None,
+ddp_bucket_cap_mb=None,
+ddp_find_unused_parameters=None,
+ddp_timeout=1800,
+debug=None,
+deepspeed=None,
+device_map=None,
+disable_tqdm=True,
+dispatch_batches=None,
+do_eval=False,
+do_predict=False,
+do_train=False,
+download_mode=reuse_dataset_if_exists,
+eval_accumulation_steps=None,
+eval_datasets=[],
+eval_datasets_args=None,
+eval_delay=0,
+eval_do_concat_batches=True,
+eval_generation_config=None,
+eval_limit=None,
+eval_on_start=False,
+eval_steps=None,
+eval_strategy=no,
+eval_use_evalscope=False,
+eval_use_gather_object=False,
+evaluation_strategy=no,
+external_plugins=['/root/pr4416-validation/framework-training/swift-plugin.py'],
+fourier_n_frequency=2000,
+fourier_scaling=300.0,
+fp16=False,
+fp16_backend=auto,
+fp16_full_eval=False,
+fp16_opt_level=O1,
+freeze_aligner=True,
+freeze_llm=False,
+freeze_parameters=['vision_model', 'mlp1'],
+freeze_parameters_ratio=0.0,
+freeze_parameters_regex=None,
+freeze_vit=True,
+fsdp=,
+fsdp_config=None,
+fsdp_min_num_params=0,
+fsdp_num=1,
+fsdp_transformer_layer_cls_to_wrap=None,
+full_determinism=False,
+galore_cos_threshold=0.4,
+galore_gamma_proj=2,
+galore_optim_per_parameter=False,
+galore_proj_bits=4,
+galore_proj_group_size=256,
+galore_proj_quant=False,
+galore_proj_type=std,
+galore_quantization=False,
+galore_queue_size=5,
+galore_rank=128,
+galore_scale=1.0,
+galore_target_modules=None,
+galore_update_proj_gap=50,
+galore_with_embedding=False,
+generation_config=None,
+generation_max_length=None,
+generation_num_beams=None,
+gradient_accumulation_steps=1,
+gradient_checkpointing=False,
+gradient_checkpointing_kwargs=None,
+greater_is_better=False,
+group_by_length=False,
+half_precision_backend=auto,
+hqq_axis=None,
+hub_always_push=False,
+hub_model_id=None,
+hub_private_repo=None,
+hub_strategy=every_save,
+hub_token=<HUB_TOKEN>,
+ignore_args_error=False,
+ignore_data_skip=False,
+include_for_metrics=[],
+include_inputs_for_metrics=False,
+include_num_input_tokens_seen=False,
+include_tokens_per_second=False,
+init_strategy=None,
+init_weights=True,
+interleave_prob=None,
+jit_mode_eval=False,
+label_names=None,
+label_smoothing_factor=0.0,
+lazy_tokenize=True,
+learning_rate=1e-06,
+length_column_name=length,
+lisa_activated_layers=0,
+lisa_step_interval=20,
+llamapro_num_groups=None,
+llamapro_num_new_blocks=4,
+load_args=False,
+load_best_model_at_end=False,
+load_data_args=False,
+load_from_cache_file=False,
+local_rank=-1,
+local_repo_path=None,
+log_level=passive,
+log_level_replica=warning,
+log_on_each_node=True,
+logging_dir=/root/pr4416-validation/framework-training/swift-output/v0-20261124-074932/runs,
+logging_first_step=True,
+logging_nan_inf_filter=True,
+logging_steps=1,
+logging_strategy=steps,
+logprobs=False,
+lora_alpha=32,
+lora_bias=none,
+lora_dropout=0.05,
+lora_dtype=None,
+lora_ga_batch_size=2,
+lora_ga_direction=ArB2r,
+lora_ga_iters=2,
+lora_ga_max_length=1024,
+lora_ga_scale=stable,
+lora_ga_stable_gamma=16,
+lora_modules=[],
+lora_rank=8,
+lorap_lr_ratio=None,
+loss_scale=default,
+loss_type=None,
+lr_scheduler_kwargs=None,
+lr_scheduler_type=constant,
+max_epochs=None,
+max_grad_norm=0.0,
+max_length=4096,
+max_memory={},
+max_new_tokens=64,
+max_pixels=None,
+max_steps=20,
+metric=None,
+metric_for_best_model=loss,
+metric_warmup_step=0,
+model=/root/pr4416-validation/framework-training/model-deterministic,
+model_author=[None, None],
+model_kwargs={},
+model_name=[None, None],
+model_revision=None,
+model_type=internvl3,
+modules_to_save=[],
+mp_parameters=,
+neftune_noise_alpha=None,
+no_cuda=False,
+norm_bbox=None,
+num_beams=1,
+num_labels=None,
+num_train_epochs=3.0,
+optim=adamw_torch,
+optim_args=None,
+optim_target_modules=None,
+optimizer=None,
+output_dir=/root/pr4416-validation/framework-training/swift-output/v0-20261124-074932,
+overwrite_output_dir=False,
+packing=False,
+padding_side=right,
+past_index=-1,
+per_device_eval_batch_size=1,
+per_device_train_batch_size=1,
+predict_with_generate=False,
+prediction_loss_only=False,
+problem_type=None,
+push_to_hub=False,
+push_to_hub_model_id=None,
+push_to_hub_organization=None,
+push_to_hub_token=<PUSH_TO_HUB_TOKEN>,
+quant_bits=None,
+quant_method=None,
+ray_scope=last,
+reft_args=None,
+reft_intervention_type=LoreftIntervention,
+reft_layer_key=None,
+reft_layers=None,
+reft_rank=4,
+remove_unused_columns=True,
+repetition_penalty=None,
+report_to=['none'],
+response_prefix=None,
+restore_callback_states_from_checkpoint=False,
+resume_from_checkpoint=None,
+resume_only_model=False,
+rope_scaling=None,
+run_name=/root/pr4416-validation/framework-training/swift-output/v0-20261124-074932,
+save_on_each_node=False,
+save_only_model=False,
+save_safetensors=True,
+save_steps=500,
+save_strategy=no,
+save_total_limit=None,
+seed=23,
+sequence_parallel_size=1,
+shuffle_buffer_size=1000,
+skip_memory_metrics=True,
+sortish_sampler=False,
+split_batches=None,
+split_dataset_ratio=0.0,
+stop_words=[],
+stopping_strategy=first_exhausted,
+stream=False,
+streaming=False,
+strict=False,
+swanlab_exp_name=None,
+swanlab_mode=cloud,
+swanlab_project=None,
+swanlab_token=<SWANLAB_TOKEN>,
+swanlab_workspace=None,
+system=None,
+target_modules=['all-linear'],
+target_regex=None,
+task_type=causal_lm,
+temperature=0.0,
+template=internvl3_paddle_alignment,
+template_backend=swift,
+tf32=False,
+top_k=None,
+top_logprobs=None,
+top_p=None,
+torch_compile=False,
+torch_compile_backend=None,
+torch_compile_mode=None,
+torch_dtype=torch.float32,
+torch_empty_cache_steps=None,
+torchdynamo=None,
+tpu_metrics_debug=False,
+tpu_num_cores=None,
+train_dataloader_shuffle=False,
+train_type=full,
+trainable_parameters=[],
+trainable_parameters_regex=None,
+truncation_strategy=delete,
+tuner_backend=peft,
+use_chat_template=True,
+use_cpu=False,
+use_dora=False,
+use_galore=False,
+use_hf=False,
+use_ipex=False,
+use_legacy_prediction_loop=False,
+use_liger_kernel=False,
+use_mps_device=False,
+use_rslora=False,
+use_swift_lora=False,
+val_dataset=[],
+val_dataset_shuffle=False,
+vera_d_initial=0.1,
+vera_dropout=0.0,
+vera_projection_prng_key=0,
+vera_rank=256,
+warmup_ratio=0.0,
+warmup_steps=0,
+weight_decay=0.0,
+zero_hpz_partition_size=None,
+)
+[INFO:swift] Loading the model using model_dir: /root/pr4416-validation/framework-training/model-deterministic
+[INFO:swift] attn_impl: eager
+[INFO:swift] model_kwargs: {'device_map': 'cuda:0'}
+[INFO:swift] model.hf_device_map: {'': device(type='cuda', index=0)}
+[INFO:swift] model_info: ModelInfo(model_type='internvl3', model_dir='/root/pr4416-validation/framework-training/model-deterministic', torch_dtype=torch.float32, max_model_len=32768, quant_method=None, quant_bits=None, rope_scaling={'factor': 2.0, 'rope_type': 'dynamic', 'type': 'dynamic'}, config=InternVLChatConfig {
+  "_attn_implementation_autoset": true,
+  "_commit_hash": null,
+  "_name_or_path": "/root/pr4416-validation/framework-training/model-deterministic",
+  "architectures": [
+    "InternVLChatModel"
+  ],
+  "auto_map": {
+    "AutoConfig": "configuration_internvl_chat.InternVLChatConfig",
+    "AutoModel": "modeling_internvl_chat.InternVLChatModel",
+    "AutoModelForCausalLM": "modeling_internvl_chat.InternVLChatModel"
+  },
+  "downsample_ratio": 0.5,
+  "dynamic_image_size": true,
+  "force_image_size": 448,
+  "hidden_size": 896,
+  "image_fold": null,
+  "keys_to_ignore_at_inference": [
+    "past_key_values"
+  ],
+  "llm_config": {
+    "_attn_implementation_autoset": true,
+    "_name_or_path": "./pretrained/Qwen2.5-32B-Instruct",
+    "add_cross_attention": false,
+    "architectures": [
+      "Qwen2ForCausalLM"
+    ],
+    "attention_dropout": 0.0,
+    "bad_words_ids": null,
+    "begin_suppress_tokens": null,
+    "bos_token_id": 151643,
+    "chunk_size_feed_forward": 0,
+    "cross_attention_hidden_size": null,
+    "decoder_start_token_id": null,
+    "diversity_penalty": 0.0,
+    "do_sample": false,
+    "early_stopping": false,
+    "encoder_no_repeat_ngram_size": 0,
+    "eos_token_id": 151643,
+    "exponential_decay_length_penalty": null,
+    "finetuning_task": null,
+    "forced_bos_token_id": null,
+    "forced_eos_token_id": null,
+    "hidden_act": "silu",
+    "hidden_size": 896,
+    "id2label": {
+      "0": "LABEL_0",
+      "1": "LABEL_1"
+    },
+    "initializer_range": 0.02,
+    "intermediate_size": 4864,
+    "is_decoder": false,
+    "is_encoder_decoder": false,
+    "label2id": {
+      "LABEL_0": 0,
+      "LABEL_1": 1
+    },
+    "length_penalty": 1.0,
+    "max_length": 20,
+    "max_position_embeddings": 32768,
+    "max_window_layers": 70,
+    "min_length": 0,
+    "model_type": "qwen2",
+    "moe_config": null,
+    "no_repeat_ngram_size": 0,
+    "num_attention_heads": 14,
+    "num_beam_groups": 1,
+    "num_beams": 1,
+    "num_hidden_layers": 24,
+    "num_key_value_heads": 2,
+    "num_return_sequences": 1,
+    "output_attentions": false,
+    "output_hidden_states": false,
+    "output_scores": false,
+    "pad_token_id": 151643,
+    "prefix": null,
+    "problem_type": null,
+    "pruned_heads": {},
+    "remove_invalid_values": false,
+    "repetition_penalty": 1.0,
+    "return_dict": true,
+    "return_dict_in_generate": false,
+    "rms_norm_eps": 1e-06,
+    "rope_scaling": {
+      "factor": 2.0,
+      "rope_type": "dynamic",
+      "type": "dynamic"
+    },
+    "rope_theta": 1000000.0,
+    "sep_token_id": null,
+    "sliding_window": null,
+    "suppress_tokens": null,
+    "task_specific_params": null,
+    "temperature": 1.0,
+    "tf_legacy_loss": false,
+    "tie_encoder_decoder": false,
+    "tie_word_embeddings": false,
+    "tokenizer_class": null,
+    "top_k": 50,
+    "top_p": 1.0,
+    "torch_dtype": "bfloat16",
+    "torchscript": false,
+    "transformers_version": "4.48.3",
+    "typical_p": 1.0,
+    "use_bfloat16": true,
+    "use_cache": false,
+    "use_sliding_window": false,
+    "vocab_size": 151674
+  },
+  "max_dynamic_patch": 12,
+  "min_dynamic_patch": 1,
+  "model_type": "internvl_chat",
+  "pad2square": false,
+  "pad_token_id": 151643,
+  "ps_version": "v2",
+  "select_layer": -1,
+  "system_message": null,
+  "template": "internvl2_5",
+  "tie_word_embeddings": false,
+  "torch_dtype": "float32",
+  "transformers_version": null,
+  "use_backbone_lora": 0,
+  "use_llm_lora": 0,
+  "use_thumbnail": true,
+  "vision_config": {
+    "_attn_implementation_autoset": true,
+    "_name_or_path": "OpenGVLab/InternViT-6B-448px-V1-5",
+    "add_cross_attention": false,
+    "architectures": [
+      "InternVisionModel"
+    ],
+    "attention_dropout": 0.0,
+    "auto_map": {
+      "AutoConfig": "configuration_intern_vit.InternVisionConfig",
+      "AutoModel": "modeling_intern_vit.InternVisionModel"
+    },
+    "bad_words_ids": null,
+    "begin_suppress_tokens": null,
+    "bos_token_id": null,
+    "capacity_factor": 1.2,
+    "chunk_size_feed_forward": 0,
+    "cross_attention_hidden_size": null,
+    "decoder_start_token_id": null,
+    "diversity_penalty": 0.0,
+    "do_sample": false,
+    "drop_path_rate": 0.0,
+    "dropout": 0.0,
+    "early_stopping": false,
+    "encoder_no_repeat_ngram_size": 0,
+    "eos_token_id": null,
+    "eval_capacity_factor": 1.4,
+    "exponential_decay_length_penalty": null,
+    "finetuning_task": null,
+    "forced_bos_token_id": null,
+    "forced_eos_token_id": null,
+    "hidden_act": "gelu",
+    "hidden_size": 1024,
+    "id2label": {
+      "0": "LABEL_0",
+      "1": "LABEL_1"
+    },
+    "image_size": 448,
+    "initializer_factor": 0.1,
+    "initializer_range": 1e-10,
+    "intermediate_size": 4096,
+    "is_decoder": false,
+    "is_encoder_decoder": false,
+    "label2id": {
+      "LABEL_0": 0,
+      "LABEL_1": 1
+    },
+    "laux_allreduce": "all_nodes",
+    "layer_norm_eps": 1e-06,
+    "length_penalty": 1.0,
+    "max_length": 20,
+    "min_length": 0,
+    "model_type": "intern_vit_6b",
+    "moe_coeff_ratio": 0.5,
+    "moe_intermediate_size": 768,
+    "moe_output_scale": 4.0,
+    "no_repeat_ngram_size": 0,
+    "noisy_gate_policy": "RSample_before",
+    "norm_type": "layer_norm",
+    "num_attention_heads": 16,
+    "num_beam_groups": 1,
+    "num_beams": 1,
+    "num_channels": 3,
+    "num_experts": 8,
+    "num_hidden_layers": 24,
+    "num_return_sequences": 1,
+    "num_routed_experts": 4,
+    "num_shared_experts": 4,
+    "output_attentions": false,
+    "output_hidden_states": false,
+    "output_scores": false,
+    "pad_token_id": 151643,
+    "patch_size": 14,
+    "prefix": null,
+    "problem_type": null,
+    "pruned_heads": {},
+    "qk_normalization": false,
+    "qkv_bias": true,
+    "remove_invalid_values": false,
+    "repetition_penalty": 1.0,
+    "return_dict": true,
+    "return_dict_in_generate": false,
+    "sep_token_id": null,
+    "shared_expert_intermediate_size": 3072,
+    "suppress_tokens": null,
+    "task_specific_params": null,
+    "temperature": 1.0,
+    "tf_legacy_loss": false,
+    "tie_encoder_decoder": false,
+    "tie_word_embeddings": true,
+    "tokenizer_class": null,
+    "top_k": 50,
+    "top_p": 1.0,
+    "torch_dtype": "bfloat16",
+    "torchscript": false,
+    "transformers_version": "4.48.3",
+    "typical_p": 1.0,
+    "use_bfloat16": true,
+    "use_flash_attn": false,
+    "use_moe": false,
+    "use_residual": true,
+    "use_rts": false,
+    "use_weighted_residual": false
+  }
+}
+, task_type='causal_lm', num_labels=None)
+[INFO:swift] model.generation_config: GenerationConfig {
+  "eos_token_id": 151645,
+  "max_new_tokens": 64,
+  "pad_token_id": 151643
+}
+
+[INFO:swift] default_system: '你是书生·万象，英文名是InternVL，是由上海人工智能实验室、清华大学及多家合作单位联合开发的多模态大语言模型。'
+[INFO:swift] response_prefix: ''
+[INFO:swift] agent_template: react_en
+[INFO:swift] max_length: 4096
+[INFO:swift] norm_bbox: norm1000
+[INFO:swift] Start time of running main: 2026-11-24 07:49:35.943274
+FlashAttention2 is not installed.
+Generating train split: 0 examples [00:00, ? examples/s]Generating train split: 100 examples [00:00, 32862.99 examples/s]
+Map:   0%|          | 0/100 [00:00<?, ? examples/s]Map: 100%|██████████| 100/100 [00:00<00:00, 12797.66 examples/s]
+[INFO:swift] train_dataset: Dataset({
+    features: ['messages', 'images'],
+    num_rows: 100
+})
+[INFO:swift] val_dataset: None
+[INFO:swift] Setting input_size: 448. You can adjust this hyperparameter through the environment variable: `INPUT_SIZE`.
+[INFO:swift] Using environment variable `MAX_NUM`, Setting max_num: 1.
+[INFO:swift] Setting video_max_num: 1. You can adjust this hyperparameter through the environment variable: `VIDEO_MAX_NUM`.
+[INFO:swift] [INPUT_IDS] [151644, 8948, 198, 105043, 90286, 21287, 13935, 116669, 3837, 105205, 13072, 20412, 67916, 30698, 3837, 104625, 100633, 104455, 104800, 5373, 109065, 81217, 104581, 99721, 75317, 101101, 100013, 9370, 42140, 53772, 35243, 26288, 102064, 104949, 1773, 151645, 198, 151644, 872, 198, 151665, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151667, 151666, 3838, 374, 279, 24456, 1894, 304, 419, 2168, 30, 21806, 304, 825, 11652, 13, 151645, 198, 151644, 77091, 198, 785, 24456, 1894, 374, 2518, 13, 151645, 198]
+[INFO:swift] [INPUT] <|im_start|>system
+你是书生·万象，英文名是InternVL，是由上海人工智能实验室、清华大学及多家合作单位联合开发的多模态大语言模型。<|im_end|>
+<|im_start|>user
+<img>[151667 * 256]</img>What is the dominant color in this image? Answer in one sentence.<|im_end|>
+<|im_start|>assistant
+The dominant color is red.<|im_end|>
+
+[INFO:swift] [LABELS_IDS] [-100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, 785, 24456, 1894, 374, 2518, 13, 151645, 198]
+[INFO:swift] [LABELS] [-100 * 317]The dominant color is red.<|im_end|>
+
+[INFO:swift] The TrainArguments will be saved in: /root/pr4416-validation/framework-training/swift-output/v0-20261124-074932/args.json
+[INFO:swift] model: InternVLChatModel(
+  (vision_model): InternVisionModel(
+    (embeddings): InternVisionEmbeddings(
+      (patch_embedding): Conv2d(3, 1024, kernel_size=(14, 14), stride=(14, 14))
+    )
+    (encoder): InternVisionEncoder(
+      (layers): ModuleList(
+        (0-23): 24 x InternVisionEncoderLayer(
+          (attn): InternAttention(
+            (qkv): Linear(in_features=1024, out_features=3072, bias=True)
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=1024, out_features=1024, bias=True)
+          )
+          (mlp): InternMLP(
+            (act): GELUActivation()
+            (fc1): Linear(in_features=1024, out_features=4096, bias=True)
+            (fc2): Linear(in_features=4096, out_features=1024, bias=True)
+          )
+          (norm1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+          (norm2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+          (drop_path1): Identity()
+          (drop_path2): Identity()
+        )
+      )
+    )
+  )
+  (language_model): Qwen2ForCausalLM(
+    (model): Qwen2Model(
+      (embed_tokens): Embedding(151674, 896)
+      (layers): ModuleList(
+        (0-23): 24 x Qwen2DecoderLayer(
+          (self_attn): Qwen2Attention(
+            (q_proj): Linear(in_features=896, out_features=896, bias=True)
+            (k_proj): Linear(in_features=896, out_features=128, bias=True)
+            (v_proj): Linear(in_features=896, out_features=128, bias=True)
+            (o_proj): Linear(in_features=896, out_features=896, bias=False)
+          )
+          (mlp): Qwen2MLP(
+            (gate_proj): Linear(in_features=896, out_features=4864, bias=False)
+            (up_proj): Linear(in_features=896, out_features=4864, bias=False)
+            (down_proj): Linear(in_features=4864, out_features=896, bias=False)
+            (act_fn): SiLU()
+          )
+          (input_layernorm): Qwen2RMSNorm((896,), eps=1e-06)
+          (post_attention_layernorm): Qwen2RMSNorm((896,), eps=1e-06)
+        )
+      )
+      (norm): Qwen2RMSNorm((896,), eps=1e-06)
+      (rotary_emb): Qwen2RotaryEmbedding()
+    )
+    (lm_head): Linear(in_features=896, out_features=151674, bias=False)
+  )
+  (mlp1): Sequential(
+    (0): LayerNorm((4096,), eps=1e-05, elementwise_affine=True)
+    (1): Linear(in_features=4096, out_features=896, bias=True)
+    (2): GELU(approximate='none')
+    (3): Linear(in_features=896, out_features=896, bias=True)
+  )
+)
+[INFO:swift] model_parameter_info: InternVLChatModel: 938.1930M Params (629.6979M Trainable [67.1182%]), 0.0000M Buffers.
+/data/envs/ms-swift/lib/python3.9/site-packages/swift/trainers/mixin.py:89: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `Seq2SeqTrainer.__init__`. Use `processing_class` instead.
+  super().__init__(
+Detected kernel version 5.4.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+[INFO:swift] The logging file will be saved in: /root/pr4416-validation/framework-training/swift-output/v0-20261124-074932/logging.jsonl
+[INFO:swift] Successfully registered post_encode hook: ['InternVLChatModel'].
+{'loss': 1.41938376, 'token_acc': 0.625, 'learning_rate': 1e-06, 'memory(GiB)': 15.84, 'train_speed(iter/s)': 0.19983, 'epoch': 0.01, 'global_step/max_steps': '1/20', 'percentage': '5.00%', 'elapsed_time': '4s', 'remaining_time': '1m 31s'}
+{'loss': 0.4970116, 'token_acc': 0.88888889, 'learning_rate': 1e-06, 'memory(GiB)': 16.35, 'train_speed(iter/s)': 0.372362, 'epoch': 0.02, 'global_step/max_steps': '2/20', 'percentage': '10.00%', 'elapsed_time': '5s', 'remaining_time': '46s'}
+{'loss': 0.96142572, 'token_acc': 0.86666667, 'learning_rate': 1e-06, 'memory(GiB)': 16.35, 'train_speed(iter/s)': 0.523412, 'epoch': 0.03, 'global_step/max_steps': '3/20', 'percentage': '15.00%', 'elapsed_time': '5s', 'remaining_time': '31s'}
+{'loss': 3.64134526, 'token_acc': 0.46153846, 'learning_rate': 1e-06, 'memory(GiB)': 16.35, 'train_speed(iter/s)': 0.656572, 'epoch': 0.04, 'global_step/max_steps': '4/20', 'percentage': '20.00%', 'elapsed_time': '5s', 'remaining_time': '23s'}
+{'loss': 0.27668023, 'token_acc': 0.88888889, 'learning_rate': 1e-06, 'memory(GiB)': 16.35, 'train_speed(iter/s)': 0.774004, 'epoch': 0.05, 'global_step/max_steps': '5/20', 'percentage': '25.00%', 'elapsed_time': '6s', 'remaining_time': '18s'}
+{'loss': 0.41850102, 'token_acc': 0.75, 'learning_rate': 1e-06, 'memory(GiB)': 16.35, 'train_speed(iter/s)': 0.879719, 'epoch': 0.06, 'global_step/max_steps': '6/20', 'percentage': '30.00%', 'elapsed_time': '6s', 'remaining_time': '15s'}
+{'loss': 1.49505913, 'token_acc': 0.88888889, 'learning_rate': 1e-06, 'memory(GiB)': 16.35, 'train_speed(iter/s)': 0.974973, 'epoch': 0.07, 'global_step/max_steps': '7/20', 'percentage': '35.00%', 'elapsed_time': '6s', 'remaining_time': '12s'}
+{'loss': 0.55099595, 'token_acc': 0.86666667, 'learning_rate': 1e-06, 'memory(GiB)': 16.35, 'train_speed(iter/s)': 1.061132, 'epoch': 0.08, 'global_step/max_steps': '8/20', 'percentage': '40.00%', 'elapsed_time': '7s', 'remaining_time': '11s'}
+{'loss': 1.62755549, 'token_acc': 0.61538462, 'learning_rate': 1e-06, 'memory(GiB)': 16.35, 'train_speed(iter/s)': 1.138746, 'epoch': 0.09, 'global_step/max_steps': '9/20', 'percentage': '45.00%', 'elapsed_time': '7s', 'remaining_time': '9s'}
+{'loss': 0.17766739, 'token_acc': 1.0, 'learning_rate': 1e-06, 'memory(GiB)': 16.35, 'train_speed(iter/s)': 1.210121, 'epoch': 0.1, 'global_step/max_steps': '10/20', 'percentage': '50.00%', 'elapsed_time': '8s', 'remaining_time': '8s'}
+{'loss': 0.14738673, 'token_acc': 0.875, 'learning_rate': 1e-06, 'memory(GiB)': 16.35, 'train_speed(iter/s)': 1.275491, 'epoch': 0.11, 'global_step/max_steps': '11/20', 'percentage': '55.00%', 'elapsed_time': '8s', 'remaining_time': '6s'}
+{'loss': 0.1118385, 'token_acc': 1.0, 'learning_rate': 1e-06, 'memory(GiB)': 16.35, 'train_speed(iter/s)': 1.335151, 'epoch': 0.12, 'global_step/max_steps': '12/20', 'percentage': '60.00%', 'elapsed_time': '8s', 'remaining_time': '5s'}
+{'loss': 0.37284487, 'token_acc': 0.93333333, 'learning_rate': 1e-06, 'memory(GiB)': 16.35, 'train_speed(iter/s)': 1.390409, 'epoch': 0.13, 'global_step/max_steps': '13/20', 'percentage': '65.00%', 'elapsed_time': '9s', 'remaining_time': '4s'}
+{'loss': 1.27980125, 'token_acc': 0.69230769, 'learning_rate': 1e-06, 'memory(GiB)': 16.35, 'train_speed(iter/s)': 1.441827, 'epoch': 0.14, 'global_step/max_steps': '14/20', 'percentage': '70.00%', 'elapsed_time': '9s', 'remaining_time': '4s'}
+{'loss': 0.09126037, 'token_acc': 1.0, 'learning_rate': 1e-06, 'memory(GiB)': 16.35, 'train_speed(iter/s)': 1.489643, 'epoch': 0.15, 'global_step/max_steps': '15/20', 'percentage': '75.00%', 'elapsed_time': '9s', 'remaining_time': '3s'}
+{'loss': 0.12038869, 'token_acc': 1.0, 'learning_rate': 1e-06, 'memory(GiB)': 16.35, 'train_speed(iter/s)': 1.532949, 'epoch': 0.16, 'global_step/max_steps': '16/20', 'percentage': '80.00%', 'elapsed_time': '10s', 'remaining_time': '2s'}
+{'loss': 0.81041485, 'token_acc': 0.88888889, 'learning_rate': 1e-06, 'memory(GiB)': 16.35, 'train_speed(iter/s)': 1.574321, 'epoch': 0.17, 'global_step/max_steps': '17/20', 'percentage': '85.00%', 'elapsed_time': '10s', 'remaining_time': '1s'}
+{'loss': 0.31760177, 'token_acc': 0.93333333, 'learning_rate': 1e-06, 'memory(GiB)': 16.35, 'train_speed(iter/s)': 1.612936, 'epoch': 0.18, 'global_step/max_steps': '18/20', 'percentage': '90.00%', 'elapsed_time': '10s', 'remaining_time': '1s'}
+{'loss': 0.94130719, 'token_acc': 0.69230769, 'learning_rate': 1e-06, 'memory(GiB)': 16.35, 'train_speed(iter/s)': 1.64872, 'epoch': 0.19, 'global_step/max_steps': '19/20', 'percentage': '95.00%', 'elapsed_time': '11s', 'remaining_time': '0s'}
+{'loss': 0.16019578, 'token_acc': 1.0, 'learning_rate': 1e-06, 'memory(GiB)': 16.35, 'train_speed(iter/s)': 1.682722, 'epoch': 0.2, 'global_step/max_steps': '20/20', 'percentage': '100.00%', 'elapsed_time': '11s', 'remaining_time': '0s'}
+{'train_runtime': 11.7071, 'train_samples_per_second': 1.708, 'train_steps_per_second': 1.708, 'train_loss': 0.77093328, 'epoch': 0.2, 'global_step/max_steps': '20/20', 'percentage': '100.00%', 'elapsed_time': '11s', 'remaining_time': '0s'}
+[WARNING:swift] No training was carried out, which may be due to the dataset being too small or incorrect usage of resume_from_checkpoint.
+[INFO:swift] last_model_checkpoint: None
+[INFO:swift] best_model_checkpoint: None
+[INFO:swift] End time of running main: 2026-11-24 07:49:48.957851

@@ -1,0 +1,25 @@
+{
+  "paddleformers": {
+    "python": "3.12.16 | packaged by Anaconda, Inc. | (main, Oct 26 2026, 20:21:38) [GCC 14.3.0]",
+    "packages": {
+      "paddlepaddle-gpu": "3.4.0.post20260728+8a1040b3d08",
+      "paddleformers": "1.3.0.dev20261124",
+      "paddlefleet": "0.4.0.post20260728+712fd29a930"
+    }
+  },
+  "ms-swift": {
+    "python": "3.9.7 (default, Sep 16 2021, 13:09:58) \n[GCC 7.5.0]",
+    "packages": {
+      "ms-swift": "3.4.1",
+      "torch": "2.0.0",
+      "torchvision": "0.15.1",
+      "transformers": "4.48.3",
+      "accelerate": "1.1.1",
+      "peft": "0.14.0",
+      "trl": "0.15.2",
+      "datasets": "3.3.2",
+      "timm": "0.9.16",
+      "numpy": "1.26.4"
+    }
+  }
+}
