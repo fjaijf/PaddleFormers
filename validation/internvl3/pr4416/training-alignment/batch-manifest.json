@@ -1,0 +1,842 @@
+[
+  {
+    "input_ids": {
+      "shape": [
+        1,
+        321
+      ],
+      "dtype": "int64"
+    },
+    "labels": {
+      "shape": [
+        1,
+        321
+      ],
+      "dtype": "int64"
+    },
+    "pixel_values": {
+      "shape": [
+        1,
+        3,
+        448,
+        448
+      ],
+      "dtype": "float32"
+    },
+    "image_grid_thw": {
+      "shape": [
+        1,
+        3
+      ],
+      "dtype": "int64"
+    },
+    "attn_mask_startend_row_indices": {
+      "shape": [
+        1,
+        1,
+        321,
+        1
+      ],
+      "dtype": "int32"
+    },
+    "supervised_tokens": 9
+  },
+  {
+    "input_ids": {
+      "shape": [
+        1,
+        325
+      ],
+      "dtype": "int64"
+    },
+    "labels": {
+      "shape": [
+        1,
+        325
+      ],
+      "dtype": "int64"
+    },
+    "pixel_values": {
+      "shape": [
+        1,
+        3,
+        448,
+        448
+      ],
+      "dtype": "float32"
+    },
+    "image_grid_thw": {
+      "shape": [
+        1,
+        3
+      ],
+      "dtype": "int64"
+    },
+    "attn_mask_startend_row_indices": {
+      "shape": [
+        1,
+        1,
+        325,
+        1
+      ],
+      "dtype": "int32"
+    },
+    "supervised_tokens": 8
+  },
+  {
+    "input_ids": {
+      "shape": [
+        1,
+        329
+      ],
+      "dtype": "int64"
+    },
+    "labels": {
+      "shape": [
+        1,
+        329
+      ],
+      "dtype": "int64"
+    },
+    "pixel_values": {
+      "shape": [
+        1,
+        3,
+        448,
+        448
+      ],
+      "dtype": "float32"
+    },
+    "image_grid_thw": {
+      "shape": [
+        1,
+        3
+      ],
+      "dtype": "int64"
+    },
+    "attn_mask_startend_row_indices": {
+      "shape": [
+        1,
+        1,
+        329,
+        1
+      ],
+      "dtype": "int32"
+    },
+    "supervised_tokens": 16
+  },
+  {
+    "input_ids": {
+      "shape": [
+        1,
+        321
+      ],
+      "dtype": "int64"
+    },
+    "labels": {
+      "shape": [
+        1,
+        321
+      ],
+      "dtype": "int64"
+    },
+    "pixel_values": {
+      "shape": [
+        1,
+        3,
+        448,
+        448
+      ],
+      "dtype": "float32"
+    },
+    "image_grid_thw": {
+      "shape": [
+        1,
+        3
+      ],
+      "dtype": "int64"
+    },
+    "attn_mask_startend_row_indices": {
+      "shape": [
+        1,
+        1,
+        321,
+        1
+      ],
+      "dtype": "int32"
+    },
+    "supervised_tokens": 13
+  },
+  {
+    "input_ids": {
+      "shape": [
+        1,
+        329
+      ],
+      "dtype": "int64"
+    },
+    "labels": {
+      "shape": [
+        1,
+        329
+      ],
+      "dtype": "int64"
+    },
+    "pixel_values": {
+      "shape": [
+        1,
+        3,
+        448,
+        448
+      ],
+      "dtype": "float32"
+    },
+    "image_grid_thw": {
+      "shape": [
+        1,
+        3
+      ],
+      "dtype": "int64"
+    },
+    "attn_mask_startend_row_indices": {
+      "shape": [
+        1,
+        1,
+        329,
+        1
+      ],
+      "dtype": "int32"
+    },
+    "supervised_tokens": 16
+  },
+  {
+    "input_ids": {
+      "shape": [
+        1,
+        328
+      ],
+      "dtype": "int64"
+    },
+    "labels": {
+      "shape": [
+        1,
+        328
+      ],
+      "dtype": "int64"
+    },
+    "pixel_values": {
+      "shape": [
+        1,
+        3,
+        448,
+        448
+      ],
+      "dtype": "float32"
+    },
+    "image_grid_thw": {
+      "shape": [
+        1,
+        3
+      ],
+      "dtype": "int64"
+    },
+    "attn_mask_startend_row_indices": {
+      "shape": [
+        1,
+        1,
+        328,
+        1
+      ],
+      "dtype": "int32"
+    },
+    "supervised_tokens": 15
+  },
+  {
+    "input_ids": {
+      "shape": [
+        1,
+        321
+      ],
+      "dtype": "int64"
+    },
+    "labels": {
+      "shape": [
+        1,
+        321
+      ],
+      "dtype": "int64"
+    },
+    "pixel_values": {
+      "shape": [
+        1,
+        3,
+        448,
+        448
+      ],
+      "dtype": "float32"
+    },
+    "image_grid_thw": {
+      "shape": [
+        1,
+        3
+      ],
+      "dtype": "int64"
+    },
+    "attn_mask_startend_row_indices": {
+      "shape": [
+        1,
+        1,
+        321,
+        1
+      ],
+      "dtype": "int32"
+    },
+    "supervised_tokens": 13
+  },
+  {
+    "input_ids": {
+      "shape": [
+        1,
+        325
+      ],
+      "dtype": "int64"
+    },
+    "labels": {
+      "shape": [
+        1,
+        325
+      ],
+      "dtype": "int64"
+    },
+    "pixel_values": {
+      "shape": [
+        1,
+        3,
+        448,
+        448
+      ],
+      "dtype": "float32"
+    },
+    "image_grid_thw": {
+      "shape": [
+        1,
+        3
+      ],
+      "dtype": "int64"
+    },
+    "attn_mask_startend_row_indices": {
+      "shape": [
+        1,
+        1,
+        325,
+        1
+      ],
+      "dtype": "int32"
+    },
+    "supervised_tokens": 8
+  },
+  {
+    "input_ids": {
+      "shape": [
+        1,
+        325
+      ],
+      "dtype": "int64"
+    },
+    "labels": {
+      "shape": [
+        1,
+        325
+      ],
+      "dtype": "int64"
+    },
+    "pixel_values": {
+      "shape": [
+        1,
+        3,
+        448,
+        448
+      ],
+      "dtype": "float32"
+    },
+    "image_grid_thw": {
+      "shape": [
+        1,
+        3
+      ],
+      "dtype": "int64"
+    },
+    "attn_mask_startend_row_indices": {
+      "shape": [
+        1,
+        1,
+        325,
+        1
+      ],
+      "dtype": "int32"
+    },
+    "supervised_tokens": 8
+  },
+  {
+    "input_ids": {
+      "shape": [
+        1,
+        328
+      ],
+      "dtype": "int64"
+    },
+    "labels": {
+      "shape": [
+        1,
+        328
+      ],
+      "dtype": "int64"
+    },
+    "pixel_values": {
+      "shape": [
+        1,
+        3,
+        448,
+        448
+      ],
+      "dtype": "float32"
+    },
+    "image_grid_thw": {
+      "shape": [
+        1,
+        3
+      ],
+      "dtype": "int64"
+    },
+    "attn_mask_startend_row_indices": {
+      "shape": [
+        1,
+        1,
+        328,
+        1
+      ],
+      "dtype": "int32"
+    },
+    "supervised_tokens": 15
+  },
+  {
+    "input_ids": {
+      "shape": [
+        1,
+        329
+      ],
+      "dtype": "int64"
+    },
+    "labels": {
+      "shape": [
+        1,
+        329
+      ],
+      "dtype": "int64"
+    },
+    "pixel_values": {
+      "shape": [
+        1,
+        3,
+        448,
+        448
+      ],
+      "dtype": "float32"
+    },
+    "image_grid_thw": {
+      "shape": [
+        1,
+        3
+      ],
+      "dtype": "int64"
+    },
+    "attn_mask_startend_row_indices": {
+      "shape": [
+        1,
+        1,
+        329,
+        1
+      ],
+      "dtype": "int32"
+    },
+    "supervised_tokens": 16
+  },
+  {
+    "input_ids": {
+      "shape": [
+        1,
+        322
+      ],
+      "dtype": "int64"
+    },
+    "labels": {
+      "shape": [
+        1,
+        322
+      ],
+      "dtype": "int64"
+    },
+    "pixel_values": {
+      "shape": [
+        1,
+        3,
+        448,
+        448
+      ],
+      "dtype": "float32"
+    },
+    "image_grid_thw": {
+      "shape": [
+        1,
+        3
+      ],
+      "dtype": "int64"
+    },
+    "attn_mask_startend_row_indices": {
+      "shape": [
+        1,
+        1,
+        322,
+        1
+      ],
+      "dtype": "int32"
+    },
+    "supervised_tokens": 9
+  },
+  {
+    "input_ids": {
+      "shape": [
+        1,
+        321
+      ],
+      "dtype": "int64"
+    },
+    "labels": {
+      "shape": [
+        1,
+        321
+      ],
+      "dtype": "int64"
+    },
+    "pixel_values": {
+      "shape": [
+        1,
+        3,
+        448,
+        448
+      ],
+      "dtype": "float32"
+    },
+    "image_grid_thw": {
+      "shape": [
+        1,
+        3
+      ],
+      "dtype": "int64"
+    },
+    "attn_mask_startend_row_indices": {
+      "shape": [
+        1,
+        1,
+        321,
+        1
+      ],
+      "dtype": "int32"
+    },
+    "supervised_tokens": 9
+  },
+  {
+    "input_ids": {
+      "shape": [
+        1,
+        329
+      ],
+      "dtype": "int64"
+    },
+    "labels": {
+      "shape": [
+        1,
+        329
+      ],
+      "dtype": "int64"
+    },
+    "pixel_values": {
+      "shape": [
+        1,
+        3,
+        448,
+        448
+      ],
+      "dtype": "float32"
+    },
+    "image_grid_thw": {
+      "shape": [
+        1,
+        3
+      ],
+      "dtype": "int64"
+    },
+    "attn_mask_startend_row_indices": {
+      "shape": [
+        1,
+        1,
+        329,
+        1
+      ],
+      "dtype": "int32"
+    },
+    "supervised_tokens": 16
+  },
+  {
+    "input_ids": {
+      "shape": [
+        1,
+        322
+      ],
+      "dtype": "int64"
+    },
+    "labels": {
+      "shape": [
+        1,
+        322
+      ],
+      "dtype": "int64"
+    },
+    "pixel_values": {
+      "shape": [
+        1,
+        3,
+        448,
+        448
+      ],
+      "dtype": "float32"
+    },
+    "image_grid_thw": {
+      "shape": [
+        1,
+        3
+      ],
+      "dtype": "int64"
+    },
+    "attn_mask_startend_row_indices": {
+      "shape": [
+        1,
+        1,
+        322,
+        1
+      ],
+      "dtype": "int32"
+    },
+    "supervised_tokens": 9
+  },
+  {
+    "input_ids": {
+      "shape": [
+        1,
+        322
+      ],
+      "dtype": "int64"
+    },
+    "labels": {
+      "shape": [
+        1,
+        322
+      ],
+      "dtype": "int64"
+    },
+    "pixel_values": {
+      "shape": [
+        1,
+        3,
+        448,
+        448
+      ],
+      "dtype": "float32"
+    },
+    "image_grid_thw": {
+      "shape": [
+        1,
+        3
+      ],
+      "dtype": "int64"
+    },
+    "attn_mask_startend_row_indices": {
+      "shape": [
+        1,
+        1,
+        322,
+        1
+      ],
+      "dtype": "int32"
+    },
+    "supervised_tokens": 9
+  },
+  {
+    "input_ids": {
+      "shape": [
+        1,
+        322
+      ],
+      "dtype": "int64"
+    },
+    "labels": {
+      "shape": [
+        1,
+        322
+      ],
+      "dtype": "int64"
+    },
+    "pixel_values": {
+      "shape": [
+        1,
+        3,
+        448,
+        448
+      ],
+      "dtype": "float32"
+    },
+    "image_grid_thw": {
+      "shape": [
+        1,
+        3
+      ],
+      "dtype": "int64"
+    },
+    "attn_mask_startend_row_indices": {
+      "shape": [
+        1,
+        1,
+        322,
+        1
+      ],
+      "dtype": "int32"
+    },
+    "supervised_tokens": 9
+  },
+  {
+    "input_ids": {
+      "shape": [
+        1,
+        329
+      ],
+      "dtype": "int64"
+    },
+    "labels": {
+      "shape": [
+        1,
+        329
+      ],
+      "dtype": "int64"
+    },
+    "pixel_values": {
+      "shape": [
+        1,
+        3,
+        448,
+        448
+      ],
+      "dtype": "float32"
+    },
+    "image_grid_thw": {
+      "shape": [
+        1,
+        3
+      ],
+      "dtype": "int64"
+    },
+    "attn_mask_startend_row_indices": {
+      "shape": [
+        1,
+        1,
+        329,
+        1
+      ],
+      "dtype": "int32"
+    },
+    "supervised_tokens": 16
+  },
+  {
+    "input_ids": {
+      "shape": [
+        1,
+        328
+      ],
+      "dtype": "int64"
+    },
+    "labels": {
+      "shape": [
+        1,
+        328
+      ],
+      "dtype": "int64"
+    },
+    "pixel_values": {
+      "shape": [
+        1,
+        3,
+        448,
+        448
+      ],
+      "dtype": "float32"
+    },
+    "image_grid_thw": {
+      "shape": [
+        1,
+        3
+      ],
+      "dtype": "int64"
+    },
+    "attn_mask_startend_row_indices": {
+      "shape": [
+        1,
+        1,
+        328,
+        1
+      ],
+      "dtype": "int32"
+    },
+    "supervised_tokens": 15
+  },
+  {
+    "input_ids": {
+      "shape": [
+        1,
+        322
+      ],
+      "dtype": "int64"
+    },
+    "labels": {
+      "shape": [
+        1,
+        322
+      ],
+      "dtype": "int64"
+    },
+    "pixel_values": {
+      "shape": [
+        1,
+        3,
+        448,
+        448
+      ],
+      "dtype": "float32"
+    },
+    "image_grid_thw": {
+      "shape": [
+        1,
+        3
+      ],
+      "dtype": "int64"
+    },
+    "attn_mask_startend_row_indices": {
+      "shape": [
+        1,
+        1,
+        322,
+        1
+      ],
+      "dtype": "int32"
+    },
+    "supervised_tokens": 9
+  }
+]

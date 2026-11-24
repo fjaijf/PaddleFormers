@@ -1,0 +1,28 @@
+{
+  "backend": "torch",
+  "dtype": "float32",
+  "logit_shape": [
+    1,
+    20,
+    151674
+  ],
+  "input_length": 3337,
+  "num_patches": 13,
+  "generated_ids": [
+    [
+      785,
+      2168,
+      4419,
+      264,
+      2518,
+      88222,
+      448,
+      264,
+      34847,
+      62144
+    ]
+  ],
+  "generated_text": [
+    "The image features a red panda with a distinctive redd"
+  ]
+}

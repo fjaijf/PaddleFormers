@@ -1,0 +1,33 @@
+{
+  "tested_commit": "abaa61909ab2328500e5d4bde41a447c82c3ccdc",
+  "date": "2026-11-24",
+  "files": {
+    "bf16-prior-observation.json": "504fa79c29b237a02cf43694cde45b7db50c6aa080d73c52f73eff049aaec0ce",
+    "checkpoint-config.json": "8a252be385dbef3abf1c58d028ea5116849a33dc7a1601c350c3ee28f202524c",
+    "environment-and-weights.json": "4f796fc9a139d9d0945b7b2aa051caf6e27422f0596a953c8ae1030d07769166",
+    "fp32/compare_internvl3_logits.py": "e85604b49d7551cebd3d1e2506e36f98d1cc3509ffe3e0a2849bf9d17f99df6e",
+    "fp32/measure-fp32.py": "e40c69dc2b322caf5da452e3d63cefd1ef3feac7d01a50ebd828a2b00b8138a6",
+    "fp32/paddle-results.json": "a0defc8a952a8cb938426cbcd891ec64563037f8583da67bf2feb01e9383f1c4",
+    "fp32/paddle.log": "6ff7bedb891dcea86b16e73d62b552d6f0bcbce112366fa5560080bfbb6b8204",
+    "fp32/reference.log": "fee27efc24f0ee50320932b64841e046717393893df272ffce1c11899f28b0e8",
+    "fp32/run-fp32.sh": "5d6de25d1b4c194cfa018cb538b11266bd1259d7856c2ba2af44e9b897ef2cc3",
+    "fp32/summary.json": "7d2b9e3ee1ec2067b23f89feca9ddb31576ff0e9070c7d6f58e1bdc8861c5e62",
+    "fp32/torch-results.json": "2171891805253b3070f73cbf5bace71b537d9c7d8ba2f04bd84daf8a577cb76c",
+    "README.md": "ac76cf8e89bed96f518e43c5937647bb27b9a6dfdc92eafe1a4ebed26e4935b2",
+    "training-alignment/batch-manifest.json": "d60c9bfae646d3098f00e72384d724a79471697af6343ab7c96cdea1ce740628",
+    "training-alignment/export-batches.py": "4ed5ec3ffe0c5c54d7605d37aa6910a257957d886a58b92f227dec648fec19bb",
+    "training-alignment/export.yaml": "c605e827087d2ef748d9a560f4b7707996660b2d7cf99f304f5eb3782fedb704",
+    "training-alignment/loss-comparison.csv": "f21b665dd00051e56f4121df3327e27b045d48995fe39718c126dc867182fd4b",
+    "training-alignment/loss-comparison.png": "3dcf2c62bf66aadc1ca47955de79b170ad476ad4ce2c8dfeee0438884c564654",
+    "training-alignment/loss-diff.png": "56edfffa690300529de388700c9201b6440263ef32e018ec48af94aef1863634",
+    "training-alignment/paddle-train.json": "76b4dabebc55f311b1edb86e1085c05d6b381db032dad31ace882d38df87ba51",
+    "training-alignment/paddle-train.log": "de1d3d68b3189428bd85e33c2820159a2f508351805abe559d1406755305072c",
+    "training-alignment/plot_results.py": "93c22fd33981800c4dd0f9b6f5771388d31e232297fe9fa7b75e2ec54e608035",
+    "training-alignment/tests.log": "e3ee916de298f8951224eaccdd064bfa5411d730c33c8429c3b6cb17b62e972e",
+    "training-alignment/tests.xml": "eec7f915df76ec4b41a9947581360642ee991d5a1a487784613d09a2fc96fd54",
+    "training-alignment/torch-train.json": "22f14747b274298d31ae8af019b454c9016414039724b54428d11e4ef6e363ee",
+    "training-alignment/torch-train.log": "b22e4f96c4cfd1f5c025b7d50ac090c993444ae17a0dc492f2054145f276559f",
+    "training-alignment/train_alignment.py": "86f4819b56cb24ac4f8aeaf4f7a75caa9af0051cefb54129d35f32555f8b2dae",
+    "training-alignment/training-summary.json": "75c6daa9aeee82d34fd1f6d5d18354d8fd2feaf0e0e9046f0328460ddec52106"
+  }
+}

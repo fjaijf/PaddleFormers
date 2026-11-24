@@ -1,0 +1,12 @@
+{
+  "weights": [
+    {
+      "file": "model.safetensors",
+      "sha256": "a8b67c54568417f3631723e6b3e120720eaa638e03e62dc25666c70e3ae3e484"
+    }
+  ],
+  "config_sha256": "8a252be385dbef3abf1c58d028ea5116849a33dc7a1601c350c3ee28f202524c",
+  "paddle_python": "Python 3.12.16",
+  "reference_python": "Python 3.9.7",
+  "gpu": "NVIDIA A100-SXM4-80GB, 525.60.11"
+}

@@ -1,0 +1,16 @@
+{
+  "steps": 20,
+  "precision": "float32",
+  "threshold": 0.01,
+  "all_steps_pass": true,
+  "mean_abs_loss_diff": 1.8462538719177247e-06,
+  "max_abs_loss_diff": 5.364418029785156e-06,
+  "max_diff_step": 2,
+  "paddle_first_loss": 1.8007973432540894,
+  "reference_first_loss": 1.8007935285568237,
+  "paddle_last_loss": 0.22947925329208374,
+  "reference_last_loss": 0.22947782278060913,
+  "paddle_mean_loss": 0.7385711252689362,
+  "reference_mean_loss": 0.7385696664452552,
+  "identical_batch_hashes": true
+}

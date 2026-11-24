@@ -1,0 +1,12 @@
+........s......ss.........s.sss..ss                                      [100%]
+=========================== short test summary info ============================
+SKIPPED [1] tests/transformers/internvl3/test_modeling_internvl3.py:396: InternVLChatModel.generate currently only supports greedy decoding.
+SKIPPED [1] tests/transformers/internvl3/test_modeling_internvl3.py:399: InternVLChatModel.generate currently only supports greedy decoding.
+SKIPPED [1] tests/transformers/internvl3/test_modeling_internvl3.py:516: InternVLChatModel.forward does not propagate hidden_states from sub-modules.
+SKIPPED [1] tests/transformers/internvl3/test_modeling_internvl3.py:522: InternVLChatConfig has no top-level vocab_size; text vocab lives in llm_config.
+SKIPPED [1] tests/transformers/internvl3/test_modeling_internvl3.py:519: InternVLChatConfig has no top-level vocab_size; text vocab lives in llm_config.
+SKIPPED [1] tests/transformers/test_modeling_common.py:482: Not implemented
+SKIPPED [1] tests/transformers/internvl3/test_modeling_internvl3.py:402: InternVLChatModel.generate currently only supports greedy decoding.
+SKIPPED [1] tests/transformers/test_modeling_common.py:312: Not implemented yet
+SKIPPED [1] tests/transformers/test_modeling_common.py:317: Not implemented yet
+26 passed, 9 skipped in 7.57s

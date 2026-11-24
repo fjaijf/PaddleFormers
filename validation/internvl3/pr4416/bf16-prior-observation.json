@@ -1,0 +1,9 @@
+{
+  "tested_commit": "79af1950a3514ae274bd37d188c53b95aab69492",
+  "precision": "bfloat16",
+  "mean_abs_logit_diff": 0.1086723729968071,
+  "max_abs_logit_diff": 1.6875,
+  "generation_identical": true,
+  "passed_0_01": false,
+  "note": "Historical BF16 observation. Old training losses are superseded by the corrected FP32 training alignment."
+}
