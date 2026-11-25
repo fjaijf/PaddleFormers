@@ -1,0 +1,454 @@
+{
+  "model": "openbmb/MiniCPM4.1-8B",
+  "commit": "729cca11dc5663b00f67f91c62fb69724cf54c10",
+  "dtype": "float32",
+  "logits_shape": [
+    1,
+    20,
+    73448
+  ],
+  "log_diff_mean_abs": 4.128514096473112e-06,
+  "logits_max_abs_diff": 6.580352783203125e-05,
+  "top1_matches": 20,
+  "generated_10_ids_match": true,
+  "torch_generated_ids": [
+    [
+      17251,
+      1982,
+      1441,
+      3374,
+      1385,
+      4702,
+      1384,
+      3122,
+      1358,
+      2809
+    ]
+  ],
+  "paddle_generated_ids": [
+    [
+      17251,
+      1982,
+      1441,
+      3374,
+      1385,
+      4702,
+      1384,
+      3122,
+      1358,
+      2809
+    ]
+  ],
+  "per_position_mean_abs_diff": [
+    2.253859331958897e-06,
+    3.0561609016991258e-06,
+    2.4744982489640414e-06,
+    2.2449605041348116e-06,
+    2.48137928101598e-06,
+    3.3379811731433623e-06,
+    3.183020622237288e-06,
+    3.646231217079259e-06,
+    3.463879742434634e-06,
+    5.6818313153606494e-06,
+    8.356584101497072e-06,
+    1.110878811631619e-05,
+    6.752277541294565e-06,
+    4.932364069734164e-06,
+    2.7881408364723733e-06,
+    3.4098443942607183e-06,
+    3.0898596322323047e-06,
+    3.4198058538609347e-06,
+    3.0143671438822033e-06,
+    3.874447901883656e-06
+  ],
+  "per_position_max_abs_diff": [
+    1.5497207641601562e-05,
+    1.8596649169921875e-05,
+    1.5735626220703125e-05,
+    1.71661376953125e-05,
+    2.002716064453125e-05,
+    2.1457672119140625e-05,
+    2.288818359375e-05,
+    2.574920654296875e-05,
+    2.47955322265625e-05,
+    4.673004150390625e-05,
+    4.76837158203125e-05,
+    6.580352783203125e-05,
+    4.76837158203125e-05,
+    3.528594970703125e-05,
+    2.193450927734375e-05,
+    1.71661376953125e-05,
+    2.193450927734375e-05,
+    2.3365020751953125e-05,
+    1.9073486328125e-05,
+    2.47955322265625e-05
+  ],
+  "training": {
+    "steps": 20,
+    "paddle_first": 2.3276445865631104,
+    "swift_first": 2.3276426792144775,
+    "paddle_last": 0.15339745581150055,
+    "swift_last": 0.1533971130847931,
+    "paddle_mean": 1.7521549709141255,
+    "swift_mean": 1.7521543473005294,
+    "loss_mean_abs_diff": 1.5176832675933837e-06,
+    "loss_max_abs_diff": 9.149312973022461e-06
+  },
+  "batch_checks": [
+    {
+      "step": 1,
+      "input_ids_equal_with_causal_shift": true,
+      "supervision_labels_equal_after_shift": true,
+      "position_ids_equal": true,
+      "paddle_keys": [
+        "input_ids",
+        "position_ids",
+        "attn_mask_startend_row_indices",
+        "labels"
+      ],
+      "swift_keys": [
+        "input_ids",
+        "labels",
+        "attention_mask"
+      ]
+    },
+    {
+      "step": 2,
+      "input_ids_equal_with_causal_shift": true,
+      "supervision_labels_equal_after_shift": true,
+      "position_ids_equal": true,
+      "paddle_keys": [
+        "input_ids",
+        "position_ids",
+        "attn_mask_startend_row_indices",
+        "labels"
+      ],
+      "swift_keys": [
+        "input_ids",
+        "labels",
+        "attention_mask"
+      ]
+    },
+    {
+      "step": 3,
+      "input_ids_equal_with_causal_shift": true,
+      "supervision_labels_equal_after_shift": true,
+      "position_ids_equal": true,
+      "paddle_keys": [
+        "input_ids",
+        "position_ids",
+        "attn_mask_startend_row_indices",
+        "labels"
+      ],
+      "swift_keys": [
+        "input_ids",
+        "labels",
+        "attention_mask"
+      ]
+    },
+    {
+      "step": 4,
+      "input_ids_equal_with_causal_shift": true,
+      "supervision_labels_equal_after_shift": true,
+      "position_ids_equal": true,
+      "paddle_keys": [
+        "input_ids",
+        "position_ids",
+        "attn_mask_startend_row_indices",
+        "labels"
+      ],
+      "swift_keys": [
+        "input_ids",
+        "labels",
+        "attention_mask"
+      ]
+    },
+    {
+      "step": 5,
+      "input_ids_equal_with_causal_shift": true,
+      "supervision_labels_equal_after_shift": true,
+      "position_ids_equal": true,
+      "paddle_keys": [
+        "input_ids",
+        "position_ids",
+        "attn_mask_startend_row_indices",
+        "labels"
+      ],
+      "swift_keys": [
+        "input_ids",
+        "labels",
+        "attention_mask"
+      ]
+    },
+    {
+      "step": 6,
+      "input_ids_equal_with_causal_shift": true,
+      "supervision_labels_equal_after_shift": true,
+      "position_ids_equal": true,
+      "paddle_keys": [
+        "input_ids",
+        "position_ids",
+        "attn_mask_startend_row_indices",
+        "labels"
+      ],
+      "swift_keys": [
+        "input_ids",
+        "labels",
+        "attention_mask"
+      ]
+    },
+    {
+      "step": 7,
+      "input_ids_equal_with_causal_shift": true,
+      "supervision_labels_equal_after_shift": true,
+      "position_ids_equal": true,
+      "paddle_keys": [
+        "input_ids",
+        "position_ids",
+        "attn_mask_startend_row_indices",
+        "labels"
+      ],
+      "swift_keys": [
+        "input_ids",
+        "labels",
+        "attention_mask"
+      ]
+    },
+    {
+      "step": 8,
+      "input_ids_equal_with_causal_shift": true,
+      "supervision_labels_equal_after_shift": true,
+      "position_ids_equal": true,
+      "paddle_keys": [
+        "input_ids",
+        "position_ids",
+        "attn_mask_startend_row_indices",
+        "labels"
+      ],
+      "swift_keys": [
+        "input_ids",
+        "labels",
+        "attention_mask"
+      ]
+    },
+    {
+      "step": 9,
+      "input_ids_equal_with_causal_shift": true,
+      "supervision_labels_equal_after_shift": true,
+      "position_ids_equal": true,
+      "paddle_keys": [
+        "input_ids",
+        "position_ids",
+        "attn_mask_startend_row_indices",
+        "labels"
+      ],
+      "swift_keys": [
+        "input_ids",
+        "labels",
+        "attention_mask"
+      ]
+    },
+    {
+      "step": 10,
+      "input_ids_equal_with_causal_shift": true,
+      "supervision_labels_equal_after_shift": true,
+      "position_ids_equal": true,
+      "paddle_keys": [
+        "input_ids",
+        "position_ids",
+        "attn_mask_startend_row_indices",
+        "labels"
+      ],
+      "swift_keys": [
+        "input_ids",
+        "labels",
+        "attention_mask"
+      ]
+    },
+    {
+      "step": 11,
+      "input_ids_equal_with_causal_shift": true,
+      "supervision_labels_equal_after_shift": true,
+      "position_ids_equal": true,
+      "paddle_keys": [
+        "input_ids",
+        "position_ids",
+        "attn_mask_startend_row_indices",
+        "labels"
+      ],
+      "swift_keys": [
+        "input_ids",
+        "labels",
+        "attention_mask"
+      ]
+    },
+    {
+      "step": 12,
+      "input_ids_equal_with_causal_shift": true,
+      "supervision_labels_equal_after_shift": true,
+      "position_ids_equal": true,
+      "paddle_keys": [
+        "input_ids",
+        "position_ids",
+        "attn_mask_startend_row_indices",
+        "labels"
+      ],
+      "swift_keys": [
+        "input_ids",
+        "labels",
+        "attention_mask"
+      ]
+    },
+    {
+      "step": 13,
+      "input_ids_equal_with_causal_shift": true,
+      "supervision_labels_equal_after_shift": true,
+      "position_ids_equal": true,
+      "paddle_keys": [
+        "input_ids",
+        "position_ids",
+        "attn_mask_startend_row_indices",
+        "labels"
+      ],
+      "swift_keys": [
+        "input_ids",
+        "labels",
+        "attention_mask"
+      ]
+    },
+    {
+      "step": 14,
+      "input_ids_equal_with_causal_shift": true,
+      "supervision_labels_equal_after_shift": true,
+      "position_ids_equal": true,
+      "paddle_keys": [
+        "input_ids",
+        "position_ids",
+        "attn_mask_startend_row_indices",
+        "labels"
+      ],
+      "swift_keys": [
+        "input_ids",
+        "labels",
+        "attention_mask"
+      ]
+    },
+    {
+      "step": 15,
+      "input_ids_equal_with_causal_shift": true,
+      "supervision_labels_equal_after_shift": true,
+      "position_ids_equal": true,
+      "paddle_keys": [
+        "input_ids",
+        "position_ids",
+        "attn_mask_startend_row_indices",
+        "labels"
+      ],
+      "swift_keys": [
+        "input_ids",
+        "labels",
+        "attention_mask"
+      ]
+    },
+    {
+      "step": 16,
+      "input_ids_equal_with_causal_shift": true,
+      "supervision_labels_equal_after_shift": true,
+      "position_ids_equal": true,
+      "paddle_keys": [
+        "input_ids",
+        "position_ids",
+        "attn_mask_startend_row_indices",
+        "labels"
+      ],
+      "swift_keys": [
+        "input_ids",
+        "labels",
+        "attention_mask"
+      ]
+    },
+    {
+      "step": 17,
+      "input_ids_equal_with_causal_shift": true,
+      "supervision_labels_equal_after_shift": true,
+      "position_ids_equal": true,
+      "paddle_keys": [
+        "input_ids",
+        "position_ids",
+        "attn_mask_startend_row_indices",
+        "labels"
+      ],
+      "swift_keys": [
+        "input_ids",
+        "labels",
+        "attention_mask"
+      ]
+    },
+    {
+      "step": 18,
+      "input_ids_equal_with_causal_shift": true,
+      "supervision_labels_equal_after_shift": true,
+      "position_ids_equal": true,
+      "paddle_keys": [
+        "input_ids",
+        "position_ids",
+        "attn_mask_startend_row_indices",
+        "labels"
+      ],
+      "swift_keys": [
+        "input_ids",
+        "labels",
+        "attention_mask"
+      ]
+    },
+    {
+      "step": 19,
+      "input_ids_equal_with_causal_shift": true,
+      "supervision_labels_equal_after_shift": true,
+      "position_ids_equal": true,
+      "paddle_keys": [
+        "input_ids",
+        "position_ids",
+        "attn_mask_startend_row_indices",
+        "labels"
+      ],
+      "swift_keys": [
+        "input_ids",
+        "labels",
+        "attention_mask"
+      ]
+    },
+    {
+      "step": 20,
+      "input_ids_equal_with_causal_shift": true,
+      "supervision_labels_equal_after_shift": true,
+      "position_ids_equal": true,
+      "paddle_keys": [
+        "input_ids",
+        "position_ids",
+        "attn_mask_startend_row_indices",
+        "labels"
+      ],
+      "swift_keys": [
+        "input_ids",
+        "labels",
+        "attention_mask"
+      ]
+    }
+  ],
+  "model_info": {
+    "paddle": {
+      "parameter_dtypes": [
+        "paddle.float32"
+      ],
+      "trainable_parameters": 22151168
+    },
+    "swift": {
+      "parameter_dtypes": [
+        "torch.float32"
+      ],
+      "trainable_parameters": 22151168
+    }
+  },
+  "lora_initialization_equal": true
+}

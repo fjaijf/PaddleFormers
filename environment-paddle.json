@@ -1,0 +1,627 @@
+{
+  "python": "3.12.16 | packaged by Anaconda, Inc. | (main, Oct 26 2026, 20:21:38) [GCC 14.3.0]",
+  "platform": "Linux-5.4.0-164-generic-x86_64-with-glibc2.31",
+  "packages": {
+    "paddlepaddle-gpu": "3.4.0.post20260728+8a1040b3d08",
+    "transformers": "5.3.0",
+    "numpy": "1.26.4",
+    "paddlefleet": "0.4.0.post20260728+712fd29a930"
+  },
+  "installed_packages": [
+    {
+      "name": "aiohappyeyeballs",
+      "version": "2.7.1"
+    },
+    {
+      "name": "aiohttp",
+      "version": "3.14.5"
+    },
+    {
+      "name": "aiosignal",
+      "version": "1.4.0"
+    },
+    {
+      "name": "aistudio_sdk",
+      "version": "0.3.9"
+    },
+    {
+      "name": "annotated-doc",
+      "version": "0.0.7"
+    },
+    {
+      "name": "annotated-types",
+      "version": "0.8.0"
+    },
+    {
+      "name": "anyio",
+      "version": "4.16.0"
+    },
+    {
+      "name": "apache-tvm-ffi",
+      "version": "0.1.11"
+    },
+    {
+      "name": "attrs",
+      "version": "26.1.0"
+    },
+    {
+      "name": "audioread",
+      "version": "3.1.0"
+    },
+    {
+      "name": "babel",
+      "version": "2.18.0"
+    },
+    {
+      "name": "bce-python-sdk",
+      "version": "0.9.79"
+    },
+    {
+      "name": "binpacking",
+      "version": "2.0.1"
+    },
+    {
+      "name": "blinker",
+      "version": "1.9.0"
+    },
+    {
+      "name": "certifi",
+      "version": "2026.11.20"
+    },
+    {
+      "name": "cffi",
+      "version": "2.1.1"
+    },
+    {
+      "name": "charset-normalizer",
+      "version": "3.5.3"
+    },
+    {
+      "name": "click",
+      "version": "8.5.1"
+    },
+    {
+      "name": "cloudpickle",
+      "version": "3.1.3"
+    },
+    {
+      "name": "colorlog",
+      "version": "6.12.0"
+    },
+    {
+      "name": "contourpy",
+      "version": "1.3.3"
+    },
+    {
+      "name": "crc32c",
+      "version": "2.9.post0"
+    },
+    {
+      "name": "cryptography",
+      "version": "50.0.2"
+    },
+    {
+      "name": "cuda-bindings",
+      "version": "12.9.11"
+    },
+    {
+      "name": "cuda-pathfinder",
+      "version": "1.9.1"
+    },
+    {
+      "name": "cuda-python",
+      "version": "12.9.4"
+    },
+    {
+      "name": "cycler",
+      "version": "0.12.1"
+    },
+    {
+      "name": "datasets",
+      "version": "4.0.0"
+    },
+    {
+      "name": "decorator",
+      "version": "5.3.2"
+    },
+    {
+      "name": "dill",
+      "version": "0.3.8"
+    },
+    {
+      "name": "fast_dataindex",
+      "version": "0.1.2"
+    },
+    {
+      "name": "filelock",
+      "version": "4.3.1"
+    },
+    {
+      "name": "Flask",
+      "version": "3.1.3"
+    },
+    {
+      "name": "flask-babel",
+      "version": "4.0.0"
+    },
+    {
+      "name": "fonttools",
+      "version": "4.68.0"
+    },
+    {
+      "name": "frozenlist",
+      "version": "1.8.0"
+    },
+    {
+      "name": "fsspec",
+      "version": "2025.3.0"
+    },
+    {
+      "name": "future",
+      "version": "1.0.0"
+    },
+    {
+      "name": "GPUtil",
+      "version": "1.4.0"
+    },
+    {
+      "name": "h11",
+      "version": "0.16.0"
+    },
+    {
+      "name": "hf-xet",
+      "version": "1.8.0"
+    },
+    {
+      "name": "httpcore",
+      "version": "1.0.9"
+    },
+    {
+      "name": "httpx",
+      "version": "0.28.1"
+    },
+    {
+      "name": "huggingface_hub",
+      "version": "1.33.0"
+    },
+    {
+      "name": "idna",
+      "version": "3.20"
+    },
+    {
+      "name": "importlib_metadata",
+      "version": "10.2.0"
+    },
+    {
+      "name": "iniconfig",
+      "version": "2.3.1"
+    },
+    {
+      "name": "itsdangerous",
+      "version": "2.2.0"
+    },
+    {
+      "name": "Jinja2",
+      "version": "3.1.6"
+    },
+    {
+      "name": "joblib",
+      "version": "1.6.0"
+    },
+    {
+      "name": "kiwisolver",
+      "version": "1.5.1"
+    },
+    {
+      "name": "lazy-importer",
+      "version": "0.1.0"
+    },
+    {
+      "name": "lazy-loader",
+      "version": "0.6"
+    },
+    {
+      "name": "librosa",
+      "version": "0.11.0"
+    },
+    {
+      "name": "llvmlite",
+      "version": "0.50.0"
+    },
+    {
+      "name": "markdown-it-py",
+      "version": "4.3.0"
+    },
+    {
+      "name": "MarkupSafe",
+      "version": "3.0.4"
+    },
+    {
+      "name": "matplotlib",
+      "version": "3.11.2"
+    },
+    {
+      "name": "mdurl",
+      "version": "0.1.2"
+    },
+    {
+      "name": "ml_dtypes",
+      "version": "0.5.4"
+    },
+    {
+      "name": "modelscope",
+      "version": "1.40.3"
+    },
+    {
+      "name": "modelscope-hub",
+      "version": "0.7.1"
+    },
+    {
+      "name": "msgpack",
+      "version": "1.2.4"
+    },
+    {
+      "name": "multidict",
+      "version": "7.2.1"
+    },
+    {
+      "name": "multiprocess",
+      "version": "0.70.16"
+    },
+    {
+      "name": "narwhals",
+      "version": "2.29.0"
+    },
+    {
+      "name": "networkx",
+      "version": "3.7"
+    },
+    {
+      "name": "numba",
+      "version": "0.68.1"
+    },
+    {
+      "name": "numpy",
+      "version": "1.26.4"
+    },
+    {
+      "name": "nvidia-cublas-cu12",
+      "version": "12.9.0.13"
+    },
+    {
+      "name": "nvidia-cuda-cccl-cu12",
+      "version": "12.9.27"
+    },
+    {
+      "name": "nvidia-cuda-cupti-cu12",
+      "version": "12.9.19"
+    },
+    {
+      "name": "nvidia-cuda-nvrtc-cu12",
+      "version": "12.9.41"
+    },
+    {
+      "name": "nvidia-cuda-runtime-cu12",
+      "version": "12.9.37"
+    },
+    {
+      "name": "nvidia-cudnn-cu12",
+      "version": "9.9.0.52"
+    },
+    {
+      "name": "nvidia-cufft-cu12",
+      "version": "11.4.0.6"
+    },
+    {
+      "name": "nvidia-cufile-cu12",
+      "version": "1.14.0.30"
+    },
+    {
+      "name": "nvidia-curand-cu12",
+      "version": "10.3.10.19"
+    },
+    {
+      "name": "nvidia-cusolver-cu12",
+      "version": "11.7.4.40"
+    },
+    {
+      "name": "nvidia-cusparse-cu12",
+      "version": "12.5.9.5"
+    },
+    {
+      "name": "nvidia-cusparselt-cu12",
+      "version": "0.7.1"
+    },
+    {
+      "name": "nvidia-cutlass-dsl",
+      "version": "4.4.1"
+    },
+    {
+      "name": "nvidia-cutlass-dsl-libs-base",
+      "version": "4.4.1"
+    },
+    {
+      "name": "nvidia-cutlass-dsl-libs-cu13",
+      "version": "4.4.1"
+    },
+    {
+      "name": "nvidia-nccl-cu12",
+      "version": "2.28.3"
+    },
+    {
+      "name": "nvidia-nvjitlink-cu12",
+      "version": "12.9.41"
+    },
+    {
+      "name": "nvidia-nvtx-cu12",
+      "version": "12.9.19"
+    },
+    {
+      "name": "omegaconf",
+      "version": "2.4.0"
+    },
+    {
+      "name": "opt-einsum",
+      "version": "3.3.0"
+    },
+    {
+      "name": "orjson",
+      "version": "3.13.0"
+    },
+    {
+      "name": "packaging",
+      "version": "26.3"
+    },
+    {
+      "name": "paddle-nvidia-nvshmem-cu12",
+      "version": "3.4.5"
+    },
+    {
+      "name": "paddlecodec",
+      "version": "0.2.0"
+    },
+    {
+      "name": "paddlefleet",
+      "version": "0.4.0.post20260728+712fd29a930"
+    },
+    {
+      "name": "paddlefleet-ops",
+      "version": "0.4.0.post20260728+712fd29a"
+    },
+    {
+      "name": "paddleformers",
+      "version": "1.3.0.dev20261124",
+      "editable_project_location": "/root/baidu_98_internvl/PaddleFormers"
+    },
+    {
+      "name": "paddlepaddle-gpu",
+      "version": "3.4.0.post20260728+8a1040b3d08"
+    },
+    {
+      "name": "pandas",
+      "version": "3.0.6"
+    },
+    {
+      "name": "parameterized",
+      "version": "0.9.0"
+    },
+    {
+      "name": "pillow",
+      "version": "13.0.0"
+    },
+    {
+      "name": "pip",
+      "version": "25.0.1"
+    },
+    {
+      "name": "platformdirs",
+      "version": "4.14.8"
+    },
+    {
+      "name": "pluggy",
+      "version": "1.7.0"
+    },
+    {
+      "name": "pooch",
+      "version": "1.9.0"
+    },
+    {
+      "name": "prettytable",
+      "version": "3.19.0"
+    },
+    {
+      "name": "propcache",
+      "version": "0.5.4"
+    },
+    {
+      "name": "protobuf",
+      "version": "7.36.2"
+    },
+    {
+      "name": "psutil",
+      "version": "7.2.2"
+    },
+    {
+      "name": "pyarrow",
+      "version": "20.0.0"
+    },
+    {
+      "name": "pybind11",
+      "version": "3.1.0"
+    },
+    {
+      "name": "pycparser",
+      "version": "3.12"
+    },
+    {
+      "name": "pycryptodome",
+      "version": "4.6.0"
+    },
+    {
+      "name": "pydantic",
+      "version": "2.14.4"
+    },
+    {
+      "name": "pydantic_core",
+      "version": "2.50.5"
+    },
+    {
+      "name": "Pygments",
+      "version": "2.21.0"
+    },
+    {
+      "name": "pyparsing",
+      "version": "3.3.3"
+    },
+    {
+      "name": "pytest",
+      "version": "9.2.0"
+    },
+    {
+      "name": "python-dateutil",
+      "version": "4.0.0"
+    },
+    {
+      "name": "pytz",
+      "version": "2026.6"
+    },
+    {
+      "name": "PyYAML",
+      "version": "6.0.4"
+    },
+    {
+      "name": "rarfile",
+      "version": "4.5"
+    },
+    {
+      "name": "regex",
+      "version": "2026.11.19"
+    },
+    {
+      "name": "requests",
+      "version": "2.34.2"
+    },
+    {
+      "name": "rich",
+      "version": "15.0.0"
+    },
+    {
+      "name": "safetensors",
+      "version": "0.8.0"
+    },
+    {
+      "name": "scikit-learn",
+      "version": "1.9.1"
+    },
+    {
+      "name": "scipy",
+      "version": "1.17.1"
+    },
+    {
+      "name": "sentencepiece",
+      "version": "0.2.3"
+    },
+    {
+      "name": "setuptools",
+      "version": "84.2.1"
+    },
+    {
+      "name": "shellingham",
+      "version": "1.5.4"
+    },
+    {
+      "name": "six",
+      "version": "1.17.0"
+    },
+    {
+      "name": "soundfile",
+      "version": "0.14.0"
+    },
+    {
+      "name": "soxr",
+      "version": "1.1.0"
+    },
+    {
+      "name": "threadpoolctl",
+      "version": "3.8.0"
+    },
+    {
+      "name": "tiktoken",
+      "version": "0.14.0"
+    },
+    {
+      "name": "tilelang-paddle",
+      "version": "0.1.13"
+    },
+    {
+      "name": "tokenizers",
+      "version": "0.22.2"
+    },
+    {
+      "name": "tqdm",
+      "version": "4.70.1"
+    },
+    {
+      "name": "transformers",
+      "version": "5.3.0"
+    },
+    {
+      "name": "triton",
+      "version": "3.9.0"
+    },
+    {
+      "name": "typer",
+      "version": "0.29.2"
+    },
+    {
+      "name": "typing_extensions",
+      "version": "4.16.0"
+    },
+    {
+      "name": "typing-inspection",
+      "version": "0.4.5"
+    },
+    {
+      "name": "tzdata",
+      "version": "2026.6"
+    },
+    {
+      "name": "urllib3",
+      "version": "2.8.0"
+    },
+    {
+      "name": "visualdl",
+      "version": "2.5.3"
+    },
+    {
+      "name": "wcwidth",
+      "version": "0.9.5"
+    },
+    {
+      "name": "Werkzeug",
+      "version": "3.1.9"
+    },
+    {
+      "name": "wheel",
+      "version": "0.37.1"
+    },
+    {
+      "name": "xxhash",
+      "version": "4.1.0"
+    },
+    {
+      "name": "yarl",
+      "version": "1.25.1"
+    },
+    {
+      "name": "z3-solver",
+      "version": "4.15.4.0"
+    },
+    {
+      "name": "zipp",
+      "version": "4.1.2"
+    }
+  ],
+  "gpu": "name, memory.total [MiB], driver_version\nNVIDIA A100-SXM4-80GB, 81920 MiB, 525.60.11\n",
+  "source_commit": "729cca11dc5663b00f67f91c62fb69724cf54c10"
+}

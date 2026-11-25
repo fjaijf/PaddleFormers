@@ -1,0 +1,1734 @@
+PyTorch was not found. Models won't be available and only tokenizers, configuration and file/data utilities can be used.
+[2026-11-25 03:04:54,725] [ WARNING] - Due to potential compatibility issues between PaddlePaddle and PyTorch in PaddleFormers, PaddleFormers defaults `transformers.utils.import_utils.is_torch_available` and `transformers.utils.import_utils.is_torchvision_available` to False. If you need to use PyTorch in transformers or torchvision, please add `del sys.modules['transformers']` before using them.
+[2026-11-25 03:04:55,114] [ WARNING] __init__.py:78 - [cptr_cache] Patched 18 CUTLASS DSL types
+[2026-11-25 03:04:55,124] [ WARNING] __init__.py:359 - paddlefleet_ops.deep_gemm not supported: paddlefleet_ops.deep_gemm requires GPU compute capability >= 9.0 (Hopper). Current capability: 8.0.
+[2026-11-25 03:04:55,124] [ WARNING] __init__.py:370 - paddlefleet_ops.deep_ep not supported: paddlefleet_ops.deep_ep requires GPU compute capability >= 9.0 (Hopper). Current capability: 8.0.
+[2026-11-25 03:04:55,124] [ WARNING] __init__.py:381 - paddlefleet_ops.hybrid_ep not supported: paddlefleet_ops.hybrid_ep requires GPU compute capability >= 9.0 (Hopper). Current capability: 8.0.
+[2026-11-25 03:04:55,124] [ WARNING] __init__.py:394 - paddlefleet_ops.sonicmoe not supported: CUDA >= 12.9 required (current 11.8); GPU compute capability >= 10.0 (Blackwell) required (current 8.0)
+[2026-11-25 03:04:55,124] [ WARNING] __init__.py:404 - paddlefleet_ops.flash_mla not supported: paddlefleet_ops.flash_mla requires GPU compute capability >= 9.0 (Hopper). Current capability: 8.0.
+[2026-11-25 03:04:55,124] [ WARNING] __init__.py:413 - paddlefleet_ops.flash_mask not supported: paddlefleet_ops.flash_mask requires GPU compute capability >= 10.0 (Blackwell). Current capability: 8.0.
+[2026-11-25 03:04:55,129] [    INFO] __init__.py:329 - Successfully loaded ecosystem library: fast_hadamard_transform
+[2026-11-25 03:04:55,282] [    INFO] __init__.py:329 - Successfully loaded ecosystem library: cudnn
+W1125 03:04:58.210302  4643 gpu_resources.cc:116] Please NOTE: device: 0, GPU Compute Capability: 8.0, Driver API Version: 12.0, Runtime API Version: 12.9
+[2026-11-25 03:04:58,212] [ WARNING] linear.py:26 - deep_gemm not available: paddlefleet_ops.deep_gemm not supported: paddlefleet_ops.deep_gemm requires GPU compute capability >= 9.0 (Hopper). Current capability: 8.0. 
+For developers: guard imports with `is_deep_gemm_available()` and only call `paddlefleet_ops.deep_gemm` when flag branch enabled.
+For users: set `use_deep_gemm=False` if you want to skip it, or use a GPU with compute capability equal to 9.x to enable.
+PyTorch was not found. Models won't be available and only tokenizers, configuration and file/data utilities can be used.
+/root/baidu_98_minicpm4_1/PaddleFormers/paddleformers/transformers/utils.py:204: UserWarning: The `forward` method of <class 'paddleformers.transformers.minicpm4_1.modeling.MiniCPM4_1ForCausalLM'> is patched and the patch might be based on an old version which missing some arguments compared with the latest, such as ['output_hidden_states', 'output_attentions', 'return_dict']. We automatically add compatibility on the patch for these arguments, and maybe the patch should be updated.
+  warnings.warn(
+[2026-11-25 03:04:59,834] [    INFO] - user has defined resume_from_checkpoint: None
+[2026-11-25 03:04:59,835] [    INFO] - fa_version = 2 set FLAGS_flash_attn_version to 2
+[2026-11-25 03:04:59,835] [    INFO] distributed_strategy.py:343 - distributed strategy initialized
+======================= Modified FLAGS detected =======================
+FLAGS(name='FLAGS_cusolver_dir', current_value='/home/vipuser/anaconda3/envs/paddleformers/lib/python3.12/site-packages/paddle/../nvidia/cusolver/lib', default_value='')
+FLAGS(name='FLAGS_nvidia_package_dir', current_value='/home/vipuser/anaconda3/envs/paddleformers/lib/python3.12/site-packages/paddle/../nvidia', default_value='')
+FLAGS(name='FLAGS_enable_pir_in_executor', current_value=True, default_value=False)
+FLAGS(name='FLAGS_cusparse_dir', current_value='/home/vipuser/anaconda3/envs/paddleformers/lib/python3.12/site-packages/paddle/../nvidia/cusparse/lib', default_value='')
+FLAGS(name='FLAGS_cublas_dir', current_value='/home/vipuser/anaconda3/envs/paddleformers/lib/python3.12/site-packages/paddle/../nvidia/cublas/lib', default_value='')
+FLAGS(name='FLAGS_cudnn_dir', current_value='/home/vipuser/anaconda3/envs/paddleformers/lib/python3.12/site-packages/paddle/../nvidia/cudnn/lib', default_value='')
+FLAGS(name='FLAGS_cupti_dir', current_value='/home/vipuser/anaconda3/envs/paddleformers/lib/python3.12/site-packages/paddle/../nvidia/cuda_cupti/lib', default_value='')
+FLAGS(name='FLAGS_cuda_cccl_dir', current_value='/home/vipuser/anaconda3/envs/paddleformers/lib/python3.12/site-packages/paddle/../nvidia/cuda_cccl/include/', default_value='')
+FLAGS(name='FLAGS_nccl_dir', current_value='/home/vipuser/anaconda3/envs/paddleformers/lib/python3.12/site-packages/paddle/../nvidia/nccl/lib', default_value='')
+FLAGS(name='FLAGS_curand_dir', current_value='/home/vipuser/anaconda3/envs/paddleformers/lib/python3.12/site-packages/paddle/../nvidia/curand/lib', default_value='')
+=======================================================================
+/home/vipuser/anaconda3/envs/paddleformers/lib/python3.12/site-packages/paddle/distributed/parallel.py:1069: UserWarning: Currently not a parallel execution environment, `paddle.distributed.init_parallel_env` will not do anything.
+  warnings.warn(
+[2026-11-25 03:04:59,838] [    INFO] topology.py:535 - Total 1 pipe comm group(s) create successfully!
+[2026-11-25 03:04:59,839] [    INFO] topology.py:535 - Total 1 data comm group(s) create successfully!
+[2026-11-25 03:04:59,839] [    INFO] topology.py:535 - Total 1 model comm group(s) create successfully!
+[2026-11-25 03:04:59,839] [    INFO] topology.py:535 - Total 1 sharding comm group(s) create successfully!
+[2026-11-25 03:04:59,839] [    INFO] topology.py:449 - HybridParallelInfo: rank_id: 0, mp_degree: 1, sharding_degree: 1, pp_degree: 1, dp_degree: 1, sep_degree: 1, mp_group: [0],  sharding_group: [0], pp_group: [0], dp_group: [0], sep:group: None, check/clip group: [0]
+fleet initialize successfully: rank=0 world_size=1
+[2026-11-25 03:04:59,839] [    INFO] - Auto set hybrid_parallel_expert_grad_scale = 1.0
+[2026-11-25 03:04:59,839] [    INFO] - reset finetuning arguments global_batch_size to 1
+[2026-11-25 03:04:59,863] [   DEBUG] - ============================================================
+[2026-11-25 03:04:59,863] [   DEBUG] -      Model Configuration Arguments      
+[2026-11-25 03:04:59,863] [   DEBUG] - paddle commit id              : 8a1040b3d08ef64fcf7aa8a41dad18cc861b7eb9
+[2026-11-25 03:04:59,870] [   DEBUG] - paddleformers commit id       : 729cca11dc5663b00f67f91c62fb69724cf54c10
+[2026-11-25 03:04:59,870] [   DEBUG] - _attn_implementation          : eager
+[2026-11-25 03:04:59,870] [   DEBUG] - bos_token_id                  : 0
+[2026-11-25 03:04:59,870] [   DEBUG] - continue_training             : True
+[2026-11-25 03:04:59,870] [   DEBUG] - copy_custom_file_list         : 
+[2026-11-25 03:04:59,870] [   DEBUG] - download_hub                  : None
+[2026-11-25 03:04:59,870] [   DEBUG] - eos_token_id                  : 1
+[2026-11-25 03:04:59,870] [   DEBUG] - ernie_model_config            : ErniePretrainArgument(use_quant_before_a2a=False, use_async_a2a=False, use_rms_qkv_recompute=False, moe_logging=False, use_recompute=False, num_nextn_predict_layers=0, use_fp8_mlp=False, num_hidden_layers=2, num_empty_layers_add_in_tail=0, use_fp8_fuse_node=False, use_ep_comm_overlap=False, fp8_mem_configs=FP8MemConfigs(shared_expert=False, recompute_fwd_gate_up=False, dequant_input=False, offline_quant_expert_weight=False), fp8_fused_ops_configs=FP8FusedOpsConfigs(stack_quant=False, swiglu_probs_bwd=False, split_group_gemm=True, spaq=True, transpose_split_quant=True), use_combine_before_a2a=False, moe_num_experts=0, moe_k=2, moe_use_aux_free=False, moe_gate='top2_fused', transpose_split_quant=False)
+[2026-11-25 03:04:59,870] [   DEBUG] - fine_tuning                   : lora
+[2026-11-25 03:04:59,870] [   DEBUG] - fuse_gate_detach_matmul       : True
+[2026-11-25 03:04:59,870] [   DEBUG] - fuse_softmax_mask             : False
+[2026-11-25 03:04:59,870] [   DEBUG] - lora                          : True
+[2026-11-25 03:04:59,870] [   DEBUG] - lora_alpha                    : -1
+[2026-11-25 03:04:59,870] [   DEBUG] - lora_path                     : None
+[2026-11-25 03:04:59,870] [   DEBUG] - lora_plus_scale               : 1.0
+[2026-11-25 03:04:59,871] [   DEBUG] - lora_rank                     : 8
+[2026-11-25 03:04:59,871] [   DEBUG] - loss_subbatch_seqlen          : 32768
+[2026-11-25 03:04:59,871] [   DEBUG] - max_position_embeddings       : 4096
+[2026-11-25 03:04:59,871] [   DEBUG] - model_name_or_path            : /data/minicpm4.1-8b
+[2026-11-25 03:04:59,871] [   DEBUG] - model_with_dpo_criterion      : False
+[2026-11-25 03:04:59,871] [   DEBUG] - moe_gate                      : top2_fused
+[2026-11-25 03:04:59,871] [   DEBUG] - moe_group                     : dummy
+[2026-11-25 03:04:59,871] [   DEBUG] - moe_group_experts             : False
+[2026-11-25 03:04:59,871] [   DEBUG] - moe_logging                   : None
+[2026-11-25 03:04:59,871] [   DEBUG] - moe_multimodal_dispatch_use_allgather: v2-alltoall-unpad
+[2026-11-25 03:04:59,871] [   DEBUG] - moe_orthogonal_loss_lambda    : 0.0
+[2026-11-25 03:04:59,871] [   DEBUG] - moe_use_aux_free              : None
+[2026-11-25 03:04:59,871] [   DEBUG] - moe_use_hard_gate             : False
+[2026-11-25 03:04:59,871] [   DEBUG] - mtp_attention_flexible        : False
+[2026-11-25 03:04:59,871] [   DEBUG] - neftune                       : False
+[2026-11-25 03:04:59,871] [   DEBUG] - neftune_noise_alpha           : 5.0
+[2026-11-25 03:04:59,871] [   DEBUG] - pp_seg_method                 : layer:DecoderLayer|EmptyLayer
+[2026-11-25 03:04:59,872] [   DEBUG] - rope_3d                       : True
+[2026-11-25 03:04:59,872] [   DEBUG] - rslora                        : False
+[2026-11-25 03:04:59,872] [   DEBUG] - rslora_plus                   : False
+[2026-11-25 03:04:59,872] [   DEBUG] - stage                         : SFT
+[2026-11-25 03:04:59,872] [   DEBUG] - tokenizer_name_or_path        : None
+[2026-11-25 03:04:59,872] [   DEBUG] - use_attn_mask_startend_row_indices: True
+[2026-11-25 03:04:59,872] [   DEBUG] - use_fast_layer_norm           : False
+[2026-11-25 03:04:59,872] [   DEBUG] - use_global_causal_attn        : False
+[2026-11-25 03:04:59,872] [   DEBUG] - use_mem_eff_attn              : True
+[2026-11-25 03:04:59,872] [   DEBUG] - use_sparse_flash_attn         : True
+[2026-11-25 03:04:59,872] [   DEBUG] - vision_config                 : VisionArguments(attn_implementation='eager', attn_sep=True, depth=32, embed_dim=1280, hidden_act='quick_gelu', hidden_size=1280, in_channels=3, mlp_ratio=4, model_type='DFNRope_vision_transformer', num_heads=16, patch_size=14, spatial_merge_size=2, tensor_model_parallel_size=4, vit_num_recompute_layers=10000)
+[2026-11-25 03:04:59,872] [   DEBUG] - 
+[2026-11-25 03:04:59,872] [   DEBUG] - ============================================================
+[2026-11-25 03:04:59,872] [   DEBUG] -       Data Configuration Arguments      
+[2026-11-25 03:04:59,872] [   DEBUG] - paddle commit id              : 8a1040b3d08ef64fcf7aa8a41dad18cc861b7eb9
+[2026-11-25 03:04:59,872] [   DEBUG] - paddleformers commit id       : 729cca11dc5663b00f67f91c62fb69724cf54c10
+[2026-11-25 03:04:59,872] [   DEBUG] - binpacking                    : True
+[2026-11-25 03:04:59,872] [   DEBUG] - buffer_size                   : 500
+[2026-11-25 03:04:59,872] [   DEBUG] - custom_register_path          : None
+[2026-11-25 03:04:59,873] [   DEBUG] - data_cache                    : None
+[2026-11-25 03:04:59,873] [   DEBUG] - data_impl                     : mmap
+[2026-11-25 03:04:59,873] [   DEBUG] - dataset_output_dir            : ./dataset_output
+[2026-11-25 03:04:59,873] [   DEBUG] - dataset_type                  : map
+[2026-11-25 03:04:59,873] [   DEBUG] - encode_one_turn               : True
+[2026-11-25 03:04:59,873] [   DEBUG] - eval_dataset_path             : /root/pr4840-validation/paddle-dataset.jsonl
+[2026-11-25 03:04:59,873] [   DEBUG] - eval_dataset_prob             : 1.0
+[2026-11-25 03:04:59,873] [   DEBUG] - eval_dataset_type             : erniekit
+[2026-11-25 03:04:59,873] [   DEBUG] - eval_with_do_generation       : False
+[2026-11-25 03:04:59,873] [   DEBUG] - greedy_intokens               : True
+[2026-11-25 03:04:59,873] [   DEBUG] - input_dir                     : None
+[2026-11-25 03:04:59,873] [   DEBUG] - make_offline_data             : False
+[2026-11-25 03:04:59,873] [   DEBUG] - max_prompt_len                : 2048
+[2026-11-25 03:04:59,873] [   DEBUG] - max_seq_len                   : 512
+[2026-11-25 03:04:59,873] [   DEBUG] - mix_strategy                  : concat
+[2026-11-25 03:04:59,873] [   DEBUG] - new_special_tokens_path       : None
+[2026-11-25 03:04:59,873] [   DEBUG] - num_samples_each_epoch        : 6000000
+[2026-11-25 03:04:59,873] [   DEBUG] - packed_idx_cache_dir          : None
+[2026-11-25 03:04:59,873] [   DEBUG] - packing                       : False
+[2026-11-25 03:04:59,874] [   DEBUG] - packing_interval              : 1000
+[2026-11-25 03:04:59,874] [   DEBUG] - padding_free                  : False
+[2026-11-25 03:04:59,874] [   DEBUG] - processor_use_fast            : None
+[2026-11-25 03:04:59,874] [   DEBUG] - random_shuffle                : False
+[2026-11-25 03:04:59,874] [   DEBUG] - share_folder                  : False
+[2026-11-25 03:04:59,874] [   DEBUG] - skip_warmup                   : True
+[2026-11-25 03:04:59,874] [   DEBUG] - split                         : 950,50
+[2026-11-25 03:04:59,874] [   DEBUG] - split_multi_turn              : False
+[2026-11-25 03:04:59,874] [   DEBUG] - template                      : default
+[2026-11-25 03:04:59,874] [   DEBUG] - template_backend              : custom
+[2026-11-25 03:04:59,874] [   DEBUG] - train_dataset_path            : /root/pr4840-validation/paddle-dataset.jsonl
+[2026-11-25 03:04:59,874] [   DEBUG] - train_dataset_prob            : 1.0
+[2026-11-25 03:04:59,874] [   DEBUG] - train_dataset_type            : erniekit
+[2026-11-25 03:04:59,874] [   DEBUG] - truncate_packing              : True
+[2026-11-25 03:04:59,874] [   DEBUG] - truncation_strategy           : delete
+[2026-11-25 03:04:59,874] [   DEBUG] - use_template                  : True
+[2026-11-25 03:04:59,874] [   DEBUG] - warmup_only_rank0             : False
+[2026-11-25 03:04:59,874] [   DEBUG] - 
+[2026-11-25 03:04:59,874] [   DEBUG] - ============================================================
+[2026-11-25 03:04:59,875] [   DEBUG] -      Train Configuration Arguments      
+[2026-11-25 03:04:59,875] [   DEBUG] - paddle commit id              : 8a1040b3d08ef64fcf7aa8a41dad18cc861b7eb9
+[2026-11-25 03:04:59,875] [   DEBUG] - paddleformers commit id       : 729cca11dc5663b00f67f91c62fb69724cf54c10
+[2026-11-25 03:04:59,875] [   DEBUG] - _no_sync_in_gradient_accumulation: True
+[2026-11-25 03:04:59,875] [   DEBUG] - adam_beta1                    : 0.9
+[2026-11-25 03:04:59,875] [   DEBUG] - adam_beta2                    : 0.999
+[2026-11-25 03:04:59,875] [   DEBUG] - adam_epsilon                  : 1e-08
+[2026-11-25 03:04:59,875] [   DEBUG] - amp_custom_black_list         : ['reduce_sum', 'softmax_with_cross_entropy', 'c_softmax_with_cross_entropy', 'elementwise_div', 'sin', 'cos']
+[2026-11-25 03:04:59,875] [   DEBUG] - amp_custom_white_list         : ['lookup_table', 'lookup_table_v2', 'flash_attn', 'matmul', 'matmul_v2', 'fused_gemm_epilogue']
+[2026-11-25 03:04:59,875] [   DEBUG] - amp_master_grad               : False
+[2026-11-25 03:04:59,875] [   DEBUG] - aoa_config                    : None
+[2026-11-25 03:04:59,875] [   DEBUG] - apply_rope_fusion             : False
+[2026-11-25 03:04:59,875] [   DEBUG] - attention_probs_dropout_prob  : 0.0
+[2026-11-25 03:04:59,875] [   DEBUG] - auto_parallel_resume_form_hybrid_parallel: False
+[2026-11-25 03:04:59,875] [   DEBUG] - auto_parallel_sync_shared_params: False
+[2026-11-25 03:04:59,876] [   DEBUG] - autotuner_benchmark           : False
+[2026-11-25 03:04:59,876] [   DEBUG] - balanced_image_preprocess     : False
+[2026-11-25 03:04:59,876] [   DEBUG] - batch_p2p_comm                : True
+[2026-11-25 03:04:59,876] [   DEBUG] - best_unbalanced_scheduler     : False
+[2026-11-25 03:04:59,876] [   DEBUG] - beta                          : 0.1
+[2026-11-25 03:04:59,876] [   DEBUG] - bf16                          : False
+[2026-11-25 03:04:59,876] [   DEBUG] - bf16_full_eval                : False
+[2026-11-25 03:04:59,876] [   DEBUG] - ckpt_quant_stage              : O0
+[2026-11-25 03:04:59,876] [   DEBUG] - clear_every_step_cache        : False
+[2026-11-25 03:04:59,876] [   DEBUG] - compute_type                  : float32
+[2026-11-25 03:04:59,876] [   DEBUG] - context_parallel_rank         : 0
+[2026-11-25 03:04:59,876] [   DEBUG] - context_parallel_size         : -1
+[2026-11-25 03:04:59,876] [   DEBUG] - convert_from_hf               : True
+[2026-11-25 03:04:59,876] [   DEBUG] - copy_custom_file_list         : 
+[2026-11-25 03:04:59,876] [   DEBUG] - count_trained_tokens          : False
+[2026-11-25 03:04:59,876] [   DEBUG] - cp_balance_mode               : dualchunk_allgather
+[2026-11-25 03:04:59,876] [   DEBUG] - cp_comm_type                  : None
+[2026-11-25 03:04:59,876] [   DEBUG] - cp_sharding_degree            : 1
+[2026-11-25 03:04:59,876] [   DEBUG] - cp_sharding_rank              : 0
+[2026-11-25 03:04:59,877] [   DEBUG] - csa_indexer_backend           : tilelang
+[2026-11-25 03:04:59,877] [   DEBUG] - csa_sparse_attn_backend       : tilelang
+[2026-11-25 03:04:59,877] [   DEBUG] - current_device                : gpu:0
+[2026-11-25 03:04:59,877] [   DEBUG] - data_parallel_config          : 
+[2026-11-25 03:04:59,877] [   DEBUG] - data_parallel_rank            : 0
+[2026-11-25 03:04:59,877] [   DEBUG] - data_parallel_size            : 1
+[2026-11-25 03:04:59,877] [   DEBUG] - dataloader_drop_last          : False
+[2026-11-25 03:04:59,877] [   DEBUG] - dataloader_num_workers        : 0
+[2026-11-25 03:04:59,877] [   DEBUG] - dataloader_shuffle            : False
+[2026-11-25 03:04:59,877] [   DEBUG] - dataset_batch_size            : 1000
+[2026-11-25 03:04:59,877] [   DEBUG] - dataset_kwargs                : None
+[2026-11-25 03:04:59,877] [   DEBUG] - dataset_num_proc              : None
+[2026-11-25 03:04:59,877] [   DEBUG] - dataset_rank                  : 0
+[2026-11-25 03:04:59,877] [   DEBUG] - dataset_text_field            : text
+[2026-11-25 03:04:59,877] [   DEBUG] - dataset_world_size            : 1
+[2026-11-25 03:04:59,877] [   DEBUG] - ddp_find_unused_parameters    : None
+[2026-11-25 03:04:59,877] [   DEBUG] - decay_function                : half_life
+[2026-11-25 03:04:59,877] [   DEBUG] - decay_steps                   : None
+[2026-11-25 03:04:59,877] [   DEBUG] - deterministic_mode            : False
+[2026-11-25 03:04:59,878] [   DEBUG] - device                        : gpu
+[2026-11-25 03:04:59,878] [   DEBUG] - disable_tqdm                  : True
+[2026-11-25 03:04:59,878] [   DEBUG] - distributed_dataloader        : False
+[2026-11-25 03:04:59,878] [   DEBUG] - do_eval                       : False
+[2026-11-25 03:04:59,878] [   DEBUG] - do_export                     : False
+[2026-11-25 03:04:59,878] [   DEBUG] - do_predict                    : False
+[2026-11-25 03:04:59,878] [   DEBUG] - do_train                      : True
+[2026-11-25 03:04:59,878] [   DEBUG] - download_hub                  : None
+[2026-11-25 03:04:59,878] [   DEBUG] - dp_allreduce_avg_in_gradinent_scale: False
+[2026-11-25 03:04:59,878] [   DEBUG] - dp_comm_overlap               : False
+[2026-11-25 03:04:59,878] [   DEBUG] - dpop_lambda                   : 50
+[2026-11-25 03:04:59,878] [   DEBUG] - dsa_indexer_loss_coeff        : 0.01
+[2026-11-25 03:04:59,878] [   DEBUG] - embedding_init_method         : None
+[2026-11-25 03:04:59,878] [   DEBUG] - embedding_init_method_std     : 0.02
+[2026-11-25 03:04:59,878] [   DEBUG] - enable_auto_parallel          : False
+[2026-11-25 03:04:59,878] [   DEBUG] - enable_linear_fused_grad_add  : False
+[2026-11-25 03:04:59,878] [   DEBUG] - enable_mtp_magic_send         : False
+[2026-11-25 03:04:59,878] [   DEBUG] - enable_zero_cost_checkpoint   : False
+[2026-11-25 03:04:59,878] [   DEBUG] - estimation_output_file        : estimation_output.json
+[2026-11-25 03:04:59,878] [   DEBUG] - eval_accumulation_steps       : 16
+[2026-11-25 03:04:59,879] [   DEBUG] - eval_batch_size               : 1
+[2026-11-25 03:04:59,879] [   DEBUG] - eval_iters                    : -1
+[2026-11-25 03:04:59,879] [   DEBUG] - eval_steps                    : 50
+[2026-11-25 03:04:59,879] [   DEBUG] - evaluation_strategy           : IntervalStrategy.NO
+[2026-11-25 03:04:59,879] [   DEBUG] - experimental_dataflow         : False
+[2026-11-25 03:04:59,879] [   DEBUG] - expert_model_parallel_size    : -1
+[2026-11-25 03:04:59,879] [   DEBUG] - expert_parallel_rank          : 0
+[2026-11-25 03:04:59,879] [   DEBUG] - expert_tensor_model_parallel_size: -1
+[2026-11-25 03:04:59,879] [   DEBUG] - fa_version                    : 2
+[2026-11-25 03:04:59,879] [   DEBUG] - factor                        : 20
+[2026-11-25 03:04:59,879] [   DEBUG] - flash_device_save_steps       : 0
+[2026-11-25 03:04:59,879] [   DEBUG] - flatten_param_grads           : False
+[2026-11-25 03:04:59,879] [   DEBUG] - flex_ckpt_comm_method         : None
+[2026-11-25 03:04:59,879] [   DEBUG] - force_reshard_pp              : False
+[2026-11-25 03:04:59,879] [   DEBUG] - forward_backward_overlap_scheduler: False
+[2026-11-25 03:04:59,879] [   DEBUG] - fp16                          : False
+[2026-11-25 03:04:59,879] [   DEBUG] - fp16_full_eval                : False
+[2026-11-25 03:04:59,879] [   DEBUG] - fp16_opt_level                : O1
+[2026-11-25 03:04:59,880] [   DEBUG] - fp32_residual_connection      : True
+[2026-11-25 03:04:59,880] [   DEBUG] - fp8                           : None
+[2026-11-25 03:04:59,880] [   DEBUG] - fp8_wgrad                     : True
+[2026-11-25 03:04:59,880] [   DEBUG] - freeze_config                 : 
+[2026-11-25 03:04:59,880] [   DEBUG] - freeze_training               : False
+[2026-11-25 03:04:59,880] [   DEBUG] - fuse_optimizer_states         : False
+[2026-11-25 03:04:59,880] [   DEBUG] - fuse_sequence_parallel_allreduce: False
+[2026-11-25 03:04:59,880] [   DEBUG] - fuse_swiglu                   : False
+[2026-11-25 03:04:59,880] [   DEBUG] - gated_linear_unit             : True
+[2026-11-25 03:04:59,880] [   DEBUG] - gc_interval                   : 0
+[2026-11-25 03:04:59,880] [   DEBUG] - global_batch_size             : 1
+[2026-11-25 03:04:59,880] [   DEBUG] - global_logging_interval       : 1
+[2026-11-25 03:04:59,880] [   DEBUG] - gradient_accumulation_steps   : 1
+[2026-11-25 03:04:59,880] [   DEBUG] - gradient_sync_after_accumulate: False
+[2026-11-25 03:04:59,880] [   DEBUG] - greater_is_better             : None
+[2026-11-25 03:04:59,880] [   DEBUG] - hidden_dropout_prob           : 0.0
+[2026-11-25 03:04:59,880] [   DEBUG] - hidden_size                   : None
+[2026-11-25 03:04:59,880] [   DEBUG] - high_precision_rope           : False
+[2026-11-25 03:04:59,880] [   DEBUG] - hybrid_parallel_expert_grad_scale: 1.0
+[2026-11-25 03:04:59,880] [   DEBUG] - hybrid_parallel_topo_order    : sharding_first
+[2026-11-25 03:04:59,881] [   DEBUG] - ignore_data_skip              : False
+[2026-11-25 03:04:59,881] [   DEBUG] - ignore_eos_token              : False
+[2026-11-25 03:04:59,881] [   DEBUG] - ignore_load_lr_and_optim      : False
+[2026-11-25 03:04:59,881] [   DEBUG] - ignore_save_lr_and_optim      : False
+[2026-11-25 03:04:59,881] [   DEBUG] - init_method                   : None
+[2026-11-25 03:04:59,881] [   DEBUG] - init_method_std               : 0.02
+[2026-11-25 03:04:59,881] [   DEBUG] - intermediate_size             : None
+[2026-11-25 03:04:59,881] [   DEBUG] - internal_medicine_log_dir     : 
+[2026-11-25 03:04:59,881] [   DEBUG] - internal_medicine_monitor_interval: 0
+[2026-11-25 03:04:59,881] [   DEBUG] - internal_medicine_monitors    : 
+[2026-11-25 03:04:59,881] [   DEBUG] - internal_medicine_qk_row_stride: 1
+[2026-11-25 03:04:59,881] [   DEBUG] - label_names                   : None
+[2026-11-25 03:04:59,881] [   DEBUG] - label_smoothing               : 0.0
+[2026-11-25 03:04:59,881] [   DEBUG] - lazy_data_processing          : True
+[2026-11-25 03:04:59,881] [   DEBUG] - learning_rate                 : 0.0001
+[2026-11-25 03:04:59,881] [   DEBUG] - load_best_model_at_end        : False
+[2026-11-25 03:04:59,881] [   DEBUG] - load_checkpoint_format        : flex_checkpoint
+[2026-11-25 03:04:59,881] [   DEBUG] - load_from_hf                  : False
+[2026-11-25 03:04:59,881] [   DEBUG] - load_sharded_model            : False
+[2026-11-25 03:04:59,882] [   DEBUG] - load_sharded_model_remap_parameter_name: False
+[2026-11-25 03:04:59,882] [   DEBUG] - load_via_cpu                  : True
+[2026-11-25 03:04:59,882] [   DEBUG] - local_process_index           : 0
+[2026-11-25 03:04:59,882] [   DEBUG] - local_rank                    : -1
+[2026-11-25 03:04:59,882] [   DEBUG] - log_global_grad_norm          : False
+[2026-11-25 03:04:59,882] [   DEBUG] - log_level                     : -1
+[2026-11-25 03:04:59,882] [   DEBUG] - log_level_replica             : -1
+[2026-11-25 03:04:59,882] [   DEBUG] - log_on_each_node              : True
+[2026-11-25 03:04:59,882] [   DEBUG] - logging_dir                   : /root/pr4840-validation/paddle-vdl
+[2026-11-25 03:04:59,882] [   DEBUG] - logging_first_step            : False
+[2026-11-25 03:04:59,882] [   DEBUG] - logging_steps                 : 1
+[2026-11-25 03:04:59,882] [   DEBUG] - logging_strategy              : IntervalStrategy.STEPS
+[2026-11-25 03:04:59,882] [   DEBUG] - logical_process_index         : 0
+[2026-11-25 03:04:59,882] [   DEBUG] - loss_subbatch_sequence_length : -1
+[2026-11-25 03:04:59,882] [   DEBUG] - loss_type                     : sigmoid
+[2026-11-25 03:04:59,882] [   DEBUG] - lr_end                        : 1e-07
+[2026-11-25 03:04:59,882] [   DEBUG] - lr_scheduler                  : cosine
+[2026-11-25 03:04:59,882] [   DEBUG] - lr_scheduler_type             : SchedulerType.CONSTANT
+[2026-11-25 03:04:59,882] [   DEBUG] - max_estimate_samples          : 100000.0
+[2026-11-25 03:04:59,883] [   DEBUG] - max_evaluate_steps            : -1
+[2026-11-25 03:04:59,883] [   DEBUG] - max_grad_norm                 : 0.0
+[2026-11-25 03:04:59,883] [   DEBUG] - max_gradient_accumulation_steps: 1
+[2026-11-25 03:04:59,883] [   DEBUG] - max_seq_len                   : 512
+[2026-11-25 03:04:59,883] [   DEBUG] - max_steps                     : 20
+[2026-11-25 03:04:59,883] [   DEBUG] - merge_with_qdq_base_model     : False
+[2026-11-25 03:04:59,883] [   DEBUG] - metric_for_best_model         : None
+[2026-11-25 03:04:59,883] [   DEBUG] - metrics_output_path           : None
+[2026-11-25 03:04:59,883] [   DEBUG] - min_lr                        : 0.0
+[2026-11-25 03:04:59,883] [   DEBUG] - minimum_eval_times            : None
+[2026-11-25 03:04:59,883] [   DEBUG] - model_name_or_path            : /data/minicpm4.1-8b
+[2026-11-25 03:04:59,883] [   DEBUG] - moe_deep_gemm                 : True
+[2026-11-25 03:04:59,883] [   DEBUG] - moe_deepep_num_sms            : None
+[2026-11-25 03:04:59,883] [   DEBUG] - moe_dequant_input             : False
+[2026-11-25 03:04:59,883] [   DEBUG] - moe_dropout_prob              : 0.0
+[2026-11-25 03:04:59,883] [   DEBUG] - moe_ep_barrier                : True
+[2026-11-25 03:04:59,883] [   DEBUG] - moe_expert_capacity_factor    : 0.0
+[2026-11-25 03:04:59,883] [   DEBUG] - moe_expert_fusion             : False
+[2026-11-25 03:04:59,883] [   DEBUG] - moe_gate_lr_ratio             : None
+[2026-11-25 03:04:59,884] [   DEBUG] - moe_pad_expert_input_to_capacity: False
+[2026-11-25 03:04:59,884] [   DEBUG] - moe_router_bias_update_rate   : 0.0
+[2026-11-25 03:04:59,884] [   DEBUG] - moe_router_force_load_balancing: False
+[2026-11-25 03:04:59,884] [   DEBUG] - moe_router_fusion             : True
+[2026-11-25 03:04:59,884] [   DEBUG] - moe_router_load_balancing_type: seq_aux_loss
+[2026-11-25 03:04:59,884] [   DEBUG] - moe_sharding_parallel_rank    : 0
+[2026-11-25 03:04:59,884] [   DEBUG] - moe_shared_expert_overlap     : True
+[2026-11-25 03:04:59,884] [   DEBUG] - moe_subbatch_token_num_after_dispatch: None
+[2026-11-25 03:04:59,884] [   DEBUG] - moe_subbatch_token_num_before_dispatch: 0
+[2026-11-25 03:04:59,884] [   DEBUG] - moe_token_dispatcher_type     : deepep
+[2026-11-25 03:04:59,884] [   DEBUG] - moe_token_drop_policy         : probs
+[2026-11-25 03:04:59,884] [   DEBUG] - moe_use_fusion_node           : True
+[2026-11-25 03:04:59,884] [   DEBUG] - moe_with_send_router_loss     : True
+[2026-11-25 03:04:59,884] [   DEBUG] - mp_async_allreduce            : False
+[2026-11-25 03:04:59,884] [   DEBUG] - mp_fused_linear_param_grad_add: False
+[2026-11-25 03:04:59,884] [   DEBUG] - mp_skip_c_identity            : False
+[2026-11-25 03:04:59,884] [   DEBUG] - mtp_distillation_loss         : False
+[2026-11-25 03:04:59,884] [   DEBUG] - mtp_num_layers                : 0
+[2026-11-25 03:04:59,884] [   DEBUG] - multi_latent_attention        : False
+[2026-11-25 03:04:59,885] [   DEBUG] - muon_exclude_patterns         : ['embed', 'bias', 'lm_head', 'mlp.gate']
+[2026-11-25 03:04:59,885] [   DEBUG] - muon_extra_scale_factor       : 0.2
+[2026-11-25 03:04:59,885] [   DEBUG] - muon_ffn_split                : True
+[2026-11-25 03:04:59,885] [   DEBUG] - muon_momentum                 : 0.95
+[2026-11-25 03:04:59,885] [   DEBUG] - muon_ns_coeff_type            : quintic
+[2026-11-25 03:04:59,885] [   DEBUG] - muon_ns_coeffs                : None
+[2026-11-25 03:04:59,885] [   DEBUG] - muon_ns_steps                 : 5
+[2026-11-25 03:04:59,885] [   DEBUG] - muon_qkv_update_mode          : split_head
+[2026-11-25 03:04:59,885] [   DEBUG] - muon_version                  : 3
+[2026-11-25 03:04:59,885] [   DEBUG] - n_routed_experts              : None
+[2026-11-25 03:04:59,885] [   DEBUG] - nccl_comm_group_config        : None
+[2026-11-25 03:04:59,885] [   DEBUG] - need_data                     : True
+[2026-11-25 03:04:59,885] [   DEBUG] - no_cuda                       : False
+[2026-11-25 03:04:59,885] [   DEBUG] - no_recompute_layers           : None
+[2026-11-25 03:04:59,885] [   DEBUG] - no_rope_freq                  : False
+[2026-11-25 03:04:59,885] [   DEBUG] - non_batch_p2p_comm            : False
+[2026-11-25 03:04:59,885] [   DEBUG] - normalization                 : RMSNorm
+[2026-11-25 03:04:59,885] [   DEBUG] - normalize_logps               : False
+[2026-11-25 03:04:59,885] [   DEBUG] - num_attention_heads           : None
+[2026-11-25 03:04:59,886] [   DEBUG] - num_consecutive               : 1
+[2026-11-25 03:04:59,886] [   DEBUG] - num_cycles                    : 0.5
+[2026-11-25 03:04:59,886] [   DEBUG] - num_empty_layers_add_in_head  : 0
+[2026-11-25 03:04:59,886] [   DEBUG] - num_empty_layers_add_in_tail  : 0
+[2026-11-25 03:04:59,886] [   DEBUG] - num_experts_per_tok           : None
+[2026-11-25 03:04:59,886] [   DEBUG] - num_hidden_layers             : None
+[2026-11-25 03:04:59,886] [   DEBUG] - num_key_value_heads           : None
+[2026-11-25 03:04:59,886] [   DEBUG] - num_nextn_predict_layers      : 0
+[2026-11-25 03:04:59,886] [   DEBUG] - num_of_gpus                   : -1
+[2026-11-25 03:04:59,886] [   DEBUG] - num_train_epochs              : 1
+[2026-11-25 03:04:59,886] [   DEBUG] - offload_fp8_expert_master_weight: True
+[2026-11-25 03:04:59,886] [   DEBUG] - offload_queue                 : False
+[2026-11-25 03:04:59,886] [   DEBUG] - offset_alpha                  : 0.0
+[2026-11-25 03:04:59,886] [   DEBUG] - online_merge_ema              : True
+[2026-11-25 03:04:59,886] [   DEBUG] - optim                         : OptimizerNames.ADAMW
+[2026-11-25 03:04:59,886] [   DEBUG] - optim_shard_num               : 1
+[2026-11-25 03:04:59,886] [   DEBUG] - optimizer_name_suffix         : None
+[2026-11-25 03:04:59,886] [   DEBUG] - ordered_save_group_size       : 0
+[2026-11-25 03:04:59,886] [   DEBUG] - output_dir                    : /root/pr4840-validation/paddle-training-output
+[2026-11-25 03:04:59,886] [   DEBUG] - output_layer_init_method      : None
+[2026-11-25 03:04:59,887] [   DEBUG] - output_signal_dir             : /root/pr4840-validation/paddle-training-output
+[2026-11-25 03:04:59,887] [   DEBUG] - overlap                       : False
+[2026-11-25 03:04:59,887] [   DEBUG] - overlap_p2p_comm              : False
+[2026-11-25 03:04:59,887] [   DEBUG] - overwrite_output_dir          : True
+[2026-11-25 03:04:59,887] [   DEBUG] - p2p_cache_shape               : True
+[2026-11-25 03:04:59,887] [   DEBUG] - pad_token_id                  : 0
+[2026-11-25 03:04:59,887] [   DEBUG] - partial_send_recv             : True
+[2026-11-25 03:04:59,887] [   DEBUG] - past_index                    : -1
+[2026-11-25 03:04:59,887] [   DEBUG] - pdc_download_ckpt             : False
+[2026-11-25 03:04:59,887] [   DEBUG] - pdc_download_timeout          : 300
+[2026-11-25 03:04:59,887] [   DEBUG] - per_device_eval_batch_size    : 1
+[2026-11-25 03:04:59,887] [   DEBUG] - per_device_train_batch_size   : 1
+[2026-11-25 03:04:59,887] [   DEBUG] - pipeline_model_parallel_size  : -1
+[2026-11-25 03:04:59,887] [   DEBUG] - pipeline_parallel_config      : 
+[2026-11-25 03:04:59,887] [   DEBUG] - pipeline_parallel_rank        : 0
+[2026-11-25 03:04:59,887] [   DEBUG] - position_embedding_type       : rope
+[2026-11-25 03:04:59,887] [   DEBUG] - power                         : 1.0
+[2026-11-25 03:04:59,887] [   DEBUG] - pp_delay_scale_loss           : True
+[2026-11-25 03:04:59,887] [   DEBUG] - pp_need_data                  : False
+[2026-11-25 03:04:59,888] [   DEBUG] - pp_need_data_degree           : 0
+[2026-11-25 03:04:59,888] [   DEBUG] - pp_release_grads              : False
+[2026-11-25 03:04:59,888] [   DEBUG] - pp_sharding_comm_overlap      : False
+[2026-11-25 03:04:59,888] [   DEBUG] - pp_sync_moment                : False
+[2026-11-25 03:04:59,888] [   DEBUG] - pp_sync_param                 : False
+[2026-11-25 03:04:59,888] [   DEBUG] - pre_alloc_memory              : 0
+[2026-11-25 03:04:59,888] [   DEBUG] - prediction_loss_only          : False
+[2026-11-25 03:04:59,888] [   DEBUG] - pref_loss_ratio               : 1.0
+[2026-11-25 03:04:59,888] [   DEBUG] - prefetch_factor               : 2
+[2026-11-25 03:04:59,888] [   DEBUG] - process_index                 : 0
+[2026-11-25 03:04:59,888] [   DEBUG] - profile                       : False
+[2026-11-25 03:04:59,888] [   DEBUG] - profile_step_end              : 12
+[2026-11-25 03:04:59,888] [   DEBUG] - profile_step_start            : 10
+[2026-11-25 03:04:59,888] [   DEBUG] - recompute_granularity         : None
+[2026-11-25 03:04:59,888] [   DEBUG] - recompute_method              : None
+[2026-11-25 03:04:59,888] [   DEBUG] - recompute_modules             : None
+[2026-11-25 03:04:59,888] [   DEBUG] - recompute_mtp_granularity     : None
+[2026-11-25 03:04:59,888] [   DEBUG] - recompute_mtp_method          : None
+[2026-11-25 03:04:59,888] [   DEBUG] - recompute_mtp_modules         : None
+[2026-11-25 03:04:59,888] [   DEBUG] - recompute_num_layers          : None
+[2026-11-25 03:04:59,889] [   DEBUG] - recompute_use_reentrant       : True
+[2026-11-25 03:04:59,889] [   DEBUG] - reeao_dataset_rank            : 0
+[2026-11-25 03:04:59,889] [   DEBUG] - reeao_dataset_world_size      : 1
+[2026-11-25 03:04:59,889] [   DEBUG] - ref_model_update_steps        : -1
+[2026-11-25 03:04:59,889] [   DEBUG] - reference_free                : False
+[2026-11-25 03:04:59,889] [   DEBUG] - release_grads                 : False
+[2026-11-25 03:04:59,889] [   DEBUG] - remove_unused_columns         : True
+[2026-11-25 03:04:59,889] [   DEBUG] - reorder_pipeline_priority     : False
+[2026-11-25 03:04:59,889] [   DEBUG] - replace_with_c_embedding      : False
+[2026-11-25 03:04:59,889] [   DEBUG] - replace_with_parallel_cross_entropy: False
+[2026-11-25 03:04:59,889] [   DEBUG] - replicate_saved_into_local    : False
+[2026-11-25 03:04:59,889] [   DEBUG] - report_to                     : []
+[2026-11-25 03:04:59,889] [   DEBUG] - resume_from_checkpoint        : None
+[2026-11-25 03:04:59,889] [   DEBUG] - resume_from_huggingface_ckpt  : None
+[2026-11-25 03:04:59,889] [   DEBUG] - router_aux_loss_coef          : 0.0
+[2026-11-25 03:04:59,889] [   DEBUG] - router_z_loss_coef            : None
+[2026-11-25 03:04:59,889] [   DEBUG] - run_name                      : /root/pr4840-validation/paddle-training-output
+[2026-11-25 03:04:59,889] [   DEBUG] - same_data                     : None
+[2026-11-25 03:04:59,890] [   DEBUG] - save_checkpoint_format        : flex_checkpoint
+[2026-11-25 03:04:59,890] [   DEBUG] - save_hf_memory_growth_threshold: 8
+[2026-11-25 03:04:59,890] [   DEBUG] - save_hf_steps                 : -1
+[2026-11-25 03:04:59,890] [   DEBUG] - save_hf_total_limit           : None
+[2026-11-25 03:04:59,890] [   DEBUG] - save_last_step                : False
+[2026-11-25 03:04:59,890] [   DEBUG] - save_on_each_node             : False
+[2026-11-25 03:04:59,890] [   DEBUG] - save_rng_states               : True
+[2026-11-25 03:04:59,890] [   DEBUG] - save_safetensors              : False
+[2026-11-25 03:04:59,890] [   DEBUG] - save_sharded_model            : False
+[2026-11-25 03:04:59,890] [   DEBUG] - save_sharding_stage1_model_include_freeze_params: False
+[2026-11-25 03:04:59,890] [   DEBUG] - save_steps                    : 100000
+[2026-11-25 03:04:59,890] [   DEBUG] - save_strategy                 : IntervalStrategy.NO
+[2026-11-25 03:04:59,890] [   DEBUG] - save_tokenizer                : True
+[2026-11-25 03:04:59,890] [   DEBUG] - save_total_limit              : None
+[2026-11-25 03:04:59,891] [   DEBUG] - scale_loss                    : 32768
+[2026-11-25 03:04:59,891] [   DEBUG] - sd_release_grads              : False
+[2026-11-25 03:04:59,891] [   DEBUG] - sd_sharding_comm_overlap      : False
+[2026-11-25 03:04:59,891] [   DEBUG] - sd_shardingv1_comm_overlap    : False
+[2026-11-25 03:04:59,891] [   DEBUG] - seed                          : 23
+[2026-11-25 03:04:59,891] [   DEBUG] - send_recv_overlap             : False
+[2026-11-25 03:04:59,891] [   DEBUG] - sep_parallel_size             : -1
+[2026-11-25 03:04:59,891] [   DEBUG] - sequence_parallel             : False
+[2026-11-25 03:04:59,891] [   DEBUG] - sequence_parallel_config      : 
+[2026-11-25 03:04:59,891] [   DEBUG] - sft_loss_ratio                : 0.0
+[2026-11-25 03:04:59,891] [   DEBUG] - sharded_model_from_ema        : False
+[2026-11-25 03:04:59,891] [   DEBUG] - sharding                      : []
+[2026-11-25 03:04:59,891] [   DEBUG] - sharding_comm_buffer_size_MB  : -1
+[2026-11-25 03:04:59,891] [   DEBUG] - sharding_comm_group_call_opt  : False
+[2026-11-25 03:04:59,891] [   DEBUG] - sharding_degree               : -1
+[2026-11-25 03:04:59,891] [   DEBUG] - sharding_offload_opt_buffersize_GB: -1
+[2026-11-25 03:04:59,891] [   DEBUG] - sharding_parallel_config      : 
+[2026-11-25 03:04:59,891] [   DEBUG] - sharding_parallel_mesh_dimension: dp
+[2026-11-25 03:04:59,891] [   DEBUG] - sharding_parallel_rank        : 0
+[2026-11-25 03:04:59,892] [   DEBUG] - sharding_parallel_size        : -1
+[2026-11-25 03:04:59,892] [   DEBUG] - should_load_dataset           : True
+[2026-11-25 03:04:59,892] [   DEBUG] - should_load_sharding_stage1_model: False
+[2026-11-25 03:04:59,892] [   DEBUG] - should_log                    : True
+[2026-11-25 03:04:59,892] [   DEBUG] - should_save                   : True
+[2026-11-25 03:04:59,892] [   DEBUG] - should_save_model_state       : True
+[2026-11-25 03:04:59,892] [   DEBUG] - should_save_model_with_tensor_fusion: False
+[2026-11-25 03:04:59,892] [   DEBUG] - should_save_sharding_stage1_model: False
+[2026-11-25 03:04:59,892] [   DEBUG] - shuffle_consecutive           : False
+[2026-11-25 03:04:59,892] [   DEBUG] - simpo_gamma                   : 0.5
+[2026-11-25 03:04:59,892] [   DEBUG] - skip_data_intervals           : None
+[2026-11-25 03:04:59,892] [   DEBUG] - skip_memory_metrics           : True
+[2026-11-25 03:04:59,892] [   DEBUG] - skip_profile_timer            : True
+[2026-11-25 03:04:59,892] [   DEBUG] - softmax_scale                 : None
+[2026-11-25 03:04:59,892] [   DEBUG] - softmax_type                  : vanilla
+[2026-11-25 03:04:59,892] [   DEBUG] - sp_allreduce_avg_in_gradinent_scale: False
+[2026-11-25 03:04:59,892] [   DEBUG] - sp_async_reduce_scatter       : False
+[2026-11-25 03:04:59,892] [   DEBUG] - split_backward                : False
+[2026-11-25 03:04:59,892] [   DEBUG] - split_inputs_sequence_dim     : True
+[2026-11-25 03:04:59,893] [   DEBUG] - split_norm_comm               : False
+[2026-11-25 03:04:59,893] [   DEBUG] - split_param                   : True
+[2026-11-25 03:04:59,893] [   DEBUG] - stage1_allgather_overlap      : False
+[2026-11-25 03:04:59,893] [   DEBUG] - stage1_broadcast_overlap      : False
+[2026-11-25 03:04:59,893] [   DEBUG] - stage1_overlap                : False
+[2026-11-25 03:04:59,893] [   DEBUG] - stage1_reduce_avg             : True
+[2026-11-25 03:04:59,893] [   DEBUG] - stage1_tensor_fusion          : False
+[2026-11-25 03:04:59,893] [   DEBUG] - stage2_overlap                : False
+[2026-11-25 03:04:59,893] [   DEBUG] - swa_high_precision_norm       : False
+[2026-11-25 03:04:59,893] [   DEBUG] - sync_grad                     : False
+[2026-11-25 03:04:59,893] [   DEBUG] - tensor_fusion                 : False
+[2026-11-25 03:04:59,893] [   DEBUG] - tensor_model_parallel_size    : -1
+[2026-11-25 03:04:59,893] [   DEBUG] - tensor_parallel_config        : 
+[2026-11-25 03:04:59,893] [   DEBUG] - tensor_parallel_output        : True
+[2026-11-25 03:04:59,893] [   DEBUG] - tensor_parallel_rank          : 0
+[2026-11-25 03:04:59,893] [   DEBUG] - tensorwise_offload_optimizer  : False
+[2026-11-25 03:04:59,893] [   DEBUG] - tie_word_embeddings           : None
+[2026-11-25 03:04:59,893] [   DEBUG] - timer                         : False
+[2026-11-25 03:04:59,893] [   DEBUG] - to_static                     : False
+[2026-11-25 03:04:59,893] [   DEBUG] - token_balance_loss            : False
+[2026-11-25 03:04:59,894] [   DEBUG] - tp_async_allreduce            : False
+[2026-11-25 03:04:59,894] [   DEBUG] - tp_sync_moment                : False
+[2026-11-25 03:04:59,894] [   DEBUG] - tp_sync_param                 : False
+[2026-11-25 03:04:59,894] [   DEBUG] - train_batch_size              : 1
+[2026-11-25 03:04:59,894] [   DEBUG] - train_mtp_only                : False
+[2026-11-25 03:04:59,894] [   DEBUG] - unified_checkpoint            : False
+[2026-11-25 03:04:59,894] [   DEBUG] - unified_checkpoint_config     : 
+[2026-11-25 03:04:59,894] [   DEBUG] - use_accuracy_compatible       : False
+[2026-11-25 03:04:59,894] [   DEBUG] - use_async_save                : False
+[2026-11-25 03:04:59,894] [   DEBUG] - use_cache                     : False
+[2026-11-25 03:04:59,894] [   DEBUG] - use_dualpipev                 : False
+[2026-11-25 03:04:59,894] [   DEBUG] - use_expert_parallel           : False
+[2026-11-25 03:04:59,894] [   DEBUG] - use_filtered_label_loss       : False
+[2026-11-25 03:04:59,894] [   DEBUG] - use_flex_async_save           : False
+[2026-11-25 03:04:59,894] [   DEBUG] - use_fp8                       : False
+[2026-11-25 03:04:59,894] [   DEBUG] - use_fused_head_and_loss_fn    : False
+[2026-11-25 03:04:59,894] [   DEBUG] - use_fused_linear_cross_entropy: False
+[2026-11-25 03:04:59,894] [   DEBUG] - use_hybrid_parallel           : False
+[2026-11-25 03:04:59,894] [   DEBUG] - use_intermediate_api          : False
+[2026-11-25 03:04:59,894] [   DEBUG] - use_lowprecision_moment       : False
+[2026-11-25 03:04:59,895] [   DEBUG] - use_moe                       : False
+[2026-11-25 03:04:59,895] [   DEBUG] - use_ortho_loss_callback       : False
+[2026-11-25 03:04:59,895] [   DEBUG] - use_qk_norm                   : None
+[2026-11-25 03:04:59,895] [   DEBUG] - use_recompute_mtp             : False
+[2026-11-25 03:04:59,895] [   DEBUG] - use_ue8m0                     : False
+[2026-11-25 03:04:59,895] [   DEBUG] - use_unified_moe               : False
+[2026-11-25 03:04:59,895] [   DEBUG] - using_sonic_moe               : False
+[2026-11-25 03:04:59,895] [   DEBUG] - variable_seq_lengths          : False
+[2026-11-25 03:04:59,895] [   DEBUG] - virtual_pipeline_model_parallel_size: 1
+[2026-11-25 03:04:59,895] [   DEBUG] - wandb_api_key                 : None
+[2026-11-25 03:04:59,895] [   DEBUG] - wandb_http_proxy              : None
+[2026-11-25 03:04:59,895] [   DEBUG] - warmup_ratio                  : 0.0
+[2026-11-25 03:04:59,895] [   DEBUG] - warmup_steps                  : 0
+[2026-11-25 03:04:59,895] [   DEBUG] - weight_decay                  : 0.0
+[2026-11-25 03:04:59,895] [   DEBUG] - weight_name_suffix            : None
+[2026-11-25 03:04:59,895] [   DEBUG] - weight_quantize_algo          : None
+[2026-11-25 03:04:59,895] [   DEBUG] - world_size                    : 1
+[2026-11-25 03:04:59,895] [   DEBUG] - zcc_ema_interval              : 1
+[2026-11-25 03:04:59,896] [   DEBUG] - zcc_ema_loss_threshold        : None
+[2026-11-25 03:04:59,896] [   DEBUG] - zcc_pipeline_hooks_capacity_usage: 0.6
+[2026-11-25 03:04:59,896] [   DEBUG] - zcc_save_ema_coef             : None
+[2026-11-25 03:04:59,896] [   DEBUG] - zcc_workers_num               : 3
+[2026-11-25 03:04:59,896] [   DEBUG] - 
+/home/vipuser/anaconda3/envs/paddleformers/lib/python3.12/site-packages/paddlefleet/parallel_state.py:248: UserWarning: get_pipeline_model_parallel_rank is not implemented yet, always returns 0 for now. 
+  warnings.warn(
+[2026-11-25 03:04:59,896] [    INFO] - The global seed is set to 23, local seed is set to 24 and random seed is set to 23.
+[2026-11-25 03:04:59,896] [ WARNING] - Process rank: -1, device: gpu, world_size: 1, distributed training: False, 16-bits training: False
+[2026-11-25 03:04:59,897] [    INFO] - Using download source: huggingface
+[2026-11-25 03:04:59,897] [    INFO] - Using download source: huggingface
+[2026-11-25 03:04:59,897] [    INFO] - Loading configuration file /data/minicpm4.1-8b/config.json
+[2026-11-25 03:04:59,899] [    INFO] - Final model config: MiniCPM4_1Config {
+  "_name_or_path": "openbmb/MiniCPM4.1-8B",
+  "architectures": [
+    "MiniCPMForCausalLM"
+  ],
+  "attention_bias": false,
+  "attention_dropout": 0.0,
+  "attention_dropout_prob": 0.0,
+  "auto_map": {
+    "AutoConfig": "configuration_minicpm.MiniCPMConfig",
+    "AutoModel": "modeling_minicpm.MiniCPMModel",
+    "AutoModelForCausalLM": "modeling_minicpm.MiniCPMForCausalLM",
+    "AutoModelForSeq2SeqLM": "modeling_minicpm.MiniCPMForCausalLM",
+    "AutoModelForSequenceClassification": "modeling_minicpm.MiniCPMForSequenceClassification"
+  },
+  "bos_token_id": 1,
+  "dim_model_base": 256,
+  "enable_auto_parallel": false,
+  "eos_token_id": [
+    2,
+    73440
+  ],
+  "expert_model_parallel_size": -1,
+  "fuse_attention_ffn": false,
+  "fuse_attention_qkv": false,
+  "hidden_act": "silu",
+  "hidden_dropout_prob": 0.0,
+  "hidden_size": 4096,
+  "initializer_range": 0.1,
+  "intermediate_size": 16384,
+  "is_lora": true,
+  "max_position_embeddings": 65536,
+  "max_sequence_length": 512,
+  "model_type": "minicpm4_1",
+  "moe_logging": null,
+  "moe_router_bias_update_rate": 0.0,
+  "mup_denominator": 32,
+  "num_attention_heads": 32,
+  "num_hidden_layers": 32,
+  "num_key_value_heads": 2,
+  "pad_token_id": 0,
+  "paddleformers_version": "1.1.0.post20261125",
+  "pipeline_model_parallel_size": -1,
+  "pp_seg_method": "layer:DecoderLayer|EmptyLayer",
+  "pretraining_tp": 1,
+  "rms_norm_eps": 1e-06,
+  "rope_parameters": {
+    "rope_theta": 10000.0,
+    "rope_type": "default"
+  },
+  "rope_scaling": {
+    "long_factor": [
+      0.9982316082870437,
+      1.033048153422584,
+      1.0749920956484724,
+      1.1255096879436193,
+      1.1863348602111476,
+      1.259543828902579,
+      1.3476188888731149,
+      1.4535223827776373,
+      1.5807816745852985,
+      1.7335856049489526,
+      1.9168922912975785,
+      2.1365471404135326,
+      2.3994084200118646,
+      2.713475511863602,
+      3.0880118452194134,
+      3.533650295140154,
+      4.062463396503134,
+      4.687974098908333,
+      5.425075306704039,
+      6.289818967956352,
+      7.29902962722721,
+      8.469695779093664,
+      9.81809877306655,
+      11.358657902065282,
+      13.102505860712087,
+      15.055862949967128,
+      17.218348131364184,
+      19.581439255386453,
+      22.127353314656723,
+      24.828633849376587,
+      27.6486820771775,
+      30.54334096108829,
+      33.46345345363812,
+      36.358112337548896,
+      39.17816056534983,
+      41.879441100069684,
+      44.425355159339965,
+      46.78844628336223,
+      48.95093146475928,
+      50.90428855401433,
+      52.648136512661125,
+      54.18869564165987,
+      55.537098635632745,
+      56.7077647874992,
+      57.71697544677006,
+      58.58171910802236,
+      59.31882031581807,
+      59.94433101822328,
+      60.47314411958625,
+      60.918782569507,
+      61.29331890286281,
+      61.60738599471455,
+      61.87024727431288,
+      62.089902123428836,
+      62.27320880977746,
+      62.42601274014111,
+      62.55327203194878,
+      62.65917552585329,
+      62.74725058582382,
+      62.82045955451526,
+      62.88128472678279,
+      62.931802319077946,
+      62.97374626130382,
+      63.008562806439365
+    ],
+    "original_max_position_embeddings": 65536,
+    "rope_type": "longrope",
+    "short_factor": [
+      0.9982316082870437,
+      1.033048153422584,
+      1.0749920956484724,
+      1.1255096879436193,
+      1.1863348602111476,
+      1.259543828902579,
+      1.3476188888731149,
+      1.4535223827776373,
+      1.5807816745852985,
+      1.7335856049489526,
+      1.9168922912975785,
+      2.1365471404135326,
+      2.3994084200118646,
+      2.713475511863602,
+      3.0880118452194134,
+      3.533650295140154,
+      4.062463396503134,
+      4.687974098908333,
+      5.425075306704039,
+      6.289818967956352,
+      7.29902962722721,
+      8.469695779093664,
+      9.81809877306655,
+      11.358657902065282,
+      13.102505860712087,
+      15.055862949967128,
+      17.218348131364184,
+      19.581439255386453,
+      22.127353314656723,
+      24.828633849376587,
+      27.6486820771775,
+      30.54334096108829,
+      33.46345345363812,
+      36.358112337548896,
+      39.17816056534983,
+      41.879441100069684,
+      44.425355159339965,
+      46.78844628336223,
+      48.95093146475928,
+      50.90428855401433,
+      52.648136512661125,
+      54.18869564165987,
+      55.537098635632745,
+      56.7077647874992,
+      57.71697544677006,
+      58.58171910802236,
+      59.31882031581807,
+      59.94433101822328,
+      60.47314411958625,
+      60.918782569507,
+      61.29331890286281,
+      61.60738599471455,
+      61.87024727431288,
+      62.089902123428836,
+      62.27320880977746,
+      62.42601274014111,
+      62.55327203194878,
+      62.65917552585329,
+      62.74725058582382,
+      62.82045955451526,
+      62.88128472678279,
+      62.931802319077946,
+      62.97374626130382,
+      63.008562806439365
+    ]
+  },
+  "rope_theta": 10000.0,
+  "scale_depth": 1.4,
+  "scale_emb": 12,
+  "sep_parallel_size": -1,
+  "seq_length": 512,
+  "sparse_config": null,
+  "tensor_model_parallel_size": -1,
+  "tie_word_embeddings": false,
+  "torch_dtype": "float32",
+  "use_bias": false,
+  "use_cache": true,
+  "use_fast_layer_norm": false,
+  "vocab_size": 73448
+}
+
+[2026-11-25 03:04:59,900] [    INFO] - Creating model
+[2026-11-25 03:04:59,900] [    INFO] - Loading model weights from /data/minicpm4.1-8b
+[2026-11-25 03:04:59,900] [    INFO] - Using download source: huggingface
+[2026-11-25 03:04:59,900] [    INFO] - We are using <class 'paddleformers.transformers.minicpm4_1.modeling.MiniCPM4_1ForCausalLM'> to load '/data/minicpm4.1-8b'.
+[2026-11-25 03:04:59,900] [    INFO] - Loading weights file /data/minicpm4.1-8b/model.safetensors.index.json
+[2026-11-25 03:05:00,064] [    INFO] - loss_subbatch_sequence_length: -1 , use_fused_head_and_loss_fn: False, use_filtered_label_loss: False
+[2026-11-25 03:05:00,190] [    INFO] load_state_dict.py:188 - Found HuggingFace-format checkpoint with files: model-00003-of-00004.safetensors, model-00002-of-00004.safetensors, model-00004-of-00004.safetensors, model-00001-of-00004.safetensors
+[2026-11-25 03:05:00,190] [    INFO] load_state_dict.py:197 - No metadata file found in the checkpoint directory: /data/minicpm4.1-8b. Creating one now.
+[2026-11-25 03:05:00,193] [    INFO] utils.py:384 - Process 4643 successfully wrote the metadata to the file.
+[2026-11-25 03:05:00,193] [    INFO] load_state_dict.py:207 - Created metadata file: flex-ckpt.auto_generated.metadata successfully.
+[2026-11-25 03:05:00,358] [    INFO] load_state_dict.py:1232 - The unique_id:0 is used.
+[2026-11-25 03:05:00,359] [    INFO] load_state_dict.py:188 - Found HuggingFace-format checkpoint with files: model-00003-of-00004.safetensors, model-00002-of-00004.safetensors, model-00004-of-00004.safetensors, model-00001-of-00004.safetensors
+[2026-11-25 03:05:00,360] [    INFO] load_state_dict.py:1285 - Rank 0: loading files from ['model-00001-of-00004.safetensors', 'model-00002-of-00004.safetensors', 'model-00003-of-00004.safetensors', 'model-00004-of-00004.safetensors'].
+[2026-11-25 03:05:17,613] [    INFO] resharder.py:372 - ReadItem generation completed, with a total of 291.
+[2026-11-25 03:05:19,756] [    INFO] - Using download source: huggingface
+[2026-11-25 03:05:20,126] [    INFO] - Loading configuration file /data/minicpm4.1-8b/config.json
+[2026-11-25 03:05:20,127] [    INFO] - Using download source: huggingface
+[2026-11-25 03:05:20,509] [ WARNING] - suffix is not specified, using eos token as suffix.
+[2026-11-25 03:05:20,510] [    INFO] - self.dataset_num_proc: None
+[2026-11-25 03:05:20,510] [ WARNING] - Truncate packing is only valid in pretraining data flow
+[2026-11-25 03:05:20,510] [    INFO] - [dataflow] truncation_strategy: delete
+[2026-11-25 03:05:20,510] [    INFO] - self.num_reserved_tokens_for_each_dialog: 2
+[2026-11-25 03:05:20,511] [    INFO] - Loading /root/pr4840-validation/paddle-dataset.jsonl as stream.
+json file path: /root/pr4840-validation/paddle-dataset.jsonl
+[load json] done. total: 10 lines, elapsed: 0.00s
+[2026-11-25 03:05:20,512] [    INFO] - [MapSFTDataset] Total samples: 10
+[2026-11-25 03:05:20,607] [    INFO] - Mark only lora and trainable_module as trainable.
+[2026-11-25 03:05:20,618] [   DEBUG] - Frozen parameters: 8.19e+09 || Trainable parameters:2.22e+07 || Total parameters:8.21e+09|| Trainable:0.27%
+[2026-11-25 03:05:20,781] [    INFO] - Setting max_seq_len to None using PaddleFormers Model.
+callbacks: []
+/home/vipuser/anaconda3/envs/paddleformers/lib/python3.12/site-packages/paddlefleet/parallel_state.py:248: UserWarning: get_pipeline_model_parallel_rank is not implemented yet, always returns 0 for now. 
+  warnings.warn(
+[2026-11-25 03:05:20,781] [    INFO] - The global seed is set to 23, local seed is set to 24 and random seed is set to 23.
+[2026-11-25 03:05:20,781] [    INFO] - max_steps is given, it will override any value given in num_train_epochs
+[2026-11-25 03:05:20,782] [   DEBUG] - ============================================================
+[2026-11-25 03:05:20,782] [   DEBUG] -     Training Configuration Arguments    
+[2026-11-25 03:05:20,782] [   DEBUG] - paddle commit id              : 8a1040b3d08ef64fcf7aa8a41dad18cc861b7eb9
+[2026-11-25 03:05:20,782] [   DEBUG] - paddleformers commit id       : 729cca11dc5663b00f67f91c62fb69724cf54c10
+[2026-11-25 03:05:20,782] [   DEBUG] - paddlefleet commit id         : 712fd29a93038f2d84db1ce60cc29e6da877fad0
+[2026-11-25 03:05:20,782] [   DEBUG] - _no_sync_in_gradient_accumulation: True
+[2026-11-25 03:05:20,782] [   DEBUG] - adam_beta1                    : 0.9
+[2026-11-25 03:05:20,782] [   DEBUG] - adam_beta2                    : 0.999
+[2026-11-25 03:05:20,782] [   DEBUG] - adam_epsilon                  : 1e-08
+[2026-11-25 03:05:20,782] [   DEBUG] - amp_custom_black_list         : ['reduce_sum', 'softmax_with_cross_entropy', 'c_softmax_with_cross_entropy', 'elementwise_div', 'sin', 'cos']
+[2026-11-25 03:05:20,782] [   DEBUG] - amp_custom_white_list         : ['lookup_table', 'lookup_table_v2', 'flash_attn', 'matmul', 'matmul_v2', 'fused_gemm_epilogue']
+[2026-11-25 03:05:20,782] [   DEBUG] - amp_master_grad               : False
+[2026-11-25 03:05:20,782] [   DEBUG] - aoa_config                    : None
+[2026-11-25 03:05:20,783] [   DEBUG] - apply_rope_fusion             : False
+[2026-11-25 03:05:20,783] [   DEBUG] - attention_probs_dropout_prob  : 0.0
+[2026-11-25 03:05:20,783] [   DEBUG] - auto_parallel_resume_form_hybrid_parallel: False
+[2026-11-25 03:05:20,783] [   DEBUG] - auto_parallel_sync_shared_params: False
+[2026-11-25 03:05:20,783] [   DEBUG] - autotuner_benchmark           : False
+[2026-11-25 03:05:20,783] [   DEBUG] - balanced_image_preprocess     : False
+[2026-11-25 03:05:20,783] [   DEBUG] - batch_p2p_comm                : True
+[2026-11-25 03:05:20,783] [   DEBUG] - best_unbalanced_scheduler     : False
+[2026-11-25 03:05:20,783] [   DEBUG] - beta                          : 0.1
+[2026-11-25 03:05:20,783] [   DEBUG] - bf16                          : False
+[2026-11-25 03:05:20,783] [   DEBUG] - bf16_full_eval                : False
+[2026-11-25 03:05:20,783] [   DEBUG] - ckpt_quant_stage              : O0
+[2026-11-25 03:05:20,783] [   DEBUG] - clear_every_step_cache        : False
+[2026-11-25 03:05:20,783] [   DEBUG] - compute_type                  : float32
+[2026-11-25 03:05:20,783] [   DEBUG] - context_parallel_rank         : 0
+[2026-11-25 03:05:20,783] [   DEBUG] - context_parallel_size         : 1
+[2026-11-25 03:05:20,783] [   DEBUG] - convert_from_hf               : True
+[2026-11-25 03:05:20,783] [   DEBUG] - copy_custom_file_list         : 
+[2026-11-25 03:05:20,784] [   DEBUG] - count_trained_tokens          : False
+[2026-11-25 03:05:20,784] [   DEBUG] - cp_balance_mode               : dualchunk_allgather
+[2026-11-25 03:05:20,784] [   DEBUG] - cp_comm_type                  : None
+[2026-11-25 03:05:20,784] [   DEBUG] - cp_sharding_degree            : 1
+[2026-11-25 03:05:20,784] [   DEBUG] - cp_sharding_rank              : 0
+[2026-11-25 03:05:20,784] [   DEBUG] - csa_indexer_backend           : tilelang
+[2026-11-25 03:05:20,784] [   DEBUG] - csa_sparse_attn_backend       : tilelang
+[2026-11-25 03:05:20,784] [   DEBUG] - current_device                : gpu:0
+[2026-11-25 03:05:20,784] [   DEBUG] - data_parallel_config          : 
+[2026-11-25 03:05:20,784] [   DEBUG] - data_parallel_rank            : 0
+[2026-11-25 03:05:20,784] [   DEBUG] - data_parallel_size            : 1
+[2026-11-25 03:05:20,784] [   DEBUG] - dataloader_drop_last          : False
+[2026-11-25 03:05:20,784] [   DEBUG] - dataloader_num_workers        : 0
+[2026-11-25 03:05:20,784] [   DEBUG] - dataloader_shuffle            : False
+[2026-11-25 03:05:20,784] [   DEBUG] - dataset_batch_size            : 1000
+[2026-11-25 03:05:20,784] [   DEBUG] - dataset_kwargs                : {}
+[2026-11-25 03:05:20,784] [   DEBUG] - dataset_num_proc              : None
+[2026-11-25 03:05:20,784] [   DEBUG] - dataset_rank                  : 0
+[2026-11-25 03:05:20,784] [   DEBUG] - dataset_text_field            : text
+[2026-11-25 03:05:20,785] [   DEBUG] - dataset_world_size            : 1
+[2026-11-25 03:05:20,785] [   DEBUG] - ddp_find_unused_parameters    : None
+[2026-11-25 03:05:20,785] [   DEBUG] - decay_function                : half_life
+[2026-11-25 03:05:20,785] [   DEBUG] - decay_steps                   : 20
+[2026-11-25 03:05:20,785] [   DEBUG] - deterministic_mode            : False
+[2026-11-25 03:05:20,785] [   DEBUG] - device                        : gpu
+[2026-11-25 03:05:20,785] [   DEBUG] - disable_tqdm                  : True
+[2026-11-25 03:05:20,785] [   DEBUG] - distributed_dataloader        : False
+[2026-11-25 03:05:20,785] [   DEBUG] - do_eval                       : False
+[2026-11-25 03:05:20,785] [   DEBUG] - do_export                     : False
+[2026-11-25 03:05:20,785] [   DEBUG] - do_predict                    : False
+[2026-11-25 03:05:20,785] [   DEBUG] - do_train                      : True
+[2026-11-25 03:05:20,785] [   DEBUG] - download_hub                  : None
+[2026-11-25 03:05:20,785] [   DEBUG] - dp_allreduce_avg_in_gradinent_scale: False
+[2026-11-25 03:05:20,785] [   DEBUG] - dp_comm_overlap               : False
+[2026-11-25 03:05:20,785] [   DEBUG] - dpop_lambda                   : 50
+[2026-11-25 03:05:20,785] [   DEBUG] - dsa_indexer_loss_coeff        : 0.01
+[2026-11-25 03:05:20,785] [   DEBUG] - embedding_init_method         : None
+[2026-11-25 03:05:20,785] [   DEBUG] - embedding_init_method_std     : 0.02
+[2026-11-25 03:05:20,785] [   DEBUG] - enable_auto_parallel          : False
+[2026-11-25 03:05:20,786] [   DEBUG] - enable_linear_fused_grad_add  : False
+[2026-11-25 03:05:20,786] [   DEBUG] - enable_mtp_magic_send         : False
+[2026-11-25 03:05:20,786] [   DEBUG] - enable_zero_cost_checkpoint   : False
+[2026-11-25 03:05:20,786] [   DEBUG] - estimation_output_file        : estimation_output.json
+[2026-11-25 03:05:20,786] [   DEBUG] - eval_accumulation_steps       : 16
+[2026-11-25 03:05:20,786] [   DEBUG] - eval_batch_size               : 1
+[2026-11-25 03:05:20,786] [   DEBUG] - eval_iters                    : -1
+[2026-11-25 03:05:20,786] [   DEBUG] - eval_steps                    : 50
+[2026-11-25 03:05:20,786] [   DEBUG] - evaluation_strategy           : IntervalStrategy.NO
+[2026-11-25 03:05:20,786] [   DEBUG] - experimental_dataflow         : False
+[2026-11-25 03:05:20,786] [   DEBUG] - expert_model_parallel_size    : -1
+[2026-11-25 03:05:20,786] [   DEBUG] - expert_parallel_rank          : 0
+[2026-11-25 03:05:20,786] [   DEBUG] - expert_tensor_model_parallel_size: -1
+[2026-11-25 03:05:20,786] [   DEBUG] - fa_version                    : 2
+[2026-11-25 03:05:20,786] [   DEBUG] - factor                        : 20
+[2026-11-25 03:05:20,786] [   DEBUG] - flash_device_save_steps       : 0
+[2026-11-25 03:05:20,786] [   DEBUG] - flatten_param_grads           : False
+[2026-11-25 03:05:20,786] [   DEBUG] - flex_ckpt_comm_method         : None
+[2026-11-25 03:05:20,786] [   DEBUG] - force_reshard_pp              : False
+[2026-11-25 03:05:20,786] [   DEBUG] - forward_backward_overlap_scheduler: False
+[2026-11-25 03:05:20,787] [   DEBUG] - fp16                          : False
+[2026-11-25 03:05:20,787] [   DEBUG] - fp16_full_eval                : False
+[2026-11-25 03:05:20,787] [   DEBUG] - fp16_opt_level                : O1
+[2026-11-25 03:05:20,787] [   DEBUG] - fp32_residual_connection      : True
+[2026-11-25 03:05:20,787] [   DEBUG] - fp8                           : None
+[2026-11-25 03:05:20,787] [   DEBUG] - fp8_wgrad                     : True
+[2026-11-25 03:05:20,787] [   DEBUG] - freeze_config                 : 
+[2026-11-25 03:05:20,787] [   DEBUG] - freeze_training               : False
+[2026-11-25 03:05:20,787] [   DEBUG] - fuse_optimizer_states         : False
+[2026-11-25 03:05:20,787] [   DEBUG] - fuse_sequence_parallel_allreduce: False
+[2026-11-25 03:05:20,787] [   DEBUG] - fuse_swiglu                   : False
+[2026-11-25 03:05:20,787] [   DEBUG] - gated_linear_unit             : True
+[2026-11-25 03:05:20,787] [   DEBUG] - gc_interval                   : 0
+[2026-11-25 03:05:20,787] [   DEBUG] - global_batch_size             : 1
+[2026-11-25 03:05:20,787] [   DEBUG] - global_logging_interval       : 1
+[2026-11-25 03:05:20,787] [   DEBUG] - gradient_accumulation_steps   : 1
+[2026-11-25 03:05:20,787] [   DEBUG] - gradient_sync_after_accumulate: False
+[2026-11-25 03:05:20,787] [   DEBUG] - greater_is_better             : None
+[2026-11-25 03:05:20,787] [   DEBUG] - hidden_dropout_prob           : 0.0
+[2026-11-25 03:05:20,788] [   DEBUG] - hidden_size                   : None
+[2026-11-25 03:05:20,788] [   DEBUG] - high_precision_rope           : False
+[2026-11-25 03:05:20,788] [   DEBUG] - hybrid_parallel_expert_grad_scale: 1.0
+[2026-11-25 03:05:20,788] [   DEBUG] - hybrid_parallel_topo_order    : sharding_first
+[2026-11-25 03:05:20,788] [   DEBUG] - ignore_data_skip              : False
+[2026-11-25 03:05:20,788] [   DEBUG] - ignore_eos_token              : False
+[2026-11-25 03:05:20,788] [   DEBUG] - ignore_load_lr_and_optim      : False
+[2026-11-25 03:05:20,788] [   DEBUG] - ignore_save_lr_and_optim      : False
+[2026-11-25 03:05:20,788] [   DEBUG] - init_method                   : None
+[2026-11-25 03:05:20,788] [   DEBUG] - init_method_std               : 0.02
+[2026-11-25 03:05:20,788] [   DEBUG] - intermediate_size             : None
+[2026-11-25 03:05:20,788] [   DEBUG] - internal_medicine_log_dir     : 
+[2026-11-25 03:05:20,788] [   DEBUG] - internal_medicine_monitor_interval: 0
+[2026-11-25 03:05:20,788] [   DEBUG] - internal_medicine_monitors    : 
+[2026-11-25 03:05:20,788] [   DEBUG] - internal_medicine_qk_row_stride: 1
+[2026-11-25 03:05:20,788] [   DEBUG] - label_names                   : None
+[2026-11-25 03:05:20,788] [   DEBUG] - label_smoothing               : 0.0
+[2026-11-25 03:05:20,788] [   DEBUG] - lazy_data_processing          : True
+[2026-11-25 03:05:20,788] [   DEBUG] - learning_rate                 : 0.0001
+[2026-11-25 03:05:20,788] [   DEBUG] - load_best_model_at_end        : False
+[2026-11-25 03:05:20,789] [   DEBUG] - load_checkpoint_format        : flex_checkpoint
+[2026-11-25 03:05:20,789] [   DEBUG] - load_from_hf                  : False
+[2026-11-25 03:05:20,789] [   DEBUG] - load_sharded_model            : False
+[2026-11-25 03:05:20,789] [   DEBUG] - load_sharded_model_remap_parameter_name: False
+[2026-11-25 03:05:20,789] [   DEBUG] - load_via_cpu                  : True
+[2026-11-25 03:05:20,789] [   DEBUG] - local_process_index           : 0
+[2026-11-25 03:05:20,789] [   DEBUG] - local_rank                    : -1
+[2026-11-25 03:05:20,789] [   DEBUG] - log_global_grad_norm          : False
+[2026-11-25 03:05:20,789] [   DEBUG] - log_level                     : -1
+[2026-11-25 03:05:20,789] [   DEBUG] - log_level_replica             : -1
+[2026-11-25 03:05:20,789] [   DEBUG] - log_on_each_node              : True
+[2026-11-25 03:05:20,789] [   DEBUG] - logging_dir                   : /root/pr4840-validation/paddle-vdl
+[2026-11-25 03:05:20,789] [   DEBUG] - logging_first_step            : False
+[2026-11-25 03:05:20,789] [   DEBUG] - logging_steps                 : 1
+[2026-11-25 03:05:20,789] [   DEBUG] - logging_strategy              : IntervalStrategy.STEPS
+[2026-11-25 03:05:20,789] [   DEBUG] - logical_process_index         : 0
+[2026-11-25 03:05:20,789] [   DEBUG] - loss_subbatch_sequence_length : -1
+[2026-11-25 03:05:20,789] [   DEBUG] - loss_type                     : sigmoid
+[2026-11-25 03:05:20,789] [   DEBUG] - lr_end                        : 1e-07
+[2026-11-25 03:05:20,789] [   DEBUG] - lr_scheduler                  : cosine
+[2026-11-25 03:05:20,790] [   DEBUG] - lr_scheduler_type             : SchedulerType.CONSTANT
+[2026-11-25 03:05:20,790] [   DEBUG] - max_estimate_samples          : 100000.0
+[2026-11-25 03:05:20,790] [   DEBUG] - max_evaluate_steps            : -1
+[2026-11-25 03:05:20,790] [   DEBUG] - max_grad_norm                 : 0.0
+[2026-11-25 03:05:20,790] [   DEBUG] - max_gradient_accumulation_steps: 1
+[2026-11-25 03:05:20,790] [   DEBUG] - max_seq_len                   : 512
+[2026-11-25 03:05:20,790] [   DEBUG] - max_steps                     : 20
+[2026-11-25 03:05:20,790] [   DEBUG] - merge_with_qdq_base_model     : False
+[2026-11-25 03:05:20,790] [   DEBUG] - metric_for_best_model         : None
+[2026-11-25 03:05:20,790] [   DEBUG] - metrics_output_path           : None
+[2026-11-25 03:05:20,790] [   DEBUG] - min_lr                        : 0.0
+[2026-11-25 03:05:20,790] [   DEBUG] - minimum_eval_times            : None
+[2026-11-25 03:05:20,790] [   DEBUG] - model_name_or_path            : /data/minicpm4.1-8b
+[2026-11-25 03:05:20,790] [   DEBUG] - moe_deep_gemm                 : True
+[2026-11-25 03:05:20,790] [   DEBUG] - moe_deepep_num_sms            : None
+[2026-11-25 03:05:20,790] [   DEBUG] - moe_dequant_input             : False
+[2026-11-25 03:05:20,790] [   DEBUG] - moe_dropout_prob              : 0.0
+[2026-11-25 03:05:20,790] [   DEBUG] - moe_ep_barrier                : True
+[2026-11-25 03:05:20,790] [   DEBUG] - moe_expert_capacity_factor    : 0.0
+[2026-11-25 03:05:20,790] [   DEBUG] - moe_expert_fusion             : False
+[2026-11-25 03:05:20,791] [   DEBUG] - moe_gate_lr_ratio             : None
+[2026-11-25 03:05:20,791] [   DEBUG] - moe_pad_expert_input_to_capacity: False
+[2026-11-25 03:05:20,791] [   DEBUG] - moe_router_bias_update_rate   : 0.0
+[2026-11-25 03:05:20,791] [   DEBUG] - moe_router_force_load_balancing: False
+[2026-11-25 03:05:20,791] [   DEBUG] - moe_router_fusion             : True
+[2026-11-25 03:05:20,791] [   DEBUG] - moe_router_load_balancing_type: seq_aux_loss
+[2026-11-25 03:05:20,791] [   DEBUG] - moe_sharding_parallel_rank    : 0
+[2026-11-25 03:05:20,791] [   DEBUG] - moe_shared_expert_overlap     : True
+[2026-11-25 03:05:20,791] [   DEBUG] - moe_subbatch_token_num_after_dispatch: None
+[2026-11-25 03:05:20,791] [   DEBUG] - moe_subbatch_token_num_before_dispatch: 0
+[2026-11-25 03:05:20,791] [   DEBUG] - moe_token_dispatcher_type     : deepep
+[2026-11-25 03:05:20,791] [   DEBUG] - moe_token_drop_policy         : probs
+[2026-11-25 03:05:20,791] [   DEBUG] - moe_use_fusion_node           : True
+[2026-11-25 03:05:20,791] [   DEBUG] - moe_with_send_router_loss     : True
+[2026-11-25 03:05:20,791] [   DEBUG] - mp_async_allreduce            : False
+[2026-11-25 03:05:20,791] [   DEBUG] - mp_fused_linear_param_grad_add: False
+[2026-11-25 03:05:20,791] [   DEBUG] - mp_skip_c_identity            : False
+[2026-11-25 03:05:20,791] [   DEBUG] - mtp_distillation_loss         : False
+[2026-11-25 03:05:20,791] [   DEBUG] - mtp_num_layers                : 0
+[2026-11-25 03:05:20,792] [   DEBUG] - multi_latent_attention        : False
+[2026-11-25 03:05:20,792] [   DEBUG] - muon_exclude_patterns         : ['embed', 'bias', 'lm_head', 'mlp.gate']
+[2026-11-25 03:05:20,792] [   DEBUG] - muon_extra_scale_factor       : 0.2
+[2026-11-25 03:05:20,792] [   DEBUG] - muon_ffn_split                : True
+[2026-11-25 03:05:20,792] [   DEBUG] - muon_momentum                 : 0.95
+[2026-11-25 03:05:20,792] [   DEBUG] - muon_ns_coeff_type            : quintic
+[2026-11-25 03:05:20,792] [   DEBUG] - muon_ns_coeffs                : None
+[2026-11-25 03:05:20,792] [   DEBUG] - muon_ns_steps                 : 5
+[2026-11-25 03:05:20,792] [   DEBUG] - muon_qkv_update_mode          : split_head
+[2026-11-25 03:05:20,792] [   DEBUG] - muon_version                  : 3
+[2026-11-25 03:05:20,792] [   DEBUG] - n_routed_experts              : None
+[2026-11-25 03:05:20,792] [   DEBUG] - nccl_comm_group_config        : None
+[2026-11-25 03:05:20,792] [   DEBUG] - need_data                     : True
+[2026-11-25 03:05:20,792] [   DEBUG] - no_cuda                       : False
+[2026-11-25 03:05:20,792] [   DEBUG] - no_recompute_layers           : None
+[2026-11-25 03:05:20,792] [   DEBUG] - no_rope_freq                  : False
+[2026-11-25 03:05:20,792] [   DEBUG] - non_batch_p2p_comm            : False
+[2026-11-25 03:05:20,792] [   DEBUG] - normalization                 : RMSNorm
+[2026-11-25 03:05:20,792] [   DEBUG] - normalize_logps               : False
+[2026-11-25 03:05:20,792] [   DEBUG] - num_attention_heads           : None
+[2026-11-25 03:05:20,793] [   DEBUG] - num_consecutive               : 1
+[2026-11-25 03:05:20,793] [   DEBUG] - num_cycles                    : 0.5
+[2026-11-25 03:05:20,793] [   DEBUG] - num_empty_layers_add_in_head  : 0
+[2026-11-25 03:05:20,793] [   DEBUG] - num_empty_layers_add_in_tail  : 0
+[2026-11-25 03:05:20,793] [   DEBUG] - num_experts_per_tok           : None
+[2026-11-25 03:05:20,793] [   DEBUG] - num_hidden_layers             : None
+[2026-11-25 03:05:20,793] [   DEBUG] - num_key_value_heads           : None
+[2026-11-25 03:05:20,793] [   DEBUG] - num_nextn_predict_layers      : 0
+[2026-11-25 03:05:20,793] [   DEBUG] - num_of_gpus                   : -1
+[2026-11-25 03:05:20,793] [   DEBUG] - num_train_epochs              : 1
+[2026-11-25 03:05:20,793] [   DEBUG] - offload_fp8_expert_master_weight: True
+[2026-11-25 03:05:20,793] [   DEBUG] - offload_queue                 : False
+[2026-11-25 03:05:20,793] [   DEBUG] - offset_alpha                  : 0.0
+[2026-11-25 03:05:20,793] [   DEBUG] - online_merge_ema              : True
+[2026-11-25 03:05:20,793] [   DEBUG] - optim                         : OptimizerNames.ADAMW
+[2026-11-25 03:05:20,793] [   DEBUG] - optim_shard_num               : 1
+[2026-11-25 03:05:20,793] [   DEBUG] - optimizer_name_suffix         : None
+[2026-11-25 03:05:20,793] [   DEBUG] - ordered_save_group_size       : 0
+[2026-11-25 03:05:20,793] [   DEBUG] - output_dir                    : /root/pr4840-validation/paddle-training-output
+[2026-11-25 03:05:20,793] [   DEBUG] - output_layer_init_method      : None
+[2026-11-25 03:05:20,794] [   DEBUG] - output_signal_dir             : /root/pr4840-validation/paddle-training-output
+[2026-11-25 03:05:20,794] [   DEBUG] - overlap                       : False
+[2026-11-25 03:05:20,794] [   DEBUG] - overlap_p2p_comm              : False
+[2026-11-25 03:05:20,794] [   DEBUG] - overwrite_output_dir          : True
+[2026-11-25 03:05:20,794] [   DEBUG] - p2p_cache_shape               : True
+[2026-11-25 03:05:20,794] [   DEBUG] - pad_token_id                  : 0
+[2026-11-25 03:05:20,794] [   DEBUG] - partial_send_recv             : True
+[2026-11-25 03:05:20,794] [   DEBUG] - past_index                    : -1
+[2026-11-25 03:05:20,794] [   DEBUG] - pdc_download_ckpt             : False
+[2026-11-25 03:05:20,794] [   DEBUG] - pdc_download_timeout          : 300
+[2026-11-25 03:05:20,794] [   DEBUG] - per_device_eval_batch_size    : 1
+[2026-11-25 03:05:20,794] [   DEBUG] - per_device_train_batch_size   : 1
+[2026-11-25 03:05:20,794] [   DEBUG] - pipeline_model_parallel_size  : -1
+[2026-11-25 03:05:20,794] [   DEBUG] - pipeline_parallel_config      : 
+[2026-11-25 03:05:20,794] [   DEBUG] - pipeline_parallel_rank        : 0
+[2026-11-25 03:05:20,794] [   DEBUG] - position_embedding_type       : rope
+[2026-11-25 03:05:20,794] [   DEBUG] - power                         : 1.0
+[2026-11-25 03:05:20,794] [   DEBUG] - pp_delay_scale_loss           : True
+[2026-11-25 03:05:20,794] [   DEBUG] - pp_need_data                  : False
+[2026-11-25 03:05:20,794] [   DEBUG] - pp_need_data_degree           : 0
+[2026-11-25 03:05:20,795] [   DEBUG] - pp_release_grads              : False
+[2026-11-25 03:05:20,795] [   DEBUG] - pp_sharding_comm_overlap      : False
+[2026-11-25 03:05:20,795] [   DEBUG] - pp_sync_moment                : False
+[2026-11-25 03:05:20,795] [   DEBUG] - pp_sync_param                 : False
+[2026-11-25 03:05:20,795] [   DEBUG] - pre_alloc_memory              : 0
+[2026-11-25 03:05:20,795] [   DEBUG] - prediction_loss_only          : False
+[2026-11-25 03:05:20,795] [   DEBUG] - pref_loss_ratio               : 1.0
+[2026-11-25 03:05:20,795] [   DEBUG] - prefetch_factor               : 2
+[2026-11-25 03:05:20,795] [   DEBUG] - process_index                 : 0
+[2026-11-25 03:05:20,795] [   DEBUG] - profile                       : False
+[2026-11-25 03:05:20,795] [   DEBUG] - profile_step_end              : 12
+[2026-11-25 03:05:20,795] [   DEBUG] - profile_step_start            : 10
+[2026-11-25 03:05:20,795] [   DEBUG] - recompute_granularity         : None
+[2026-11-25 03:05:20,795] [   DEBUG] - recompute_method              : None
+[2026-11-25 03:05:20,795] [   DEBUG] - recompute_modules             : None
+[2026-11-25 03:05:20,795] [   DEBUG] - recompute_mtp_granularity     : None
+[2026-11-25 03:05:20,795] [   DEBUG] - recompute_mtp_method          : None
+[2026-11-25 03:05:20,795] [   DEBUG] - recompute_mtp_modules         : None
+[2026-11-25 03:05:20,795] [   DEBUG] - recompute_num_layers          : None
+[2026-11-25 03:05:20,795] [   DEBUG] - recompute_use_reentrant       : True
+[2026-11-25 03:05:20,796] [   DEBUG] - reeao_dataset_rank            : 0
+[2026-11-25 03:05:20,796] [   DEBUG] - reeao_dataset_world_size      : 1
+[2026-11-25 03:05:20,796] [   DEBUG] - ref_model_update_steps        : -1
+[2026-11-25 03:05:20,796] [   DEBUG] - reference_free                : False
+[2026-11-25 03:05:20,796] [   DEBUG] - release_grads                 : False
+[2026-11-25 03:05:20,796] [   DEBUG] - remove_unused_columns         : True
+[2026-11-25 03:05:20,796] [   DEBUG] - reorder_pipeline_priority     : False
+[2026-11-25 03:05:20,796] [   DEBUG] - replace_with_c_embedding      : False
+[2026-11-25 03:05:20,796] [   DEBUG] - replace_with_parallel_cross_entropy: False
+[2026-11-25 03:05:20,796] [   DEBUG] - replicate_saved_into_local    : False
+[2026-11-25 03:05:20,796] [   DEBUG] - report_to                     : []
+[2026-11-25 03:05:20,796] [   DEBUG] - resume_from_checkpoint        : None
+[2026-11-25 03:05:20,796] [   DEBUG] - resume_from_huggingface_ckpt  : None
+[2026-11-25 03:05:20,796] [   DEBUG] - router_aux_loss_coef          : 0.0
+[2026-11-25 03:05:20,796] [   DEBUG] - router_z_loss_coef            : None
+[2026-11-25 03:05:20,796] [   DEBUG] - run_name                      : /root/pr4840-validation/paddle-training-output
+[2026-11-25 03:05:20,796] [   DEBUG] - same_data                     : None
+[2026-11-25 03:05:20,796] [   DEBUG] - save_checkpoint_format        : flex_checkpoint
+[2026-11-25 03:05:20,796] [   DEBUG] - save_hf_memory_growth_threshold: 8
+[2026-11-25 03:05:20,796] [   DEBUG] - save_hf_steps                 : -1
+[2026-11-25 03:05:20,797] [   DEBUG] - save_hf_total_limit           : None
+[2026-11-25 03:05:20,797] [   DEBUG] - save_last_step                : False
+[2026-11-25 03:05:20,797] [   DEBUG] - save_on_each_node             : False
+[2026-11-25 03:05:20,797] [   DEBUG] - save_rng_states               : True
+[2026-11-25 03:05:20,797] [   DEBUG] - save_safetensors              : False
+[2026-11-25 03:05:20,797] [   DEBUG] - save_sharded_model            : False
+[2026-11-25 03:05:20,797] [   DEBUG] - save_sharding_stage1_model_include_freeze_params: False
+[2026-11-25 03:05:20,797] [   DEBUG] - save_steps                    : 100000
+[2026-11-25 03:05:20,797] [   DEBUG] - save_strategy                 : IntervalStrategy.NO
+[2026-11-25 03:05:20,797] [   DEBUG] - save_tokenizer                : True
+[2026-11-25 03:05:20,797] [   DEBUG] - save_total_limit              : None
+[2026-11-25 03:05:20,797] [   DEBUG] - scale_loss                    : 32768
+[2026-11-25 03:05:20,797] [   DEBUG] - sd_release_grads              : False
+[2026-11-25 03:05:20,797] [   DEBUG] - sd_sharding_comm_overlap      : False
+[2026-11-25 03:05:20,797] [   DEBUG] - sd_shardingv1_comm_overlap    : False
+[2026-11-25 03:05:20,797] [   DEBUG] - seed                          : 23
+[2026-11-25 03:05:20,797] [   DEBUG] - send_recv_overlap             : False
+[2026-11-25 03:05:20,797] [   DEBUG] - sep_parallel_size             : -1
+[2026-11-25 03:05:20,797] [   DEBUG] - sequence_parallel             : False
+[2026-11-25 03:05:20,797] [   DEBUG] - sequence_parallel_config      : 
+[2026-11-25 03:05:20,798] [   DEBUG] - sft_loss_ratio                : 0.0
+[2026-11-25 03:05:20,798] [   DEBUG] - sharded_model_from_ema        : False
+[2026-11-25 03:05:20,798] [   DEBUG] - sharding                      : []
+[2026-11-25 03:05:20,798] [   DEBUG] - sharding_comm_buffer_size_MB  : -1
+[2026-11-25 03:05:20,798] [   DEBUG] - sharding_comm_group_call_opt  : False
+[2026-11-25 03:05:20,798] [   DEBUG] - sharding_degree               : -1
+[2026-11-25 03:05:20,798] [   DEBUG] - sharding_offload_opt_buffersize_GB: -1
+[2026-11-25 03:05:20,798] [   DEBUG] - sharding_parallel_config      : 
+[2026-11-25 03:05:20,798] [   DEBUG] - sharding_parallel_mesh_dimension: dp
+[2026-11-25 03:05:20,798] [   DEBUG] - sharding_parallel_rank        : 0
+[2026-11-25 03:05:20,798] [   DEBUG] - sharding_parallel_size        : -1
+[2026-11-25 03:05:20,798] [   DEBUG] - should_load_dataset           : True
+[2026-11-25 03:05:20,798] [   DEBUG] - should_load_sharding_stage1_model: False
+[2026-11-25 03:05:20,798] [   DEBUG] - should_log                    : True
+[2026-11-25 03:05:20,798] [   DEBUG] - should_save                   : True
+[2026-11-25 03:05:20,798] [   DEBUG] - should_save_model_state       : True
+[2026-11-25 03:05:20,798] [   DEBUG] - should_save_model_with_tensor_fusion: False
+[2026-11-25 03:05:20,798] [   DEBUG] - should_save_sharding_stage1_model: False
+[2026-11-25 03:05:20,798] [   DEBUG] - shuffle_consecutive           : False
+[2026-11-25 03:05:20,798] [   DEBUG] - simpo_gamma                   : 0.5
+[2026-11-25 03:05:20,799] [   DEBUG] - skip_data_intervals           : None
+[2026-11-25 03:05:20,799] [   DEBUG] - skip_memory_metrics           : True
+[2026-11-25 03:05:20,799] [   DEBUG] - skip_profile_timer            : True
+[2026-11-25 03:05:20,799] [   DEBUG] - softmax_scale                 : None
+[2026-11-25 03:05:20,799] [   DEBUG] - softmax_type                  : vanilla
+[2026-11-25 03:05:20,799] [   DEBUG] - sp_allreduce_avg_in_gradinent_scale: False
+[2026-11-25 03:05:20,799] [   DEBUG] - sp_async_reduce_scatter       : False
+[2026-11-25 03:05:20,799] [   DEBUG] - split_backward                : False
+[2026-11-25 03:05:20,799] [   DEBUG] - split_inputs_sequence_dim     : True
+[2026-11-25 03:05:20,799] [   DEBUG] - split_norm_comm               : False
+[2026-11-25 03:05:20,799] [   DEBUG] - split_param                   : True
+[2026-11-25 03:05:20,799] [   DEBUG] - stage1_allgather_overlap      : False
+[2026-11-25 03:05:20,799] [   DEBUG] - stage1_broadcast_overlap      : False
+[2026-11-25 03:05:20,799] [   DEBUG] - stage1_overlap                : False
+[2026-11-25 03:05:20,799] [   DEBUG] - stage1_reduce_avg             : True
+[2026-11-25 03:05:20,799] [   DEBUG] - stage1_tensor_fusion          : False
+[2026-11-25 03:05:20,799] [   DEBUG] - stage2_overlap                : False
+[2026-11-25 03:05:20,799] [   DEBUG] - swa_high_precision_norm       : False
+[2026-11-25 03:05:20,799] [   DEBUG] - sync_grad                     : False
+[2026-11-25 03:05:20,799] [   DEBUG] - tensor_fusion                 : False
+[2026-11-25 03:05:20,800] [   DEBUG] - tensor_model_parallel_size    : -1
+[2026-11-25 03:05:20,800] [   DEBUG] - tensor_parallel_config        : 
+[2026-11-25 03:05:20,800] [   DEBUG] - tensor_parallel_output        : True
+[2026-11-25 03:05:20,800] [   DEBUG] - tensor_parallel_rank          : 0
+[2026-11-25 03:05:20,800] [   DEBUG] - tensorwise_offload_optimizer  : False
+[2026-11-25 03:05:20,800] [   DEBUG] - tie_word_embeddings           : None
+[2026-11-25 03:05:20,800] [   DEBUG] - timer                         : False
+[2026-11-25 03:05:20,800] [   DEBUG] - to_static                     : False
+[2026-11-25 03:05:20,800] [   DEBUG] - token_balance_loss            : False
+[2026-11-25 03:05:20,800] [   DEBUG] - tp_async_allreduce            : False
+[2026-11-25 03:05:20,800] [   DEBUG] - tp_sync_moment                : False
+[2026-11-25 03:05:20,800] [   DEBUG] - tp_sync_param                 : False
+[2026-11-25 03:05:20,800] [   DEBUG] - train_batch_size              : 1
+[2026-11-25 03:05:20,800] [   DEBUG] - train_mtp_only                : False
+[2026-11-25 03:05:20,800] [   DEBUG] - unified_checkpoint            : False
+[2026-11-25 03:05:20,800] [   DEBUG] - unified_checkpoint_config     : 
+[2026-11-25 03:05:20,800] [   DEBUG] - use_accuracy_compatible       : False
+[2026-11-25 03:05:20,800] [   DEBUG] - use_async_save                : False
+[2026-11-25 03:05:20,800] [   DEBUG] - use_cache                     : False
+[2026-11-25 03:05:20,800] [   DEBUG] - use_dualpipev                 : False
+[2026-11-25 03:05:20,801] [   DEBUG] - use_expert_parallel           : False
+[2026-11-25 03:05:20,801] [   DEBUG] - use_filtered_label_loss       : False
+[2026-11-25 03:05:20,801] [   DEBUG] - use_flex_async_save           : False
+[2026-11-25 03:05:20,801] [   DEBUG] - use_fp8                       : False
+[2026-11-25 03:05:20,801] [   DEBUG] - use_fused_head_and_loss_fn    : False
+[2026-11-25 03:05:20,801] [   DEBUG] - use_fused_linear_cross_entropy: False
+[2026-11-25 03:05:20,801] [   DEBUG] - use_hybrid_parallel           : False
+[2026-11-25 03:05:20,801] [   DEBUG] - use_intermediate_api          : False
+[2026-11-25 03:05:20,801] [   DEBUG] - use_lowprecision_moment       : False
+[2026-11-25 03:05:20,801] [   DEBUG] - use_moe                       : False
+[2026-11-25 03:05:20,801] [   DEBUG] - use_ortho_loss_callback       : False
+[2026-11-25 03:05:20,801] [   DEBUG] - use_qk_norm                   : None
+[2026-11-25 03:05:20,801] [   DEBUG] - use_recompute_mtp             : False
+[2026-11-25 03:05:20,801] [   DEBUG] - use_ue8m0                     : False
+[2026-11-25 03:05:20,801] [   DEBUG] - use_unified_moe               : False
+[2026-11-25 03:05:20,801] [   DEBUG] - using_sonic_moe               : False
+[2026-11-25 03:05:20,801] [   DEBUG] - variable_seq_lengths          : False
+[2026-11-25 03:05:20,801] [   DEBUG] - virtual_pipeline_model_parallel_size: 1
+[2026-11-25 03:05:20,801] [   DEBUG] - wandb_api_key                 : None
+[2026-11-25 03:05:20,802] [   DEBUG] - wandb_http_proxy              : None
+[2026-11-25 03:05:20,802] [   DEBUG] - warmup_ratio                  : 0.0
+[2026-11-25 03:05:20,802] [   DEBUG] - warmup_steps                  : 0
+[2026-11-25 03:05:20,802] [   DEBUG] - weight_decay                  : 0.0
+[2026-11-25 03:05:20,802] [   DEBUG] - weight_name_suffix            : None
+[2026-11-25 03:05:20,802] [   DEBUG] - weight_quantize_algo          : None
+[2026-11-25 03:05:20,802] [   DEBUG] - world_size                    : 1
+[2026-11-25 03:05:20,802] [   DEBUG] - zcc_ema_interval              : 1
+[2026-11-25 03:05:20,802] [   DEBUG] - zcc_ema_loss_threshold        : None
+[2026-11-25 03:05:20,802] [   DEBUG] - zcc_pipeline_hooks_capacity_usage: 0.6
+[2026-11-25 03:05:20,802] [   DEBUG] - zcc_save_ema_coef             : None
+[2026-11-25 03:05:20,802] [   DEBUG] - zcc_workers_num               : 3
+[2026-11-25 03:05:20,802] [   DEBUG] - 
+[2026-11-25 03:05:20,804] [    INFO] - Starting training from resume_from_checkpoint : None
+[2026-11-25 03:05:20,804] [    INFO] - [timelog] RuntimeTimer: 0.00s (2026-11-25 03:05:20) 
+[2026-11-25 03:05:20,804] [    INFO] - ***** Running training *****
+[2026-11-25 03:05:20,804] [    INFO] -   Num examples = 10
+[2026-11-25 03:05:20,804] [    INFO] -   Num Epochs = 2
+[2026-11-25 03:05:20,804] [    INFO] -   Instantaneous batch size per device = 1
+[2026-11-25 03:05:20,804] [    INFO] -   Total train batch size (w. parallel, distributed & accumulation) = 1
+[2026-11-25 03:05:20,804] [    INFO] -   Gradient Accumulation steps = 1
+[2026-11-25 03:05:20,804] [    INFO] -   Total optimization steps = 20
+[2026-11-25 03:05:20,804] [    INFO] -   Total num train samples = 20
+[2026-11-25 03:05:20,810] [   DEBUG] -   Number of trainable parameters = 22,151,168 (per device)
+[2026-11-25 03:05:22,861] [    INFO] dsa_attention.py:1244 - Iteration 1 | indexer loss: 0.000000
+[2026-11-25 03:05:22,861] [    INFO] dsa_attention.py:1244 - Iteration 1 | indexer loss: 0.000000
+[2026-11-25 03:05:22,861] [    INFO] - loss: 2.32764459, learning_rate: 0.0001, global_step: 1, current_memory_allocated: 32.88503408432007, current_memory_reserved: 49.482972383499146, max_memory_allocated: 48.92190599441528, max_memory_reserved: 49.482972383499146, interval_runtime: 2.0498, interval_samples_per_second: 0.4878, interval_tokens_per_second_per_device: 249.7772, interval_steps_per_second: 0.4878, indexer_loss: 0.0, ppl: 10.253761255190488, progress_or_epoch: 0.1, cpu_used_memory: 7.22, cpu_available_memory: 39.81
+[2026-11-25 03:05:22,861] [    INFO] - [DataLoad global_step: 1] data_load_time: 31.59 ms (accumulated over 1 micro-batches)
+[2026-11-25 03:05:23,146] [    INFO] dsa_attention.py:1244 - Iteration 2 | indexer loss: 0.000000
+[2026-11-25 03:05:23,146] [    INFO] dsa_attention.py:1244 - Iteration 2 | indexer loss: 0.000000
+[2026-11-25 03:05:23,146] [    INFO] - loss: 2.61361051, learning_rate: 0.0001, global_step: 2, current_memory_allocated: 32.88503432273865, current_memory_reserved: 49.482972383499146, max_memory_allocated: 48.92190599441528, max_memory_reserved: 49.482972383499146, interval_runtime: 0.2848, interval_samples_per_second: 3.5109, interval_tokens_per_second_per_device: 1797.5975, interval_steps_per_second: 3.5109, indexer_loss: 0.0, ppl: 13.648239104827697, progress_or_epoch: 0.2, cpu_used_memory: 7.22, cpu_available_memory: 39.8
+[2026-11-25 03:05:23,146] [    INFO] - [DataLoad global_step: 2] data_load_time: 0.09 ms (accumulated over 1 micro-batches)
+[2026-11-25 03:05:23,364] [    INFO] dsa_attention.py:1244 - Iteration 3 | indexer loss: 0.000000
+[2026-11-25 03:05:23,364] [    INFO] dsa_attention.py:1244 - Iteration 3 | indexer loss: 0.000000
+[2026-11-25 03:05:23,364] [    INFO] - loss: 2.77969456, learning_rate: 0.0001, global_step: 3, current_memory_allocated: 32.88503432273865, current_memory_reserved: 49.482972383499146, max_memory_allocated: 48.92190599441528, max_memory_reserved: 49.482972383499146, interval_runtime: 0.2176, interval_samples_per_second: 4.5952, interval_tokens_per_second_per_device: 2352.7544, interval_steps_per_second: 4.5952, indexer_loss: 0.0, ppl: 16.114098306093325, progress_or_epoch: 0.3, cpu_used_memory: 7.22, cpu_available_memory: 39.8
+[2026-11-25 03:05:23,364] [    INFO] - [DataLoad global_step: 3] data_load_time: 0.07 ms (accumulated over 1 micro-batches)
+[2026-11-25 03:05:23,648] [    INFO] dsa_attention.py:1244 - Iteration 4 | indexer loss: 0.000000
+[2026-11-25 03:05:23,648] [    INFO] dsa_attention.py:1244 - Iteration 4 | indexer loss: 0.000000
+[2026-11-25 03:05:23,648] [    INFO] - loss: 2.47940063, learning_rate: 0.0001, global_step: 4, current_memory_allocated: 32.88503432273865, current_memory_reserved: 49.482972383499146, max_memory_allocated: 48.92190599441528, max_memory_reserved: 49.482972383499146, interval_runtime: 0.2838, interval_samples_per_second: 3.5241, interval_tokens_per_second_per_device: 1804.32, interval_steps_per_second: 3.5241, indexer_loss: 0.0, ppl: 11.934109326682679, progress_or_epoch: 0.4, cpu_used_memory: 7.22, cpu_available_memory: 39.8
+[2026-11-25 03:05:23,648] [    INFO] - [DataLoad global_step: 4] data_load_time: 0.07 ms (accumulated over 1 micro-batches)
+[2026-11-25 03:05:23,866] [    INFO] dsa_attention.py:1244 - Iteration 5 | indexer loss: 0.000000
+[2026-11-25 03:05:23,866] [    INFO] dsa_attention.py:1244 - Iteration 5 | indexer loss: 0.000000
+[2026-11-25 03:05:23,866] [    INFO] - loss: 2.25434041, learning_rate: 0.0001, global_step: 5, current_memory_allocated: 32.88503432273865, current_memory_reserved: 49.482972383499146, max_memory_allocated: 48.92190599441528, max_memory_reserved: 49.482972383499146, interval_runtime: 0.2174, interval_samples_per_second: 4.5999, interval_tokens_per_second_per_device: 2355.1437, interval_steps_per_second: 4.5999, indexer_loss: 0.0, ppl: 9.529005999783788, progress_or_epoch: 0.5, cpu_used_memory: 7.22, cpu_available_memory: 39.8
+[2026-11-25 03:05:23,866] [    INFO] - [DataLoad global_step: 5] data_load_time: 0.07 ms (accumulated over 1 micro-batches)
+[2026-11-25 03:05:24,082] [    INFO] dsa_attention.py:1244 - Iteration 6 | indexer loss: 0.000000
+[2026-11-25 03:05:24,082] [    INFO] dsa_attention.py:1244 - Iteration 6 | indexer loss: 0.000000
+[2026-11-25 03:05:24,083] [    INFO] - loss: 1.57507372, learning_rate: 0.0001, global_step: 6, current_memory_allocated: 32.88503432273865, current_memory_reserved: 49.482972383499146, max_memory_allocated: 48.92190599441528, max_memory_reserved: 49.482972383499146, interval_runtime: 0.2164, interval_samples_per_second: 4.6219, interval_tokens_per_second_per_device: 2366.4123, interval_steps_per_second: 4.6219, indexer_loss: 0.0, ppl: 4.831097753509355, progress_or_epoch: 0.6, cpu_used_memory: 7.22, cpu_available_memory: 39.8
+[2026-11-25 03:05:24,083] [    INFO] - [DataLoad global_step: 6] data_load_time: 0.07 ms (accumulated over 1 micro-batches)
+[2026-11-25 03:05:24,364] [    INFO] dsa_attention.py:1244 - Iteration 7 | indexer loss: 0.000000
+[2026-11-25 03:05:24,364] [    INFO] dsa_attention.py:1244 - Iteration 7 | indexer loss: 0.000000
+[2026-11-25 03:05:24,364] [    INFO] - loss: 2.46101761, learning_rate: 0.0001, global_step: 7, current_memory_allocated: 32.88503432273865, current_memory_reserved: 49.482972383499146, max_memory_allocated: 48.92190599441528, max_memory_reserved: 49.482972383499146, interval_runtime: 0.2814, interval_samples_per_second: 3.5538, interval_tokens_per_second_per_device: 1819.5267, interval_steps_per_second: 3.5538, indexer_loss: 0.0, ppl: 11.716728535650669, progress_or_epoch: 0.7, cpu_used_memory: 7.22, cpu_available_memory: 39.8
+[2026-11-25 03:05:24,365] [    INFO] - [DataLoad global_step: 7] data_load_time: 0.06 ms (accumulated over 1 micro-batches)
+[2026-11-25 03:05:24,577] [    INFO] dsa_attention.py:1244 - Iteration 8 | indexer loss: 0.000000
+[2026-11-25 03:05:24,577] [    INFO] dsa_attention.py:1244 - Iteration 8 | indexer loss: 0.000000
+[2026-11-25 03:05:24,577] [    INFO] - loss: 2.60165, learning_rate: 0.0001, global_step: 8, current_memory_allocated: 32.88503432273865, current_memory_reserved: 49.482972383499146, max_memory_allocated: 48.92190599441528, max_memory_reserved: 49.482972383499146, interval_runtime: 0.2122, interval_samples_per_second: 4.7126, interval_tokens_per_second_per_device: 2412.8677, interval_steps_per_second: 4.7126, indexer_loss: 0.0, ppl: 13.485971540357133, progress_or_epoch: 0.8, cpu_used_memory: 7.22, cpu_available_memory: 39.8
+[2026-11-25 03:05:24,577] [    INFO] - [DataLoad global_step: 8] data_load_time: 0.07 ms (accumulated over 1 micro-batches)
+[2026-11-25 03:05:24,859] [    INFO] dsa_attention.py:1244 - Iteration 9 | indexer loss: 0.000000
+[2026-11-25 03:05:24,859] [    INFO] dsa_attention.py:1244 - Iteration 9 | indexer loss: 0.000000
+[2026-11-25 03:05:24,859] [    INFO] - loss: 1.74162984, learning_rate: 0.0001, global_step: 9, current_memory_allocated: 32.88503432273865, current_memory_reserved: 49.482972383499146, max_memory_allocated: 48.92190599441528, max_memory_reserved: 49.482972383499146, interval_runtime: 0.2819, interval_samples_per_second: 3.547, interval_tokens_per_second_per_device: 1816.0523, interval_steps_per_second: 3.547, indexer_loss: 0.0, ppl: 5.706636752138833, progress_or_epoch: 0.9, cpu_used_memory: 7.22, cpu_available_memory: 39.8
+[2026-11-25 03:05:24,859] [    INFO] - [DataLoad global_step: 9] data_load_time: 0.07 ms (accumulated over 1 micro-batches)
+[2026-11-25 03:05:25,019] [    INFO] dsa_attention.py:1244 - Iteration 10 | indexer loss: 0.000000
+[2026-11-25 03:05:25,019] [    INFO] dsa_attention.py:1244 - Iteration 10 | indexer loss: 0.000000
+[2026-11-25 03:05:25,020] [    INFO] - loss: 0.81077927, learning_rate: 0.0001, global_step: 10, current_memory_allocated: 32.88503432273865, current_memory_reserved: 49.482972383499146, max_memory_allocated: 48.92190599441528, max_memory_reserved: 49.482972383499146, interval_runtime: 0.16, interval_samples_per_second: 6.2499, interval_tokens_per_second_per_device: 3199.9411, interval_steps_per_second: 6.2499, indexer_loss: 0.0, ppl: 2.249660396644826, progress_or_epoch: 1.0, cpu_used_memory: 7.22, cpu_available_memory: 39.8
+[2026-11-25 03:05:25,020] [    INFO] - [DataLoad global_step: 10] data_load_time: 0.06 ms (accumulated over 1 micro-batches)
+[2026-11-25 03:05:25,253] [    INFO] dsa_attention.py:1244 - Iteration 11 | indexer loss: 0.000000
+[2026-11-25 03:05:25,253] [    INFO] dsa_attention.py:1244 - Iteration 11 | indexer loss: 0.000000
+[2026-11-25 03:05:25,253] [    INFO] - loss: 1.58949172, learning_rate: 0.0001, global_step: 11, current_memory_allocated: 32.88503432273865, current_memory_reserved: 49.482972383499146, max_memory_allocated: 48.92190599441528, max_memory_reserved: 49.482972383499146, interval_runtime: 0.2332, interval_samples_per_second: 4.2885, interval_tokens_per_second_per_device: 2195.7192, interval_steps_per_second: 4.2885, indexer_loss: 0.0, ppl: 4.901257084152258, progress_or_epoch: 1.1, cpu_used_memory: 7.22, cpu_available_memory: 39.8
+[2026-11-25 03:05:25,253] [    INFO] - [DataLoad global_step: 11] data_load_time: 1.26 ms (accumulated over 1 micro-batches)
+[2026-11-25 03:05:25,536] [    INFO] dsa_attention.py:1244 - Iteration 12 | indexer loss: 0.000000
+[2026-11-25 03:05:25,536] [    INFO] dsa_attention.py:1244 - Iteration 12 | indexer loss: 0.000000
+[2026-11-25 03:05:25,536] [    INFO] - loss: 2.04711223, learning_rate: 0.0001, global_step: 12, current_memory_allocated: 32.88503432273865, current_memory_reserved: 49.482972383499146, max_memory_allocated: 48.92190599441528, max_memory_reserved: 49.482972383499146, interval_runtime: 0.2823, interval_samples_per_second: 3.5418, interval_tokens_per_second_per_device: 1813.4192, interval_steps_per_second: 3.5418, indexer_loss: 0.0, ppl: 7.745501552475022, progress_or_epoch: 1.2, cpu_used_memory: 7.22, cpu_available_memory: 39.8
+[2026-11-25 03:05:25,536] [    INFO] - [DataLoad global_step: 12] data_load_time: 0.07 ms (accumulated over 1 micro-batches)
+[2026-11-25 03:05:25,753] [    INFO] dsa_attention.py:1244 - Iteration 13 | indexer loss: 0.000000
+[2026-11-25 03:05:25,753] [    INFO] dsa_attention.py:1244 - Iteration 13 | indexer loss: 0.000000
+[2026-11-25 03:05:25,753] [    INFO] - loss: 1.55571103, learning_rate: 0.0001, global_step: 13, current_memory_allocated: 32.88503432273865, current_memory_reserved: 49.482972383499146, max_memory_allocated: 48.92190599441528, max_memory_reserved: 49.482972383499146, interval_runtime: 0.2169, interval_samples_per_second: 4.6113, interval_tokens_per_second_per_device: 2360.9852, interval_steps_per_second: 4.6113, indexer_loss: 0.0, ppl: 4.738454510958985, progress_or_epoch: 1.3, cpu_used_memory: 7.22, cpu_available_memory: 39.8
+[2026-11-25 03:05:25,753] [    INFO] - [DataLoad global_step: 13] data_load_time: 0.07 ms (accumulated over 1 micro-batches)
+[2026-11-25 03:05:26,036] [    INFO] dsa_attention.py:1244 - Iteration 14 | indexer loss: 0.000000
+[2026-11-25 03:05:26,036] [    INFO] dsa_attention.py:1244 - Iteration 14 | indexer loss: 0.000000
+[2026-11-25 03:05:26,040] [    INFO] - loss: 1.85349941, learning_rate: 0.0001, global_step: 14, current_memory_allocated: 32.88503432273865, current_memory_reserved: 49.482972383499146, max_memory_allocated: 48.92190599441528, max_memory_reserved: 49.482972383499146, interval_runtime: 0.2826, interval_samples_per_second: 3.5384, interval_tokens_per_second_per_device: 1811.6859, interval_steps_per_second: 3.5384, indexer_loss: 0.0, ppl: 6.382114124863072, progress_or_epoch: 1.4, cpu_used_memory: 7.22, cpu_available_memory: 39.8
+[2026-11-25 03:05:26,040] [    INFO] - [DataLoad global_step: 14] data_load_time: 0.07 ms (accumulated over 1 micro-batches)
+[2026-11-25 03:05:26,257] [    INFO] dsa_attention.py:1244 - Iteration 15 | indexer loss: 0.000000
+[2026-11-25 03:05:26,257] [    INFO] dsa_attention.py:1244 - Iteration 15 | indexer loss: 0.000000
+[2026-11-25 03:05:26,257] [    INFO] - loss: 1.07794058, learning_rate: 0.0001, global_step: 15, current_memory_allocated: 32.88503432273865, current_memory_reserved: 49.482972383499146, max_memory_allocated: 48.92190599441528, max_memory_reserved: 49.482972383499146, interval_runtime: 0.2173, interval_samples_per_second: 4.6021, interval_tokens_per_second_per_device: 2356.2704, interval_steps_per_second: 4.6021, indexer_loss: 0.0, ppl: 2.938621459323253, progress_or_epoch: 1.5, cpu_used_memory: 7.22, cpu_available_memory: 39.8
+[2026-11-25 03:05:26,258] [    INFO] - [DataLoad global_step: 15] data_load_time: 0.08 ms (accumulated over 1 micro-batches)
+[2026-11-25 03:05:26,474] [    INFO] dsa_attention.py:1244 - Iteration 16 | indexer loss: 0.000000
+[2026-11-25 03:05:26,474] [    INFO] dsa_attention.py:1244 - Iteration 16 | indexer loss: 0.000000
+[2026-11-25 03:05:26,475] [    INFO] - loss: 0.48874575, learning_rate: 0.0001, global_step: 16, current_memory_allocated: 32.88503432273865, current_memory_reserved: 49.482972383499146, max_memory_allocated: 48.92190599441528, max_memory_reserved: 49.482972383499146, interval_runtime: 0.2168, interval_samples_per_second: 4.6129, interval_tokens_per_second_per_device: 2361.7953, interval_steps_per_second: 4.6129, indexer_loss: 0.0, ppl: 1.6302701707333456, progress_or_epoch: 1.6, cpu_used_memory: 7.22, cpu_available_memory: 39.8
+[2026-11-25 03:05:26,475] [    INFO] - [DataLoad global_step: 16] data_load_time: 0.07 ms (accumulated over 1 micro-batches)
+[2026-11-25 03:05:26,756] [    INFO] dsa_attention.py:1244 - Iteration 17 | indexer loss: 0.000000
+[2026-11-25 03:05:26,756] [    INFO] dsa_attention.py:1244 - Iteration 17 | indexer loss: 0.000000
+[2026-11-25 03:05:26,756] [    INFO] - loss: 2.06341457, learning_rate: 0.0001, global_step: 17, current_memory_allocated: 32.88503432273865, current_memory_reserved: 49.482972383499146, max_memory_allocated: 48.92190599441528, max_memory_reserved: 49.482972383499146, interval_runtime: 0.2814, interval_samples_per_second: 3.5538, interval_tokens_per_second_per_device: 1819.5544, interval_steps_per_second: 3.5538, indexer_loss: 0.0, ppl: 7.872806214769999, progress_or_epoch: 1.7, cpu_used_memory: 7.22, cpu_available_memory: 39.8
+[2026-11-25 03:05:26,756] [    INFO] - [DataLoad global_step: 17] data_load_time: 0.07 ms (accumulated over 1 micro-batches)
+[2026-11-25 03:05:26,969] [    INFO] dsa_attention.py:1244 - Iteration 18 | indexer loss: 0.000000
+[2026-11-25 03:05:26,969] [    INFO] dsa_attention.py:1244 - Iteration 18 | indexer loss: 0.000000
+[2026-11-25 03:05:26,969] [    INFO] - loss: 1.07634151, learning_rate: 0.0001, global_step: 18, current_memory_allocated: 32.88503432273865, current_memory_reserved: 49.482972383499146, max_memory_allocated: 48.92190599441528, max_memory_reserved: 49.482972383499146, interval_runtime: 0.2125, interval_samples_per_second: 4.7053, interval_tokens_per_second_per_device: 2409.089, interval_steps_per_second: 4.7053, indexer_loss: 0.0, ppl: 2.933926152968561, progress_or_epoch: 1.8, cpu_used_memory: 7.22, cpu_available_memory: 39.8
+[2026-11-25 03:05:26,969] [    INFO] - [DataLoad global_step: 18] data_load_time: 0.07 ms (accumulated over 1 micro-batches)
+[2026-11-25 03:05:27,251] [    INFO] dsa_attention.py:1244 - Iteration 19 | indexer loss: 0.000000
+[2026-11-25 03:05:27,251] [    INFO] dsa_attention.py:1244 - Iteration 19 | indexer loss: 0.000000
+[2026-11-25 03:05:27,251] [    INFO] - loss: 1.49260402, learning_rate: 0.0001, global_step: 19, current_memory_allocated: 32.88503432273865, current_memory_reserved: 49.482972383499146, max_memory_allocated: 48.92190599441528, max_memory_reserved: 49.482972383499146, interval_runtime: 0.2818, interval_samples_per_second: 3.5484, interval_tokens_per_second_per_device: 1816.7959, interval_steps_per_second: 3.5484, indexer_loss: 0.0, ppl: 4.4486648613389095, progress_or_epoch: 1.9, cpu_used_memory: 7.22, cpu_available_memory: 39.8
+[2026-11-25 03:05:27,252] [    INFO] - [DataLoad global_step: 19] data_load_time: 0.07 ms (accumulated over 1 micro-batches)
+[2026-11-25 03:05:27,412] [    INFO] dsa_attention.py:1244 - Iteration 20 | indexer loss: 0.000000
+[2026-11-25 03:05:27,412] [    INFO] dsa_attention.py:1244 - Iteration 20 | indexer loss: 0.000000
+[2026-11-25 03:05:27,412] [    INFO] - loss: 0.15339746, learning_rate: 0.0001, global_step: 20, current_memory_allocated: 32.88503432273865, current_memory_reserved: 49.482972383499146, max_memory_allocated: 48.92190599441528, max_memory_reserved: 49.482972383499146, interval_runtime: 0.1602, interval_samples_per_second: 6.2405, interval_tokens_per_second_per_device: 3195.1277, interval_steps_per_second: 6.2405, indexer_loss: 0.0, ppl: 1.1657882410668516, progress_or_epoch: 2.0, cpu_used_memory: 7.22, cpu_available_memory: 39.8
+[2026-11-25 03:05:27,412] [    INFO] - [DataLoad global_step: 20] data_load_time: 0.08 ms (accumulated over 1 micro-batches)
+[2026-11-25 03:05:27,412] [    INFO] - 
+Training completed. 
+
+[2026-11-25 03:05:27,412] [    INFO] - train_runtime: 6.6019, train_samples_per_second: 3.0294, train_steps_per_second: 3.0294, train_loss: 1.7521549709141255, progress_or_epoch: 2.0, cpu_used_memory: 7.22, cpu_available_memory: 39.8
+[2026-11-25 03:05:27,413] [    INFO] - Total_Tokens_per_second_per_gpu: 1551.0686317575244 
+[2026-11-25 03:05:27,413] [    INFO] - Saving model checkpoint to /root/pr4840-validation/paddle-training-output
+[2026-11-25 03:05:27,509] [    INFO] - Saving LoRA weights use safetensors: True
+[2026-11-25 03:05:27,518] [    INFO] - [Rank 0/1] (Saver) Initializing save. Max shard size set to: 4.00 GB
+[2026-11-25 03:05:27,518] [    INFO] - [Rank 0/1] Starting to process the weight iterator...
+[2026-11-25 03:05:27,547] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.0.mlp.down_proj.lora_A
+[2026-11-25 03:05:27,550] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.0.mlp.down_proj.lora_B
+[2026-11-25 03:05:27,552] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.0.mlp.gate_proj.lora_A
+[2026-11-25 03:05:27,552] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.0.mlp.gate_proj.lora_B
+[2026-11-25 03:05:27,553] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.0.mlp.up_proj.lora_A
+[2026-11-25 03:05:27,554] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.0.mlp.up_proj.lora_B
+[2026-11-25 03:05:27,554] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.0.self_attn.k_proj.lora_A
+[2026-11-25 03:05:27,555] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.0.self_attn.k_proj.lora_B
+[2026-11-25 03:05:27,555] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.0.self_attn.o_proj.lora_A
+[2026-11-25 03:05:27,556] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.0.self_attn.o_proj.lora_B
+[2026-11-25 03:05:27,556] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.0.self_attn.q_proj.lora_A
+[2026-11-25 03:05:27,557] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.0.self_attn.q_proj.lora_B
+[2026-11-25 03:05:27,557] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.0.self_attn.v_proj.lora_A
+[2026-11-25 03:05:27,558] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.0.self_attn.v_proj.lora_B
+[2026-11-25 03:05:27,559] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.1.mlp.down_proj.lora_A
+[2026-11-25 03:05:27,559] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.1.mlp.down_proj.lora_B
+[2026-11-25 03:05:27,560] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.1.mlp.gate_proj.lora_A
+[2026-11-25 03:05:27,560] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.1.mlp.gate_proj.lora_B
+[2026-11-25 03:05:27,561] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.1.mlp.up_proj.lora_A
+[2026-11-25 03:05:27,561] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.1.mlp.up_proj.lora_B
+[2026-11-25 03:05:27,562] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.1.self_attn.k_proj.lora_A
+[2026-11-25 03:05:27,563] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.1.self_attn.k_proj.lora_B
+[2026-11-25 03:05:27,563] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.1.self_attn.o_proj.lora_A
+[2026-11-25 03:05:27,564] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.1.self_attn.o_proj.lora_B
+[2026-11-25 03:05:27,564] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.1.self_attn.q_proj.lora_A
+[2026-11-25 03:05:27,565] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.1.self_attn.q_proj.lora_B
+[2026-11-25 03:05:27,565] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.1.self_attn.v_proj.lora_A
+[2026-11-25 03:05:27,566] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.1.self_attn.v_proj.lora_B
+[2026-11-25 03:05:27,566] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.10.mlp.down_proj.lora_A
+[2026-11-25 03:05:27,567] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.10.mlp.down_proj.lora_B
+[2026-11-25 03:05:27,567] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.10.mlp.gate_proj.lora_A
+[2026-11-25 03:05:27,568] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.10.mlp.gate_proj.lora_B
+[2026-11-25 03:05:27,569] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.10.mlp.up_proj.lora_A
+[2026-11-25 03:05:27,569] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.10.mlp.up_proj.lora_B
+[2026-11-25 03:05:27,570] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.10.self_attn.k_proj.lora_A
+[2026-11-25 03:05:27,570] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.10.self_attn.k_proj.lora_B
+[2026-11-25 03:05:27,571] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.10.self_attn.o_proj.lora_A
+[2026-11-25 03:05:27,571] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.10.self_attn.o_proj.lora_B
+[2026-11-25 03:05:27,572] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.10.self_attn.q_proj.lora_A
+[2026-11-25 03:05:27,572] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.10.self_attn.q_proj.lora_B
+[2026-11-25 03:05:27,573] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.10.self_attn.v_proj.lora_A
+[2026-11-25 03:05:27,573] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.10.self_attn.v_proj.lora_B
+[2026-11-25 03:05:27,574] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.11.mlp.down_proj.lora_A
+[2026-11-25 03:05:27,574] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.11.mlp.down_proj.lora_B
+[2026-11-25 03:05:27,575] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.11.mlp.gate_proj.lora_A
+[2026-11-25 03:05:27,576] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.11.mlp.gate_proj.lora_B
+[2026-11-25 03:05:27,576] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.11.mlp.up_proj.lora_A
+[2026-11-25 03:05:27,577] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.11.mlp.up_proj.lora_B
+[2026-11-25 03:05:27,577] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.11.self_attn.k_proj.lora_A
+[2026-11-25 03:05:27,578] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.11.self_attn.k_proj.lora_B
+[2026-11-25 03:05:27,578] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.11.self_attn.o_proj.lora_A
+[2026-11-25 03:05:27,579] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.11.self_attn.o_proj.lora_B
+[2026-11-25 03:05:27,579] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.11.self_attn.q_proj.lora_A
+[2026-11-25 03:05:27,580] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.11.self_attn.q_proj.lora_B
+[2026-11-25 03:05:27,580] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.11.self_attn.v_proj.lora_A
+[2026-11-25 03:05:27,581] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.11.self_attn.v_proj.lora_B
+[2026-11-25 03:05:27,581] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.12.mlp.down_proj.lora_A
+[2026-11-25 03:05:27,582] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.12.mlp.down_proj.lora_B
+[2026-11-25 03:05:27,583] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.12.mlp.gate_proj.lora_A
+[2026-11-25 03:05:27,583] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.12.mlp.gate_proj.lora_B
+[2026-11-25 03:05:27,584] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.12.mlp.up_proj.lora_A
+[2026-11-25 03:05:27,584] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.12.mlp.up_proj.lora_B
+[2026-11-25 03:05:27,585] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.12.self_attn.k_proj.lora_A
+[2026-11-25 03:05:27,585] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.12.self_attn.k_proj.lora_B
+[2026-11-25 03:05:27,586] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.12.self_attn.o_proj.lora_A
+[2026-11-25 03:05:27,587] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.12.self_attn.o_proj.lora_B
+[2026-11-25 03:05:27,587] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.12.self_attn.q_proj.lora_A
+[2026-11-25 03:05:27,588] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.12.self_attn.q_proj.lora_B
+[2026-11-25 03:05:27,588] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.12.self_attn.v_proj.lora_A
+[2026-11-25 03:05:27,589] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.12.self_attn.v_proj.lora_B
+[2026-11-25 03:05:27,590] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.13.mlp.down_proj.lora_A
+[2026-11-25 03:05:27,591] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.13.mlp.down_proj.lora_B
+[2026-11-25 03:05:27,591] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.13.mlp.gate_proj.lora_A
+[2026-11-25 03:05:27,592] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.13.mlp.gate_proj.lora_B
+[2026-11-25 03:05:27,593] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.13.mlp.up_proj.lora_A
+[2026-11-25 03:05:27,593] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.13.mlp.up_proj.lora_B
+[2026-11-25 03:05:27,594] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.13.self_attn.k_proj.lora_A
+[2026-11-25 03:05:27,595] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.13.self_attn.k_proj.lora_B
+[2026-11-25 03:05:27,595] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.13.self_attn.o_proj.lora_A
+[2026-11-25 03:05:27,596] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.13.self_attn.o_proj.lora_B
+[2026-11-25 03:05:27,596] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.13.self_attn.q_proj.lora_A
+[2026-11-25 03:05:27,597] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.13.self_attn.q_proj.lora_B
+[2026-11-25 03:05:27,598] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.13.self_attn.v_proj.lora_A
+[2026-11-25 03:05:27,598] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.13.self_attn.v_proj.lora_B
+[2026-11-25 03:05:27,599] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.14.mlp.down_proj.lora_A
+[2026-11-25 03:05:27,600] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.14.mlp.down_proj.lora_B
+[2026-11-25 03:05:27,600] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.14.mlp.gate_proj.lora_A
+[2026-11-25 03:05:27,601] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.14.mlp.gate_proj.lora_B
+[2026-11-25 03:05:27,602] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.14.mlp.up_proj.lora_A
+[2026-11-25 03:05:27,602] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.14.mlp.up_proj.lora_B
+[2026-11-25 03:05:27,603] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.14.self_attn.k_proj.lora_A
+[2026-11-25 03:05:27,604] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.14.self_attn.k_proj.lora_B
+[2026-11-25 03:05:27,604] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.14.self_attn.o_proj.lora_A
+[2026-11-25 03:05:27,605] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.14.self_attn.o_proj.lora_B
+[2026-11-25 03:05:27,605] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.14.self_attn.q_proj.lora_A
+[2026-11-25 03:05:27,606] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.14.self_attn.q_proj.lora_B
+[2026-11-25 03:05:27,607] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.14.self_attn.v_proj.lora_A
+[2026-11-25 03:05:27,607] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.14.self_attn.v_proj.lora_B
+[2026-11-25 03:05:27,608] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.15.mlp.down_proj.lora_A
+[2026-11-25 03:05:27,609] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.15.mlp.down_proj.lora_B
+[2026-11-25 03:05:27,609] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.15.mlp.gate_proj.lora_A
+[2026-11-25 03:05:27,610] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.15.mlp.gate_proj.lora_B
+[2026-11-25 03:05:27,611] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.15.mlp.up_proj.lora_A
+[2026-11-25 03:05:27,611] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.15.mlp.up_proj.lora_B
+[2026-11-25 03:05:27,612] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.15.self_attn.k_proj.lora_A
+[2026-11-25 03:05:27,613] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.15.self_attn.k_proj.lora_B
+[2026-11-25 03:05:27,613] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.15.self_attn.o_proj.lora_A
+[2026-11-25 03:05:27,614] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.15.self_attn.o_proj.lora_B
+[2026-11-25 03:05:27,614] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.15.self_attn.q_proj.lora_A
+[2026-11-25 03:05:27,615] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.15.self_attn.q_proj.lora_B
+[2026-11-25 03:05:27,616] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.15.self_attn.v_proj.lora_A
+[2026-11-25 03:05:27,616] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.15.self_attn.v_proj.lora_B
+[2026-11-25 03:05:27,617] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.16.mlp.down_proj.lora_A
+[2026-11-25 03:05:27,617] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.16.mlp.down_proj.lora_B
+[2026-11-25 03:05:27,618] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.16.mlp.gate_proj.lora_A
+[2026-11-25 03:05:27,619] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.16.mlp.gate_proj.lora_B
+[2026-11-25 03:05:27,620] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.16.mlp.up_proj.lora_A
+[2026-11-25 03:05:27,620] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.16.mlp.up_proj.lora_B
+[2026-11-25 03:05:27,621] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.16.self_attn.k_proj.lora_A
+[2026-11-25 03:05:27,622] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.16.self_attn.k_proj.lora_B
+[2026-11-25 03:05:27,622] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.16.self_attn.o_proj.lora_A
+[2026-11-25 03:05:27,623] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.16.self_attn.o_proj.lora_B
+[2026-11-25 03:05:27,623] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.16.self_attn.q_proj.lora_A
+[2026-11-25 03:05:27,624] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.16.self_attn.q_proj.lora_B
+[2026-11-25 03:05:27,624] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.16.self_attn.v_proj.lora_A
+[2026-11-25 03:05:27,625] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.16.self_attn.v_proj.lora_B
+[2026-11-25 03:05:27,626] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.17.mlp.down_proj.lora_A
+[2026-11-25 03:05:27,626] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.17.mlp.down_proj.lora_B
+[2026-11-25 03:05:27,627] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.17.mlp.gate_proj.lora_A
+[2026-11-25 03:05:27,628] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.17.mlp.gate_proj.lora_B
+[2026-11-25 03:05:27,628] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.17.mlp.up_proj.lora_A
+[2026-11-25 03:05:27,629] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.17.mlp.up_proj.lora_B
+[2026-11-25 03:05:27,630] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.17.self_attn.k_proj.lora_A
+[2026-11-25 03:05:27,630] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.17.self_attn.k_proj.lora_B
+[2026-11-25 03:05:27,631] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.17.self_attn.o_proj.lora_A
+[2026-11-25 03:05:27,632] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.17.self_attn.o_proj.lora_B
+[2026-11-25 03:05:27,632] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.17.self_attn.q_proj.lora_A
+[2026-11-25 03:05:27,633] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.17.self_attn.q_proj.lora_B
+[2026-11-25 03:05:27,633] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.17.self_attn.v_proj.lora_A
+[2026-11-25 03:05:27,634] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.17.self_attn.v_proj.lora_B
+[2026-11-25 03:05:27,634] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.18.mlp.down_proj.lora_A
+[2026-11-25 03:05:27,635] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.18.mlp.down_proj.lora_B
+[2026-11-25 03:05:27,636] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.18.mlp.gate_proj.lora_A
+[2026-11-25 03:05:27,636] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.18.mlp.gate_proj.lora_B
+[2026-11-25 03:05:27,637] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.18.mlp.up_proj.lora_A
+[2026-11-25 03:05:27,638] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.18.mlp.up_proj.lora_B
+[2026-11-25 03:05:27,639] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.18.self_attn.k_proj.lora_A
+[2026-11-25 03:05:27,639] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.18.self_attn.k_proj.lora_B
+[2026-11-25 03:05:27,640] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.18.self_attn.o_proj.lora_A
+[2026-11-25 03:05:27,640] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.18.self_attn.o_proj.lora_B
+[2026-11-25 03:05:27,641] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.18.self_attn.q_proj.lora_A
+[2026-11-25 03:05:27,642] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.18.self_attn.q_proj.lora_B
+[2026-11-25 03:05:27,642] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.18.self_attn.v_proj.lora_A
+[2026-11-25 03:05:27,643] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.18.self_attn.v_proj.lora_B
+[2026-11-25 03:05:27,643] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.19.mlp.down_proj.lora_A
+[2026-11-25 03:05:27,644] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.19.mlp.down_proj.lora_B
+[2026-11-25 03:05:27,645] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.19.mlp.gate_proj.lora_A
+[2026-11-25 03:05:27,645] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.19.mlp.gate_proj.lora_B
+[2026-11-25 03:05:27,646] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.19.mlp.up_proj.lora_A
+[2026-11-25 03:05:27,647] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.19.mlp.up_proj.lora_B
+[2026-11-25 03:05:27,648] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.19.self_attn.k_proj.lora_A
+[2026-11-25 03:05:27,648] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.19.self_attn.k_proj.lora_B
+[2026-11-25 03:05:27,649] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.19.self_attn.o_proj.lora_A
+[2026-11-25 03:05:27,649] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.19.self_attn.o_proj.lora_B
+[2026-11-25 03:05:27,650] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.19.self_attn.q_proj.lora_A
+[2026-11-25 03:05:27,651] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.19.self_attn.q_proj.lora_B
+[2026-11-25 03:05:27,651] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.19.self_attn.v_proj.lora_A
+[2026-11-25 03:05:27,652] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.19.self_attn.v_proj.lora_B
+[2026-11-25 03:05:27,652] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.2.mlp.down_proj.lora_A
+[2026-11-25 03:05:27,653] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.2.mlp.down_proj.lora_B
+[2026-11-25 03:05:27,654] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.2.mlp.gate_proj.lora_A
+[2026-11-25 03:05:27,655] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.2.mlp.gate_proj.lora_B
+[2026-11-25 03:05:27,655] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.2.mlp.up_proj.lora_A
+[2026-11-25 03:05:27,656] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.2.mlp.up_proj.lora_B
+[2026-11-25 03:05:27,657] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.2.self_attn.k_proj.lora_A
+[2026-11-25 03:05:27,657] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.2.self_attn.k_proj.lora_B
+[2026-11-25 03:05:27,658] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.2.self_attn.o_proj.lora_A
+[2026-11-25 03:05:27,658] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.2.self_attn.o_proj.lora_B
+[2026-11-25 03:05:27,659] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.2.self_attn.q_proj.lora_A
+[2026-11-25 03:05:27,660] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.2.self_attn.q_proj.lora_B
+[2026-11-25 03:05:27,660] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.2.self_attn.v_proj.lora_A
+[2026-11-25 03:05:27,661] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.2.self_attn.v_proj.lora_B
+[2026-11-25 03:05:27,661] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.20.mlp.down_proj.lora_A
+[2026-11-25 03:05:27,662] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.20.mlp.down_proj.lora_B
+[2026-11-25 03:05:27,663] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.20.mlp.gate_proj.lora_A
+[2026-11-25 03:05:27,664] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.20.mlp.gate_proj.lora_B
+[2026-11-25 03:05:27,664] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.20.mlp.up_proj.lora_A
+[2026-11-25 03:05:27,665] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.20.mlp.up_proj.lora_B
+[2026-11-25 03:05:27,666] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.20.self_attn.k_proj.lora_A
+[2026-11-25 03:05:27,666] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.20.self_attn.k_proj.lora_B
+[2026-11-25 03:05:27,667] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.20.self_attn.o_proj.lora_A
+[2026-11-25 03:05:27,667] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.20.self_attn.o_proj.lora_B
+[2026-11-25 03:05:27,668] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.20.self_attn.q_proj.lora_A
+[2026-11-25 03:05:27,669] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.20.self_attn.q_proj.lora_B
+[2026-11-25 03:05:27,669] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.20.self_attn.v_proj.lora_A
+[2026-11-25 03:05:27,670] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.20.self_attn.v_proj.lora_B
+[2026-11-25 03:05:27,670] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.21.mlp.down_proj.lora_A
+[2026-11-25 03:05:27,671] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.21.mlp.down_proj.lora_B
+[2026-11-25 03:05:27,672] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.21.mlp.gate_proj.lora_A
+[2026-11-25 03:05:27,672] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.21.mlp.gate_proj.lora_B
+[2026-11-25 03:05:27,673] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.21.mlp.up_proj.lora_A
+[2026-11-25 03:05:27,674] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.21.mlp.up_proj.lora_B
+[2026-11-25 03:05:27,675] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.21.self_attn.k_proj.lora_A
+[2026-11-25 03:05:27,675] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.21.self_attn.k_proj.lora_B
+[2026-11-25 03:05:27,676] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.21.self_attn.o_proj.lora_A
+[2026-11-25 03:05:27,676] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.21.self_attn.o_proj.lora_B
+[2026-11-25 03:05:27,677] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.21.self_attn.q_proj.lora_A
+[2026-11-25 03:05:27,678] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.21.self_attn.q_proj.lora_B
+[2026-11-25 03:05:27,678] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.21.self_attn.v_proj.lora_A
+[2026-11-25 03:05:27,679] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.21.self_attn.v_proj.lora_B
+[2026-11-25 03:05:27,679] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.22.mlp.down_proj.lora_A
+[2026-11-25 03:05:27,680] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.22.mlp.down_proj.lora_B
+[2026-11-25 03:05:27,681] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.22.mlp.gate_proj.lora_A
+[2026-11-25 03:05:27,681] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.22.mlp.gate_proj.lora_B
+[2026-11-25 03:05:27,682] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.22.mlp.up_proj.lora_A
+[2026-11-25 03:05:27,683] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.22.mlp.up_proj.lora_B
+[2026-11-25 03:05:27,684] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.22.self_attn.k_proj.lora_A
+[2026-11-25 03:05:27,684] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.22.self_attn.k_proj.lora_B
+[2026-11-25 03:05:27,685] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.22.self_attn.o_proj.lora_A
+[2026-11-25 03:05:27,685] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.22.self_attn.o_proj.lora_B
+[2026-11-25 03:05:27,686] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.22.self_attn.q_proj.lora_A
+[2026-11-25 03:05:27,686] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.22.self_attn.q_proj.lora_B
+[2026-11-25 03:05:27,687] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.22.self_attn.v_proj.lora_A
+[2026-11-25 03:05:27,688] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.22.self_attn.v_proj.lora_B
+[2026-11-25 03:05:27,688] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.23.mlp.down_proj.lora_A
+[2026-11-25 03:05:27,689] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.23.mlp.down_proj.lora_B
+[2026-11-25 03:05:27,690] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.23.mlp.gate_proj.lora_A
+[2026-11-25 03:05:27,690] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.23.mlp.gate_proj.lora_B
+[2026-11-25 03:05:27,691] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.23.mlp.up_proj.lora_A
+[2026-11-25 03:05:27,692] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.23.mlp.up_proj.lora_B
+[2026-11-25 03:05:27,692] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.23.self_attn.k_proj.lora_A
+[2026-11-25 03:05:27,693] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.23.self_attn.k_proj.lora_B
+[2026-11-25 03:05:27,694] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.23.self_attn.o_proj.lora_A
+[2026-11-25 03:05:27,694] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.23.self_attn.o_proj.lora_B
+[2026-11-25 03:05:27,695] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.23.self_attn.q_proj.lora_A
+[2026-11-25 03:05:27,695] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.23.self_attn.q_proj.lora_B
+[2026-11-25 03:05:27,696] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.23.self_attn.v_proj.lora_A
+[2026-11-25 03:05:27,697] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.23.self_attn.v_proj.lora_B
+[2026-11-25 03:05:27,697] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.24.mlp.down_proj.lora_A
+[2026-11-25 03:05:27,698] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.24.mlp.down_proj.lora_B
+[2026-11-25 03:05:27,698] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.24.mlp.gate_proj.lora_A
+[2026-11-25 03:05:27,699] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.24.mlp.gate_proj.lora_B
+[2026-11-25 03:05:27,700] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.24.mlp.up_proj.lora_A
+[2026-11-25 03:05:27,700] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.24.mlp.up_proj.lora_B
+[2026-11-25 03:05:27,701] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.24.self_attn.k_proj.lora_A
+[2026-11-25 03:05:27,702] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.24.self_attn.k_proj.lora_B
+[2026-11-25 03:05:27,702] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.24.self_attn.o_proj.lora_A
+[2026-11-25 03:05:27,703] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.24.self_attn.o_proj.lora_B
+[2026-11-25 03:05:27,704] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.24.self_attn.q_proj.lora_A
+[2026-11-25 03:05:27,704] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.24.self_attn.q_proj.lora_B
+[2026-11-25 03:05:27,705] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.24.self_attn.v_proj.lora_A
+[2026-11-25 03:05:27,705] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.24.self_attn.v_proj.lora_B
+[2026-11-25 03:05:27,706] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.25.mlp.down_proj.lora_A
+[2026-11-25 03:05:27,707] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.25.mlp.down_proj.lora_B
+[2026-11-25 03:05:27,707] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.25.mlp.gate_proj.lora_A
+[2026-11-25 03:05:27,708] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.25.mlp.gate_proj.lora_B
+[2026-11-25 03:05:27,709] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.25.mlp.up_proj.lora_A
+[2026-11-25 03:05:27,709] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.25.mlp.up_proj.lora_B
+[2026-11-25 03:05:27,710] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.25.self_attn.k_proj.lora_A
+[2026-11-25 03:05:27,711] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.25.self_attn.k_proj.lora_B
+[2026-11-25 03:05:27,711] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.25.self_attn.o_proj.lora_A
+[2026-11-25 03:05:27,712] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.25.self_attn.o_proj.lora_B
+[2026-11-25 03:05:27,713] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.25.self_attn.q_proj.lora_A
+[2026-11-25 03:05:27,713] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.25.self_attn.q_proj.lora_B
+[2026-11-25 03:05:27,714] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.25.self_attn.v_proj.lora_A
+[2026-11-25 03:05:27,714] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.25.self_attn.v_proj.lora_B
+[2026-11-25 03:05:27,715] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.26.mlp.down_proj.lora_A
+[2026-11-25 03:05:27,716] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.26.mlp.down_proj.lora_B
+[2026-11-25 03:05:27,716] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.26.mlp.gate_proj.lora_A
+[2026-11-25 03:05:27,717] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.26.mlp.gate_proj.lora_B
+[2026-11-25 03:05:27,718] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.26.mlp.up_proj.lora_A
+[2026-11-25 03:05:27,718] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.26.mlp.up_proj.lora_B
+[2026-11-25 03:05:27,719] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.26.self_attn.k_proj.lora_A
+[2026-11-25 03:05:27,720] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.26.self_attn.k_proj.lora_B
+[2026-11-25 03:05:27,721] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.26.self_attn.o_proj.lora_A
+[2026-11-25 03:05:27,721] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.26.self_attn.o_proj.lora_B
+[2026-11-25 03:05:27,722] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.26.self_attn.q_proj.lora_A
+[2026-11-25 03:05:27,723] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.26.self_attn.q_proj.lora_B
+[2026-11-25 03:05:27,723] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.26.self_attn.v_proj.lora_A
+[2026-11-25 03:05:27,724] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.26.self_attn.v_proj.lora_B
+[2026-11-25 03:05:27,724] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.27.mlp.down_proj.lora_A
+[2026-11-25 03:05:27,725] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.27.mlp.down_proj.lora_B
+[2026-11-25 03:05:27,726] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.27.mlp.gate_proj.lora_A
+[2026-11-25 03:05:27,726] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.27.mlp.gate_proj.lora_B
+[2026-11-25 03:05:27,727] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.27.mlp.up_proj.lora_A
+[2026-11-25 03:05:27,728] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.27.mlp.up_proj.lora_B
+[2026-11-25 03:05:27,729] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.27.self_attn.k_proj.lora_A
+[2026-11-25 03:05:27,729] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.27.self_attn.k_proj.lora_B
+[2026-11-25 03:05:27,730] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.27.self_attn.o_proj.lora_A
+[2026-11-25 03:05:27,730] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.27.self_attn.o_proj.lora_B
+[2026-11-25 03:05:27,731] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.27.self_attn.q_proj.lora_A
+[2026-11-25 03:05:27,732] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.27.self_attn.q_proj.lora_B
+[2026-11-25 03:05:27,732] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.27.self_attn.v_proj.lora_A
+[2026-11-25 03:05:27,733] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.27.self_attn.v_proj.lora_B
+[2026-11-25 03:05:27,733] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.28.mlp.down_proj.lora_A
+[2026-11-25 03:05:27,734] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.28.mlp.down_proj.lora_B
+[2026-11-25 03:05:27,735] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.28.mlp.gate_proj.lora_A
+[2026-11-25 03:05:27,735] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.28.mlp.gate_proj.lora_B
+[2026-11-25 03:05:27,736] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.28.mlp.up_proj.lora_A
+[2026-11-25 03:05:27,737] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.28.mlp.up_proj.lora_B
+[2026-11-25 03:05:27,738] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.28.self_attn.k_proj.lora_A
+[2026-11-25 03:05:27,738] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.28.self_attn.k_proj.lora_B
+[2026-11-25 03:05:27,739] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.28.self_attn.o_proj.lora_A
+[2026-11-25 03:05:27,739] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.28.self_attn.o_proj.lora_B
+[2026-11-25 03:05:27,740] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.28.self_attn.q_proj.lora_A
+[2026-11-25 03:05:27,740] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.28.self_attn.q_proj.lora_B
+[2026-11-25 03:05:27,741] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.28.self_attn.v_proj.lora_A
+[2026-11-25 03:05:27,742] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.28.self_attn.v_proj.lora_B
+[2026-11-25 03:05:27,742] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.29.mlp.down_proj.lora_A
+[2026-11-25 03:05:27,743] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.29.mlp.down_proj.lora_B
+[2026-11-25 03:05:27,744] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.29.mlp.gate_proj.lora_A
+[2026-11-25 03:05:27,744] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.29.mlp.gate_proj.lora_B
+[2026-11-25 03:05:27,745] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.29.mlp.up_proj.lora_A
+[2026-11-25 03:05:27,746] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.29.mlp.up_proj.lora_B
+[2026-11-25 03:05:27,746] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.29.self_attn.k_proj.lora_A
+[2026-11-25 03:05:27,747] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.29.self_attn.k_proj.lora_B
+[2026-11-25 03:05:27,748] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.29.self_attn.o_proj.lora_A
+[2026-11-25 03:05:27,748] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.29.self_attn.o_proj.lora_B
+[2026-11-25 03:05:27,749] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.29.self_attn.q_proj.lora_A
+[2026-11-25 03:05:27,749] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.29.self_attn.q_proj.lora_B
+[2026-11-25 03:05:27,750] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.29.self_attn.v_proj.lora_A
+[2026-11-25 03:05:27,751] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.29.self_attn.v_proj.lora_B
+[2026-11-25 03:05:27,751] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.3.mlp.down_proj.lora_A
+[2026-11-25 03:05:27,752] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.3.mlp.down_proj.lora_B
+[2026-11-25 03:05:27,753] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.3.mlp.gate_proj.lora_A
+[2026-11-25 03:05:27,753] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.3.mlp.gate_proj.lora_B
+[2026-11-25 03:05:27,754] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.3.mlp.up_proj.lora_A
+[2026-11-25 03:05:27,755] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.3.mlp.up_proj.lora_B
+[2026-11-25 03:05:27,755] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.3.self_attn.k_proj.lora_A
+[2026-11-25 03:05:27,756] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.3.self_attn.k_proj.lora_B
+[2026-11-25 03:05:27,757] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.3.self_attn.o_proj.lora_A
+[2026-11-25 03:05:27,757] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.3.self_attn.o_proj.lora_B
+[2026-11-25 03:05:27,758] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.3.self_attn.q_proj.lora_A
+[2026-11-25 03:05:27,758] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.3.self_attn.q_proj.lora_B
+[2026-11-25 03:05:27,759] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.3.self_attn.v_proj.lora_A
+[2026-11-25 03:05:27,760] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.3.self_attn.v_proj.lora_B
+[2026-11-25 03:05:27,760] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.30.mlp.down_proj.lora_A
+[2026-11-25 03:05:27,761] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.30.mlp.down_proj.lora_B
+[2026-11-25 03:05:27,761] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.30.mlp.gate_proj.lora_A
+[2026-11-25 03:05:27,762] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.30.mlp.gate_proj.lora_B
+[2026-11-25 03:05:27,763] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.30.mlp.up_proj.lora_A
+[2026-11-25 03:05:27,764] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.30.mlp.up_proj.lora_B
+[2026-11-25 03:05:27,764] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.30.self_attn.k_proj.lora_A
+[2026-11-25 03:05:27,765] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.30.self_attn.k_proj.lora_B
+[2026-11-25 03:05:27,765] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.30.self_attn.o_proj.lora_A
+[2026-11-25 03:05:27,766] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.30.self_attn.o_proj.lora_B
+[2026-11-25 03:05:27,767] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.30.self_attn.q_proj.lora_A
+[2026-11-25 03:05:27,767] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.30.self_attn.q_proj.lora_B
+[2026-11-25 03:05:27,768] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.30.self_attn.v_proj.lora_A
+[2026-11-25 03:05:27,768] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.30.self_attn.v_proj.lora_B
+[2026-11-25 03:05:27,769] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.31.mlp.down_proj.lora_A
+[2026-11-25 03:05:27,770] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.31.mlp.down_proj.lora_B
+[2026-11-25 03:05:27,770] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.31.mlp.gate_proj.lora_A
+[2026-11-25 03:05:27,771] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.31.mlp.gate_proj.lora_B
+[2026-11-25 03:05:27,772] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.31.mlp.up_proj.lora_A
+[2026-11-25 03:05:27,772] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.31.mlp.up_proj.lora_B
+[2026-11-25 03:05:27,773] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.31.self_attn.k_proj.lora_A
+[2026-11-25 03:05:27,774] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.31.self_attn.k_proj.lora_B
+[2026-11-25 03:05:27,774] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.31.self_attn.o_proj.lora_A
+[2026-11-25 03:05:27,775] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.31.self_attn.o_proj.lora_B
+[2026-11-25 03:05:27,776] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.31.self_attn.q_proj.lora_A
+[2026-11-25 03:05:27,776] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.31.self_attn.q_proj.lora_B
+[2026-11-25 03:05:27,777] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.31.self_attn.v_proj.lora_A
+[2026-11-25 03:05:27,777] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.31.self_attn.v_proj.lora_B
+[2026-11-25 03:05:27,778] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.4.mlp.down_proj.lora_A
+[2026-11-25 03:05:27,779] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.4.mlp.down_proj.lora_B
+[2026-11-25 03:05:27,779] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.4.mlp.gate_proj.lora_A
+[2026-11-25 03:05:27,780] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.4.mlp.gate_proj.lora_B
+[2026-11-25 03:05:27,781] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.4.mlp.up_proj.lora_A
+[2026-11-25 03:05:27,781] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.4.mlp.up_proj.lora_B
+[2026-11-25 03:05:27,782] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.4.self_attn.k_proj.lora_A
+[2026-11-25 03:05:27,783] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.4.self_attn.k_proj.lora_B
+[2026-11-25 03:05:27,783] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.4.self_attn.o_proj.lora_A
+[2026-11-25 03:05:27,784] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.4.self_attn.o_proj.lora_B
+[2026-11-25 03:05:27,785] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.4.self_attn.q_proj.lora_A
+[2026-11-25 03:05:27,785] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.4.self_attn.q_proj.lora_B
+[2026-11-25 03:05:27,786] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.4.self_attn.v_proj.lora_A
+[2026-11-25 03:05:27,787] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.4.self_attn.v_proj.lora_B
+[2026-11-25 03:05:27,787] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.5.mlp.down_proj.lora_A
+[2026-11-25 03:05:27,788] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.5.mlp.down_proj.lora_B
+[2026-11-25 03:05:27,789] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.5.mlp.gate_proj.lora_A
+[2026-11-25 03:05:27,789] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.5.mlp.gate_proj.lora_B
+[2026-11-25 03:05:27,790] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.5.mlp.up_proj.lora_A
+[2026-11-25 03:05:27,791] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.5.mlp.up_proj.lora_B
+[2026-11-25 03:05:27,791] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.5.self_attn.k_proj.lora_A
+[2026-11-25 03:05:27,792] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.5.self_attn.k_proj.lora_B
+[2026-11-25 03:05:27,793] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.5.self_attn.o_proj.lora_A
+[2026-11-25 03:05:27,793] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.5.self_attn.o_proj.lora_B
+[2026-11-25 03:05:27,794] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.5.self_attn.q_proj.lora_A
+[2026-11-25 03:05:27,794] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.5.self_attn.q_proj.lora_B
+[2026-11-25 03:05:27,795] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.5.self_attn.v_proj.lora_A
+[2026-11-25 03:05:27,796] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.5.self_attn.v_proj.lora_B
+[2026-11-25 03:05:27,796] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.6.mlp.down_proj.lora_A
+[2026-11-25 03:05:27,797] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.6.mlp.down_proj.lora_B
+[2026-11-25 03:05:27,797] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.6.mlp.gate_proj.lora_A
+[2026-11-25 03:05:27,798] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.6.mlp.gate_proj.lora_B
+[2026-11-25 03:05:27,799] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.6.mlp.up_proj.lora_A
+[2026-11-25 03:05:27,800] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.6.mlp.up_proj.lora_B
+[2026-11-25 03:05:27,800] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.6.self_attn.k_proj.lora_A
+[2026-11-25 03:05:27,801] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.6.self_attn.k_proj.lora_B
+[2026-11-25 03:05:27,801] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.6.self_attn.o_proj.lora_A
+[2026-11-25 03:05:27,802] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.6.self_attn.o_proj.lora_B
+[2026-11-25 03:05:27,803] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.6.self_attn.q_proj.lora_A
+[2026-11-25 03:05:27,803] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.6.self_attn.q_proj.lora_B
+[2026-11-25 03:05:27,804] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.6.self_attn.v_proj.lora_A
+[2026-11-25 03:05:27,804] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.6.self_attn.v_proj.lora_B
+[2026-11-25 03:05:27,805] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.7.mlp.down_proj.lora_A
+[2026-11-25 03:05:27,806] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.7.mlp.down_proj.lora_B
+[2026-11-25 03:05:27,806] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.7.mlp.gate_proj.lora_A
+[2026-11-25 03:05:27,807] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.7.mlp.gate_proj.lora_B
+[2026-11-25 03:05:27,808] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.7.mlp.up_proj.lora_A
+[2026-11-25 03:05:27,808] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.7.mlp.up_proj.lora_B
+[2026-11-25 03:05:27,809] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.7.self_attn.k_proj.lora_A
+[2026-11-25 03:05:27,810] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.7.self_attn.k_proj.lora_B
+[2026-11-25 03:05:27,810] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.7.self_attn.o_proj.lora_A
+[2026-11-25 03:05:27,811] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.7.self_attn.o_proj.lora_B
+[2026-11-25 03:05:27,812] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.7.self_attn.q_proj.lora_A
+[2026-11-25 03:05:27,812] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.7.self_attn.q_proj.lora_B
+[2026-11-25 03:05:27,813] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.7.self_attn.v_proj.lora_A
+[2026-11-25 03:05:27,813] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.7.self_attn.v_proj.lora_B
+[2026-11-25 03:05:27,814] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.8.mlp.down_proj.lora_A
+[2026-11-25 03:05:27,815] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.8.mlp.down_proj.lora_B
+[2026-11-25 03:05:27,815] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.8.mlp.gate_proj.lora_A
+[2026-11-25 03:05:27,816] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.8.mlp.gate_proj.lora_B
+[2026-11-25 03:05:27,817] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.8.mlp.up_proj.lora_A
+[2026-11-25 03:05:27,817] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.8.mlp.up_proj.lora_B
+[2026-11-25 03:05:27,818] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.8.self_attn.k_proj.lora_A
+[2026-11-25 03:05:27,819] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.8.self_attn.k_proj.lora_B
+[2026-11-25 03:05:27,819] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.8.self_attn.o_proj.lora_A
+[2026-11-25 03:05:27,820] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.8.self_attn.o_proj.lora_B
+[2026-11-25 03:05:27,821] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.8.self_attn.q_proj.lora_A
+[2026-11-25 03:05:27,821] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.8.self_attn.q_proj.lora_B
+[2026-11-25 03:05:27,822] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.8.self_attn.v_proj.lora_A
+[2026-11-25 03:05:27,822] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.8.self_attn.v_proj.lora_B
+[2026-11-25 03:05:27,823] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.9.mlp.down_proj.lora_A
+[2026-11-25 03:05:27,824] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.9.mlp.down_proj.lora_B
+[2026-11-25 03:05:27,824] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.9.mlp.gate_proj.lora_A
+[2026-11-25 03:05:27,825] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.9.mlp.gate_proj.lora_B
+[2026-11-25 03:05:27,826] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.9.mlp.up_proj.lora_A
+[2026-11-25 03:05:27,826] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.9.mlp.up_proj.lora_B
+[2026-11-25 03:05:27,827] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.9.self_attn.k_proj.lora_A
+[2026-11-25 03:05:27,828] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.9.self_attn.k_proj.lora_B
+[2026-11-25 03:05:27,828] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.9.self_attn.o_proj.lora_A
+[2026-11-25 03:05:27,829] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.9.self_attn.o_proj.lora_B
+[2026-11-25 03:05:27,829] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.9.self_attn.q_proj.lora_A
+[2026-11-25 03:05:27,830] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.9.self_attn.q_proj.lora_B
+[2026-11-25 03:05:27,831] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.9.self_attn.v_proj.lora_A
+[2026-11-25 03:05:27,831] [    INFO] - [Rank 0/1] Assigned to store parameter model.layers.9.self_attn.v_proj.lora_B
+[2026-11-25 03:05:27,832] [    INFO] - [Rank 0/1] Saving sub-shard 0... Size: 84.50 MB, Params: 448, Path: /root/pr4840-validation/paddle-training-output/shard_0-0.safetensors
+[2026-11-25 03:05:27,890] [    INFO] - [Rank 0/1] (Saver) All shards saved successfully.
+[2026-11-25 03:05:27,900] [    INFO] - Configuration saved in /root/pr4840-validation/paddle-training-output/config.json
+[2026-11-25 03:05:27,900] [    INFO] - ***** train metrics *****
+[2026-11-25 03:05:27,900] [    INFO] -   cpu_available_memory     =       39.8
+[2026-11-25 03:05:27,900] [    INFO] -   cpu_used_memory          =       7.22
+[2026-11-25 03:05:27,901] [    INFO] -   progress_or_epoch        =        2.0
+[2026-11-25 03:05:27,901] [    INFO] -   train_loss               =     1.7522
+[2026-11-25 03:05:27,901] [    INFO] -   train_runtime            = 0:00:06.60
+[2026-11-25 03:05:27,901] [    INFO] -   train_samples_per_second =     3.0294
+[2026-11-25 03:05:27,901] [    INFO] -   train_steps_per_second   =     3.0294

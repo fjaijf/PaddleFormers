@@ -1,0 +1,11 @@
+{
+  "config.json": "2e6184e20da805d284b0ebba0bf5cf55bb561c6f333b66119fd2cc3f45a7ba15",
+  "model.safetensors.index.json": "c3ebf7274c8c22bf6152b9356d1214187613c5702ea4e22d9fa9417dbb39a0b9",
+  "modeling_minicpm.py": "cd81d52e8e0d35d0c35a75ca4d03ed23f19dae29acf085ea24147003c78d8a3a",
+  "configuration_minicpm.py": "f9014f14f71a175a53d48e862ebabb6007a09a2b7dd61eb6a00ddb0cee0ef9a5",
+  "tokenizer.json": "adf7208af154a5ca065d2eda4e5419e02aac58c2c00627874748b75ec6769094",
+  "tokenizer.model": "bb74d51116831c3bf65db812c553f94ab0c88dcf97a5bbb37e3504f6d359c530",
+  "tokenizer_config.json": "754ae39e7407a1f34c4fd76b37d8f46dae72ba14e52f01899ff9cac4254bf94e",
+  "special_tokens_map.json": "9ec9d6f07cb0e436598bf29b4d97c6355434c08fdbe9c264e6926907f3751c7e",
+  "generation_config.json": "83595cf3b045d7ed16593ae399b0e3c13fe45640a4bec3a1cd371b057a6a98b7"
+}

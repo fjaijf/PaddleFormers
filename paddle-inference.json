@@ -1,0 +1,33 @@
+{
+  "backend": "paddle",
+  "dtype": "float32",
+  "input_length": 31,
+  "logits_shape": [
+    1,
+    20,
+    73448
+  ],
+  "generated_ids": [
+    [
+      17251,
+      1982,
+      1441,
+      3374,
+      1385,
+      4702,
+      1384,
+      3122,
+      1358,
+      2809
+    ]
+  ],
+  "generated_text": [
+    "AI may be able to reason and understand the world"
+  ],
+  "versions": {
+    "paddle": "3.4.0.post20260728+8a1040b3d08"
+  },
+  "parameter_dtypes": [
+    "paddle.float32"
+  ]
+}

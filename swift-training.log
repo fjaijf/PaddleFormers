@@ -1,0 +1,713 @@
+run sh: `/data/envs/minicpm41-swift/bin/python /data/envs/minicpm41-swift/lib/python3.12/site-packages/swift/cli/sft.py --model /data/minicpm4.1-8b --model_type minicpm --train_type lora --lora_rank 8 --lora_alpha 16 --lora_dropout 0 --target_modules q_proj k_proj v_proj o_proj gate_proj up_proj down_proj --torch_dtype float32 --attn_impl eager --dataset /root/pr4840-validation/swift-dataset.jsonl --template minicpm41_paddle_alignment --external_plugins /root/pr4840-validation/swift-plugin.py --split_dataset_ratio 0 --dataset_shuffle false --train_dataloader_shuffle false --dataset_num_proc 1 --dataloader_num_workers 0 --max_length 512 --max_steps 20 --per_device_train_batch_size 1 --gradient_accumulation_steps 1 --learning_rate 1e-4 --lr_scheduler_type constant --warmup_steps 0 --weight_decay 0 --adam_beta1 0.9 --adam_beta2 0.999 --adam_epsilon 1e-8 --max_grad_norm 0 --use_logits_to_keep false --gradient_checkpointing false --bf16 false --fp16 false --tf32 false --seed 23 --data_seed 23 --logging_steps 1 --save_strategy no --eval_strategy no --report_to none --optim adamw_torch --disable_tqdm true --output_dir /root/pr4840-validation/swift-training-output`
+[INFO:swift] Successfully registered `/data/envs/minicpm41-swift/lib/python3.12/site-packages/swift/llm/dataset/data/dataset_info.json`.
+[INFO:swift] Successfully imported external_plugins: ['/root/pr4840-validation/swift-plugin.py'].
+[INFO:swift] rank: -1, local_rank: -1, world_size: 1, local_world_size: 1
+`torch_dtype` is deprecated! Use `dtype` instead!
+[INFO:swift] Setting args.lazy_tokenize: False
+[INFO:swift] output_dir: /root/pr4840-validation/swift-training-output/v1-20261125-034026
+[INFO:swift] Global seed set to 23
+[INFO:swift] args: TrainArguments(
+_n_gpu=-1,
+acc_strategy=token,
+accelerator_config={'dispatch_batches': False},
+adafactor=False,
+adalora_beta1=0.85,
+adalora_beta2=0.85,
+adalora_deltaT=1,
+adalora_init_r=12,
+adalora_orth_reg_weight=0.5,
+adalora_target_r=8,
+adalora_tfinal=0,
+adalora_tinit=0,
+adam_beta1=0.9,
+adam_beta2=0.999,
+adam_epsilon=1e-08,
+adapter_act=gelu,
+adapter_length=128,
+adapters=[],
+add_version=True,
+agent_template=None,
+aligner_lr=None,
+attn_impl=eager,
+auto_find_batch_size=False,
+average_tokens_across_devices=True,
+batch_eval_metrics=False,
+bf16=False,
+bf16_full_eval=False,
+bnb_4bit_compute_dtype=torch.float32,
+bnb_4bit_quant_storage=None,
+bnb_4bit_quant_type=nf4,
+bnb_4bit_use_double_quant=True,
+boft_block_num=0,
+boft_block_size=4,
+boft_dropout=0.0,
+boft_n_butterfly_factor=1,
+cached_dataset=[],
+check_model=True,
+ckpt_dir=None,
+columns={},
+create_checkpoint_symlink=False,
+custom_dataset_info=[],
+custom_register_path=[],
+data_seed=23,
+dataloader_drop_last=False,
+dataloader_num_workers=0,
+dataloader_persistent_workers=False,
+dataloader_pin_memory=True,
+dataloader_prefetch_factor=None,
+dataset=['/root/pr4840-validation/swift-dataset.jsonl'],
+dataset_num_proc=1,
+dataset_shuffle=False,
+ddp_backend=None,
+ddp_broadcast_buffers=None,
+ddp_bucket_cap_mb=None,
+ddp_find_unused_parameters=None,
+ddp_timeout=18000000,
+debug=None,
+deepspeed=None,
+deepspeed_autotp_size=None,
+device_map=None,
+disable_tqdm=True,
+do_eval=False,
+do_predict=False,
+do_train=False,
+download_mode=reuse_dataset_if_exists,
+ds3_gather_for_generation=True,
+early_stop_interval=None,
+enable_channel_loss=False,
+enable_dft_loss=False,
+eval_accumulation_steps=None,
+eval_dataset=[],
+eval_dataset_args=None,
+eval_delay=0,
+eval_do_concat_batches=True,
+eval_generation_config=None,
+eval_limit=None,
+eval_on_start=False,
+eval_steps=None,
+eval_strategy=no,
+eval_use_evalscope=False,
+eval_use_gather_object=False,
+external_plugins=['/root/pr4840-validation/swift-plugin.py'],
+extra_eval_args=None,
+fourier_n_frequency=2000,
+fourier_scaling=300.0,
+fp16=False,
+fp16_backend=auto,
+fp16_full_eval=False,
+fp16_opt_level=O1,
+freeze_aligner=True,
+freeze_llm=False,
+freeze_parameters=[],
+freeze_parameters_ratio=0.0,
+freeze_parameters_regex=None,
+freeze_vit=True,
+fsdp=,
+fsdp_config=None,
+fsdp_min_num_params=0,
+fsdp_transformer_layer_cls_to_wrap=None,
+full_determinism=False,
+galore_cos_threshold=0.4,
+galore_gamma_proj=2,
+galore_optim_per_parameter=False,
+galore_proj_bits=4,
+galore_proj_group_size=256,
+galore_proj_quant=False,
+galore_proj_type=std,
+galore_quantization=False,
+galore_queue_size=5,
+galore_rank=128,
+galore_scale=1.0,
+galore_target_modules=None,
+galore_update_proj_gap=50,
+galore_with_embedding=False,
+generation_config=None,
+generation_max_length=None,
+generation_num_beams=None,
+gradient_accumulation_steps=1,
+gradient_checkpointing=False,
+gradient_checkpointing_kwargs=None,
+greater_is_better=False,
+group_by_length=False,
+half_precision_backend=auto,
+hqq_axis=None,
+hub_always_push=False,
+hub_model_id=None,
+hub_private_repo=None,
+hub_revision=None,
+hub_strategy=every_save,
+hub_token=<HUB_TOKEN>,
+ignore_args_error=False,
+ignore_data_skip=False,
+include_for_metrics=[],
+include_inputs_for_metrics=False,
+include_num_input_tokens_seen=False,
+include_tokens_per_second=False,
+init_strategy=None,
+init_weights=True,
+interleave_prob=None,
+jit_mode_eval=False,
+label_names=None,
+label_smoothing_factor=0.0,
+lazy_tokenize=False,
+learning_rate=0.0001,
+length_column_name=length,
+liger_kernel_config=None,
+lisa_activated_layers=0,
+lisa_step_interval=20,
+llamapro_num_groups=None,
+llamapro_num_new_blocks=4,
+load_args=False,
+load_best_model_at_end=False,
+load_data_args=False,
+load_from_cache_file=False,
+local_rank=-1,
+local_repo_path=None,
+log_level=passive,
+log_level_replica=warning,
+log_on_each_node=True,
+logging_dir=/root/pr4840-validation/swift-training-output/v1-20261125-034026/runs,
+logging_first_step=True,
+logging_nan_inf_filter=True,
+logging_steps=1,
+logging_strategy=steps,
+logprobs=False,
+lora_alpha=16,
+lora_bias=none,
+lora_dropout=0.0,
+lora_dtype=None,
+lora_ga_batch_size=2,
+lora_ga_direction=ArB2r,
+lora_ga_iters=2,
+lora_ga_max_length=1024,
+lora_ga_scale=stable,
+lora_ga_stable_gamma=16,
+lora_modules=[],
+lora_rank=8,
+lorap_lr_ratio=None,
+loss_scale=default,
+loss_type=None,
+lr_scheduler_kwargs=None,
+lr_scheduler_type=constant,
+max_epochs=None,
+max_grad_norm=0.0,
+max_length=512,
+max_memory={},
+max_model_len=None,
+max_new_tokens=64,
+max_pixels=None,
+max_steps=20,
+metric=None,
+metric_for_best_model=loss,
+model=/data/minicpm4.1-8b,
+model_author=None,
+model_kwargs={},
+model_name=None,
+model_revision=None,
+model_type=minicpm,
+modules_to_save=[],
+mp_parameters=,
+neftune_noise_alpha=None,
+new_special_tokens=[],
+no_cuda=False,
+norm_bbox=None,
+num_beams=1,
+num_labels=None,
+num_train_epochs=3.0,
+optim=adamw_torch,
+optim_args=None,
+optim_target_modules=None,
+optimizer=None,
+output_dir=/root/pr4840-validation/swift-training-output/v1-20261125-034026,
+overwrite_output_dir=False,
+packing=False,
+packing_length=None,
+padding_free=False,
+padding_side=right,
+parallelism_config=None,
+past_index=-1,
+per_device_eval_batch_size=1,
+per_device_train_batch_size=1,
+predict_with_generate=False,
+prediction_loss_only=False,
+problem_type=None,
+push_to_hub=False,
+push_to_hub_model_id=None,
+push_to_hub_organization=None,
+push_to_hub_token=<PUSH_TO_HUB_TOKEN>,
+quant_bits=None,
+quant_method=None,
+ray_scope=last,
+reft_args=None,
+reft_intervention_type=LoreftIntervention,
+reft_layer_key=None,
+reft_layers=None,
+reft_rank=4,
+remove_unused_columns=True,
+repetition_penalty=None,
+report_to=['none'],
+response_prefix=None,
+restore_callback_states_from_checkpoint=False,
+resume_from_checkpoint=None,
+resume_only_model=False,
+rope_scaling=None,
+router_aux_loss_coef=0.0,
+run_name=/root/pr4840-validation/swift-training-output/v1-20261125-034026,
+save_on_each_node=False,
+save_only_model=False,
+save_safetensors=True,
+save_steps=500,
+save_strategy=no,
+save_total_limit=None,
+seed=23,
+sequence_parallel_size=1,
+shuffle_buffer_size=1000,
+skip_memory_metrics=True,
+sortish_sampler=False,
+split_dataset_ratio=0.0,
+stop_words=[],
+stopping_strategy=first_exhausted,
+stream=False,
+streaming=False,
+strict=False,
+swanlab_exp_name=None,
+swanlab_lark_secret=None,
+swanlab_lark_webhook_url=None,
+swanlab_mode=cloud,
+swanlab_project=None,
+swanlab_token=<SWANLAB_TOKEN>,
+swanlab_workspace=None,
+system=None,
+target_modules=['q_proj', 'k_proj', 'v_proj', 'o_proj', 'gate_proj', 'up_proj', 'down_proj'],
+target_parameters=None,
+target_regex=None,
+task_type=causal_lm,
+temperature=0.0,
+template=minicpm41_paddle_alignment,
+template_backend=swift,
+tf32=False,
+top_k=None,
+top_logprobs=None,
+top_p=None,
+torch_compile=False,
+torch_compile_backend=None,
+torch_compile_mode=None,
+torch_dtype=torch.float32,
+torch_empty_cache_steps=None,
+torchdynamo=None,
+tpu_metrics_debug=False,
+tpu_num_cores=None,
+train_dataloader_shuffle=False,
+train_type=lora,
+trainable_parameters=[],
+trainable_parameters_regex=None,
+truncation_strategy=delete,
+tuner_backend=peft,
+use_chat_template=True,
+use_cpu=False,
+use_dora=False,
+use_flash_ckpt=False,
+use_galore=False,
+use_hf=False,
+use_ipex=False,
+use_legacy_prediction_loop=False,
+use_liger_kernel=False,
+use_logits_to_keep=False,
+use_mps_device=False,
+use_rslora=False,
+use_swift_lora=False,
+val_dataset=[],
+val_dataset_shuffle=False,
+vera_d_initial=0.1,
+vera_dropout=0.0,
+vera_projection_prng_key=0,
+vera_rank=256,
+vit_gradient_checkpointing=None,
+vit_lr=None,
+warmup_ratio=0.0,
+warmup_steps=0,
+weight_decay=0.0,
+zero_hpz_partition_size=None,
+)
+[INFO:swift] attn_impl: eager
+[INFO:swift] model_kwargs: {'device_map': 'cuda:0', 'dtype': torch.float32}
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:02,  1.36it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:01<00:01,  1.33it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:02<00:00,  1.38it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.80it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.61it/s]
+[INFO:swift] model.hf_device_map: {'': device(type='cuda', index=0)}
+[INFO:swift] model_info: ModelInfo(model_type='minicpm', model_dir='/data/minicpm4.1-8b', torch_dtype=torch.float32, max_model_len=65536, quant_method=None, quant_bits=None, rope_scaling={'rope_type': 'longrope', 'long_factor': [0.9982316082870437, 1.033048153422584, 1.0749920956484724, 1.1255096879436193, 1.1863348602111476, 1.259543828902579, 1.3476188888731149, 1.4535223827776373, 1.5807816745852985, 1.7335856049489526, 1.9168922912975785, 2.1365471404135326, 2.3994084200118646, 2.713475511863602, 3.0880118452194134, 3.533650295140154, 4.062463396503134, 4.687974098908333, 5.425075306704039, 6.289818967956352, 7.29902962722721, 8.469695779093664, 9.81809877306655, 11.358657902065282, 13.102505860712087, 15.055862949967128, 17.218348131364184, 19.581439255386453, 22.127353314656723, 24.828633849376587, 27.6486820771775, 30.54334096108829, 33.46345345363812, 36.358112337548896, 39.17816056534983, 41.879441100069684, 44.425355159339965, 46.78844628336223, 48.95093146475928, 50.90428855401433, 52.648136512661125, 54.18869564165987, 55.537098635632745, 56.7077647874992, 57.71697544677006, 58.58171910802236, 59.31882031581807, 59.94433101822328, 60.47314411958625, 60.918782569507, 61.29331890286281, 61.60738599471455, 61.87024727431288, 62.089902123428836, 62.27320880977746, 62.42601274014111, 62.55327203194878, 62.65917552585329, 62.74725058582382, 62.82045955451526, 62.88128472678279, 62.931802319077946, 62.97374626130382, 63.008562806439365], 'short_factor': [0.9982316082870437, 1.033048153422584, 1.0749920956484724, 1.1255096879436193, 1.1863348602111476, 1.259543828902579, 1.3476188888731149, 1.4535223827776373, 1.5807816745852985, 1.7335856049489526, 1.9168922912975785, 2.1365471404135326, 2.3994084200118646, 2.713475511863602, 3.0880118452194134, 3.533650295140154, 4.062463396503134, 4.687974098908333, 5.425075306704039, 6.289818967956352, 7.29902962722721, 8.469695779093664, 9.81809877306655, 11.358657902065282, 13.102505860712087, 15.055862949967128, 17.218348131364184, 19.581439255386453, 22.127353314656723, 24.828633849376587, 27.6486820771775, 30.54334096108829, 33.46345345363812, 36.358112337548896, 39.17816056534983, 41.879441100069684, 44.425355159339965, 46.78844628336223, 48.95093146475928, 50.90428855401433, 52.648136512661125, 54.18869564165987, 55.537098635632745, 56.7077647874992, 57.71697544677006, 58.58171910802236, 59.31882031581807, 59.94433101822328, 60.47314411958625, 60.918782569507, 61.29331890286281, 61.60738599471455, 61.87024727431288, 62.089902123428836, 62.27320880977746, 62.42601274014111, 62.55327203194878, 62.65917552585329, 62.74725058582382, 62.82045955451526, 62.88128472678279, 62.931802319077946, 62.97374626130382, 63.008562806439365], 'original_max_position_embeddings': 65536}, is_moe_model=False, config=MiniCPMConfig {
+  "architectures": [
+    "MiniCPMForCausalLM"
+  ],
+  "attention_bias": false,
+  "attention_dropout": 0.0,
+  "auto_map": {
+    "AutoConfig": "configuration_minicpm.MiniCPMConfig",
+    "AutoModel": "modeling_minicpm.MiniCPMModel",
+    "AutoModelForCausalLM": "modeling_minicpm.MiniCPMForCausalLM",
+    "AutoModelForSeq2SeqLM": "modeling_minicpm.MiniCPMForCausalLM",
+    "AutoModelForSequenceClassification": "modeling_minicpm.MiniCPMForSequenceClassification"
+  },
+  "bos_token_id": 1,
+  "dim_model_base": 256,
+  "dtype": "float32",
+  "eos_token_id": [
+    2,
+    73440
+  ],
+  "hidden_act": "silu",
+  "hidden_size": 4096,
+  "initializer_range": 0.1,
+  "intermediate_size": 16384,
+  "max_position_embeddings": 65536,
+  "model_type": "minicpm",
+  "mup_denominator": 32,
+  "num_attention_heads": 32,
+  "num_hidden_layers": 32,
+  "num_key_value_heads": 2,
+  "pad_token_id": 73440,
+  "pretraining_tp": 1,
+  "rms_norm_eps": 1e-06,
+  "rope_scaling": {
+    "long_factor": [
+      0.9982316082870437,
+      1.033048153422584,
+      1.0749920956484724,
+      1.1255096879436193,
+      1.1863348602111476,
+      1.259543828902579,
+      1.3476188888731149,
+      1.4535223827776373,
+      1.5807816745852985,
+      1.7335856049489526,
+      1.9168922912975785,
+      2.1365471404135326,
+      2.3994084200118646,
+      2.713475511863602,
+      3.0880118452194134,
+      3.533650295140154,
+      4.062463396503134,
+      4.687974098908333,
+      5.425075306704039,
+      6.289818967956352,
+      7.29902962722721,
+      8.469695779093664,
+      9.81809877306655,
+      11.358657902065282,
+      13.102505860712087,
+      15.055862949967128,
+      17.218348131364184,
+      19.581439255386453,
+      22.127353314656723,
+      24.828633849376587,
+      27.6486820771775,
+      30.54334096108829,
+      33.46345345363812,
+      36.358112337548896,
+      39.17816056534983,
+      41.879441100069684,
+      44.425355159339965,
+      46.78844628336223,
+      48.95093146475928,
+      50.90428855401433,
+      52.648136512661125,
+      54.18869564165987,
+      55.537098635632745,
+      56.7077647874992,
+      57.71697544677006,
+      58.58171910802236,
+      59.31882031581807,
+      59.94433101822328,
+      60.47314411958625,
+      60.918782569507,
+      61.29331890286281,
+      61.60738599471455,
+      61.87024727431288,
+      62.089902123428836,
+      62.27320880977746,
+      62.42601274014111,
+      62.55327203194878,
+      62.65917552585329,
+      62.74725058582382,
+      62.82045955451526,
+      62.88128472678279,
+      62.931802319077946,
+      62.97374626130382,
+      63.008562806439365
+    ],
+    "original_max_position_embeddings": 65536,
+    "rope_type": "longrope",
+    "short_factor": [
+      0.9982316082870437,
+      1.033048153422584,
+      1.0749920956484724,
+      1.1255096879436193,
+      1.1863348602111476,
+      1.259543828902579,
+      1.3476188888731149,
+      1.4535223827776373,
+      1.5807816745852985,
+      1.7335856049489526,
+      1.9168922912975785,
+      2.1365471404135326,
+      2.3994084200118646,
+      2.713475511863602,
+      3.0880118452194134,
+      3.533650295140154,
+      4.062463396503134,
+      4.687974098908333,
+      5.425075306704039,
+      6.289818967956352,
+      7.29902962722721,
+      8.469695779093664,
+      9.81809877306655,
+      11.358657902065282,
+      13.102505860712087,
+      15.055862949967128,
+      17.218348131364184,
+      19.581439255386453,
+      22.127353314656723,
+      24.828633849376587,
+      27.6486820771775,
+      30.54334096108829,
+      33.46345345363812,
+      36.358112337548896,
+      39.17816056534983,
+      41.879441100069684,
+      44.425355159339965,
+      46.78844628336223,
+      48.95093146475928,
+      50.90428855401433,
+      52.648136512661125,
+      54.18869564165987,
+      55.537098635632745,
+      56.7077647874992,
+      57.71697544677006,
+      58.58171910802236,
+      59.31882031581807,
+      59.94433101822328,
+      60.47314411958625,
+      60.918782569507,
+      61.29331890286281,
+      61.60738599471455,
+      61.87024727431288,
+      62.089902123428836,
+      62.27320880977746,
+      62.42601274014111,
+      62.55327203194878,
+      62.65917552585329,
+      62.74725058582382,
+      62.82045955451526,
+      62.88128472678279,
+      62.931802319077946,
+      62.97374626130382,
+      63.008562806439365
+    ]
+  },
+  "rope_theta": 10000.0,
+  "scale_depth": 1.4,
+  "scale_emb": 12,
+  "sparse_config": null,
+  "tie_word_embeddings": false,
+  "transformers_version": "4.56.2",
+  "use_cache": true,
+  "vocab_size": 73448
+}
+, task_type='causal_lm', num_labels=None)
+[INFO:swift] model.generation_config: GenerationConfig {
+  "bos_token_id": 1,
+  "eos_token_id": [
+    2,
+    73440
+  ],
+  "max_new_tokens": 64,
+  "pad_token_id": 73440
+}
+
+[INFO:swift] default_system: None
+[INFO:swift] max_length: 512
+[INFO:swift] response_prefix: ''
+[INFO:swift] agent_template: react_en
+[INFO:swift] Start time of running main: 2026-11-25 03:40:31.451541
+[INFO:swift] swift.__version__: 3.9.3
+Map:   0%|          | 0/10 [00:00<?, ? examples/s]Map: 100%|██████████| 10/10 [00:00<00:00, 1982.37 examples/s]
+[INFO:swift] train_dataset: Dataset({
+    features: ['messages'],
+    num_rows: 10
+})
+[INFO:swift] val_dataset: None
+Map:   0%|          | 0/10 [00:00<?, ? examples/s]Map: 100%|██████████| 10/10 [00:00<00:00, 985.11 examples/s]
+[INFO:swift] [INPUT_IDS] [12525, 59358, 59320, 5991, 2455, 5388, 2654, 59637, 59566, 6829, 9998, 66, 73440, 59320, 5, 6427, 8583, 59358, 59320, 59345, 72, 59320, 16317, 5961, 2938, 66, 5, 59349, 72, 59320, 40500, 6829, 66, 5, 59362, 72, 59320, 8369, 59409, 59872, 59689, 6230, 66, 5, 59370, 72, 36413, 59409, 8530, 66, 5, 59367, 72, 10982, 25607, 40331, 66, 73440, 59320, 5, 73440]
+[INFO:swift] [INPUT] Human: 针对产品发布提出五种营销策略。<|im_end|> 
+Assistant: 1. 社交媒体活动。
+2. 电子邮件营销。
+3. 在线和离线广告。
+4. 推荐和评论。
+5. 合作名人推销。<|im_end|> 
+<|im_end|>
+[INFO:swift] [LABELS_IDS] [-100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, 59320, 59345, 72, 59320, 16317, 5961, 2938, 66, 5, 59349, 72, 59320, 40500, 6829, 66, 5, 59362, 72, 59320, 8369, 59409, 59872, 59689, 6230, 66, 5, 59370, 72, 36413, 59409, 8530, 66, 5, 59367, 72, 10982, 25607, 40331, 66, 73440, 59320, 5, 73440]
+[INFO:swift] [LABELS] [-100 * 18]1. 社交媒体活动。
+2. 电子邮件营销。
+3. 在线和离线广告。
+4. 推荐和评论。
+5. 合作名人推销。<|im_end|> 
+<|im_end|>
+[INFO:swift] Dataset Token Length: 54.200000±21.917117, min=27.000000, max=87.000000, size=10
+[INFO:swift] The TrainArguments will be saved in: /root/pr4840-validation/swift-training-output/v1-20261125-034026/args.json
+[INFO:swift] lora_config: LoraConfig(task_type='CAUSAL_LM', peft_type=<PeftType.LORA: 'LORA'>, auto_mapping=None, base_model_name_or_path='/data/minicpm4.1-8b', revision=None, inference_mode=False, r=8, target_modules={'k_proj', 'q_proj', 'o_proj', 'gate_proj', 'up_proj', 'v_proj', 'down_proj'}, exclude_modules=None, lora_alpha=16, lora_dropout=0.0, fan_in_fan_out=False, bias='none', use_rslora=False, modules_to_save=[], init_lora_weights=True, layers_to_transform=None, layers_pattern=None, rank_pattern={}, alpha_pattern={}, megatron_config=None, megatron_core='megatron.core', trainable_token_indices=None, loftq_config={}, eva_config=None, corda_config=None, use_dora=False, use_qalora=False, qalora_group_size=16, layer_replication=None, runtime_config=LoraRuntimeConfig(ephemeral_gpu_offload=False), lora_bias=False, target_parameters=None, lora_dtype=None, lorap_lr_ratio=None, lorap_emb_lr=1e-06)
+[INFO:swift] model: PeftModelForCausalLM(
+  (base_model): LoraModel(
+    (model): MiniCPMForCausalLM(
+      (model): MiniCPMModel(
+        (embed_tokens): Embedding(73448, 4096, padding_idx=2)
+        (layers): ModuleList(
+          (0-31): 32 x MiniCPMDecoderLayer(
+            (self_attn): MiniCPMAttention(
+              (q_proj): lora.Linear(
+                (base_layer): Linear(in_features=4096, out_features=4096, bias=False)
+                (lora_dropout): ModuleDict(
+                  (default): Identity()
+                )
+                (lora_A): ModuleDict(
+                  (default): Linear(in_features=4096, out_features=8, bias=False)
+                )
+                (lora_B): ModuleDict(
+                  (default): Linear(in_features=8, out_features=4096, bias=False)
+                )
+                (lora_embedding_A): ParameterDict()
+                (lora_embedding_B): ParameterDict()
+                (lora_magnitude_vector): ModuleDict()
+              )
+              (k_proj): lora.Linear(
+                (base_layer): Linear(in_features=4096, out_features=256, bias=False)
+                (lora_dropout): ModuleDict(
+                  (default): Identity()
+                )
+                (lora_A): ModuleDict(
+                  (default): Linear(in_features=4096, out_features=8, bias=False)
+                )
+                (lora_B): ModuleDict(
+                  (default): Linear(in_features=8, out_features=256, bias=False)
+                )
+                (lora_embedding_A): ParameterDict()
+                (lora_embedding_B): ParameterDict()
+                (lora_magnitude_vector): ModuleDict()
+              )
+              (v_proj): lora.Linear(
+                (base_layer): Linear(in_features=4096, out_features=256, bias=False)
+                (lora_dropout): ModuleDict(
+                  (default): Identity()
+                )
+                (lora_A): ModuleDict(
+                  (default): Linear(in_features=4096, out_features=8, bias=False)
+                )
+                (lora_B): ModuleDict(
+                  (default): Linear(in_features=8, out_features=256, bias=False)
+                )
+                (lora_embedding_A): ParameterDict()
+                (lora_embedding_B): ParameterDict()
+                (lora_magnitude_vector): ModuleDict()
+              )
+              (o_proj): lora.Linear(
+                (base_layer): Linear(in_features=4096, out_features=4096, bias=False)
+                (lora_dropout): ModuleDict(
+                  (default): Identity()
+                )
+                (lora_A): ModuleDict(
+                  (default): Linear(in_features=4096, out_features=8, bias=False)
+                )
+                (lora_B): ModuleDict(
+                  (default): Linear(in_features=8, out_features=4096, bias=False)
+                )
+                (lora_embedding_A): ParameterDict()
+                (lora_embedding_B): ParameterDict()
+                (lora_magnitude_vector): ModuleDict()
+              )
+              (rotary_emb): MiniCPMLongRoPE()
+            )
+            (mlp): MiniCPMMLP(
+              (gate_proj): lora.Linear(
+                (base_layer): Linear(in_features=4096, out_features=16384, bias=False)
+                (lora_dropout): ModuleDict(
+                  (default): Identity()
+                )
+                (lora_A): ModuleDict(
+                  (default): Linear(in_features=4096, out_features=8, bias=False)
+                )
+                (lora_B): ModuleDict(
+                  (default): Linear(in_features=8, out_features=16384, bias=False)
+                )
+                (lora_embedding_A): ParameterDict()
+                (lora_embedding_B): ParameterDict()
+                (lora_magnitude_vector): ModuleDict()
+              )
+              (up_proj): lora.Linear(
+                (base_layer): Linear(in_features=4096, out_features=16384, bias=False)
+                (lora_dropout): ModuleDict(
+                  (default): Identity()
+                )
+                (lora_A): ModuleDict(
+                  (default): Linear(in_features=4096, out_features=8, bias=False)
+                )
+                (lora_B): ModuleDict(
+                  (default): Linear(in_features=8, out_features=16384, bias=False)
+                )
+                (lora_embedding_A): ParameterDict()
+                (lora_embedding_B): ParameterDict()
+                (lora_magnitude_vector): ModuleDict()
+              )
+              (down_proj): lora.Linear(
+                (base_layer): Linear(in_features=16384, out_features=4096, bias=False)
+                (lora_dropout): ModuleDict(
+                  (default): Identity()
+                )
+                (lora_A): ModuleDict(
+                  (default): Linear(in_features=16384, out_features=8, bias=False)
+                )
+                (lora_B): ModuleDict(
+                  (default): Linear(in_features=8, out_features=4096, bias=False)
+                )
+                (lora_embedding_A): ParameterDict()
+                (lora_embedding_B): ParameterDict()
+                (lora_magnitude_vector): ModuleDict()
+              )
+              (act_fn): SiLU()
+            )
+            (input_layernorm): MiniCPMRMSNorm()
+            (post_attention_layernorm): MiniCPMRMSNorm()
+          )
+        )
+        (norm): MiniCPMRMSNorm()
+      )
+      (lm_head): Linear(in_features=4096, out_features=73448, bias=False)
+    )
+  )
+)
+[INFO:swift] model_parameter_info: PeftModelForCausalLM: 8207.4051M Params (22.1512M Trainable [0.2699%]), 536.8730M Buffers.
+Detected kernel version 5.4.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+[INFO:swift] use_reentrant: True
+[INFO:swift] The logging file will be saved in: /root/pr4840-validation/swift-training-output/v1-20261125-034026/logging.jsonl
+The tokenizer has new PAD/BOS/EOS tokens that differ from the model config and generation config. The model config and generation config were aligned accordingly, being updated with the tokenizer's values. Updated tokens: {'eos_token_id': 73440}.
+[INFO:swift] use_logits_to_keep: False
+{'loss': 2.32764268, 'learning_rate': 0.0001, 'token_acc': 0.58139535, 'epoch': 0.1, 'global_step/max_steps': '1/20', 'percentage': '5.00%', 'elapsed_time': '2s', 'remaining_time': '42s', 'memory(GiB)': 33.49, 'train_speed(iter/s)': 0.444709}
+{'loss': 2.61361098, 'learning_rate': 0.0001, 'token_acc': 0.5, 'epoch': 0.2, 'global_step/max_steps': '2/20', 'percentage': '10.00%', 'elapsed_time': '2s', 'remaining_time': '22s', 'memory(GiB)': 34.01, 'train_speed(iter/s)': 0.791291}
+{'loss': 2.77969599, 'learning_rate': 0.0001, 'token_acc': 0.44444444, 'epoch': 0.3, 'global_step/max_steps': '3/20', 'percentage': '15.00%', 'elapsed_time': '2s', 'remaining_time': '15s', 'memory(GiB)': 34.01, 'train_speed(iter/s)': 1.096727}
+{'loss': 2.47939897, 'learning_rate': 0.0001, 'token_acc': 0.5, 'epoch': 0.4, 'global_step/max_steps': '4/20', 'percentage': '20.00%', 'elapsed_time': '3s', 'remaining_time': '12s', 'memory(GiB)': 34.01, 'train_speed(iter/s)': 1.326992}
+{'loss': 2.25433946, 'learning_rate': 0.0001, 'token_acc': 0.6, 'epoch': 0.5, 'global_step/max_steps': '5/20', 'percentage': '25.00%', 'elapsed_time': '3s', 'remaining_time': '9s', 'memory(GiB)': 34.02, 'train_speed(iter/s)': 1.550896}
+{'loss': 1.57507348, 'learning_rate': 0.0001, 'token_acc': 0.63157895, 'epoch': 0.6, 'global_step/max_steps': '6/20', 'percentage': '30.00%', 'elapsed_time': '3s', 'remaining_time': '8s', 'memory(GiB)': 34.02, 'train_speed(iter/s)': 1.74882}
+{'loss': 2.46101785, 'learning_rate': 0.0001, 'token_acc': 0.421875, 'epoch': 0.7, 'global_step/max_steps': '7/20', 'percentage': '35.00%', 'elapsed_time': '3s', 'remaining_time': '6s', 'memory(GiB)': 34.02, 'train_speed(iter/s)': 1.890258}
+{'loss': 2.60165024, 'learning_rate': 0.0001, 'token_acc': 0.46153846, 'epoch': 0.8, 'global_step/max_steps': '8/20', 'percentage': '40.00%', 'elapsed_time': '3s', 'remaining_time': '5s', 'memory(GiB)': 34.02, 'train_speed(iter/s)': 2.046798}
+{'loss': 1.74163139, 'learning_rate': 0.0001, 'token_acc': 0.54411765, 'epoch': 0.9, 'global_step/max_steps': '9/20', 'percentage': '45.00%', 'elapsed_time': '4s', 'remaining_time': '5s', 'memory(GiB)': 34.09, 'train_speed(iter/s)': 2.150976}
+{'loss': 0.8107776, 'learning_rate': 0.0001, 'token_acc': 0.75, 'epoch': 1.0, 'global_step/max_steps': '10/20', 'percentage': '50.00%', 'elapsed_time': '4s', 'remaining_time': '4s', 'memory(GiB)': 34.09, 'train_speed(iter/s)': 2.296729}
+{'loss': 1.58949053, 'learning_rate': 0.0001, 'token_acc': 0.69767442, 'epoch': 1.1, 'global_step/max_steps': '11/20', 'percentage': '55.00%', 'elapsed_time': '4s', 'remaining_time': '3s', 'memory(GiB)': 34.19, 'train_speed(iter/s)': 2.406153}
+{'loss': 2.04711151, 'learning_rate': 0.0001, 'token_acc': 0.5, 'epoch': 1.2, 'global_step/max_steps': '12/20', 'percentage': '60.00%', 'elapsed_time': '4s', 'remaining_time': '3s', 'memory(GiB)': 34.19, 'train_speed(iter/s)': 2.477065}
+{'loss': 1.55571234, 'learning_rate': 0.0001, 'token_acc': 0.72222222, 'epoch': 1.3, 'global_step/max_steps': '13/20', 'percentage': '65.00%', 'elapsed_time': '5s', 'remaining_time': '2s', 'memory(GiB)': 34.19, 'train_speed(iter/s)': 2.573225}
+{'loss': 1.85350096, 'learning_rate': 0.0001, 'token_acc': 0.56, 'epoch': 1.4, 'global_step/max_steps': '14/20', 'percentage': '70.00%', 'elapsed_time': '5s', 'remaining_time': '2s', 'memory(GiB)': 34.19, 'train_speed(iter/s)': 2.628941}
+{'loss': 1.07793868, 'learning_rate': 0.0001, 'token_acc': 0.65, 'epoch': 1.5, 'global_step/max_steps': '15/20', 'percentage': '75.00%', 'elapsed_time': '5s', 'remaining_time': '1s', 'memory(GiB)': 34.19, 'train_speed(iter/s)': 2.710847}
+{'loss': 0.4887366, 'learning_rate': 0.0001, 'token_acc': 0.78947368, 'epoch': 1.6, 'global_step/max_steps': '16/20', 'percentage': '80.00%', 'elapsed_time': '5s', 'remaining_time': '1s', 'memory(GiB)': 34.19, 'train_speed(iter/s)': 2.786305}
+{'loss': 2.06341577, 'learning_rate': 0.0001, 'token_acc': 0.4375, 'epoch': 1.7, 'global_step/max_steps': '17/20', 'percentage': '85.00%', 'elapsed_time': '6s', 'remaining_time': '1s', 'memory(GiB)': 34.19, 'train_speed(iter/s)': 2.825038}
+{'loss': 1.07634246, 'learning_rate': 0.0001, 'token_acc': 0.84615385, 'epoch': 1.8, 'global_step/max_steps': '18/20', 'percentage': '90.00%', 'elapsed_time': '6s', 'remaining_time': '0s', 'memory(GiB)': 34.19, 'train_speed(iter/s)': 2.891323}
+{'loss': 1.49260235, 'learning_rate': 0.0001, 'token_acc': 0.58823529, 'epoch': 1.9, 'global_step/max_steps': '19/20', 'percentage': '95.00%', 'elapsed_time': '6s', 'remaining_time': '0s', 'memory(GiB)': 34.19, 'train_speed(iter/s)': 2.921784}
+{'loss': 0.15339711, 'learning_rate': 0.0001, 'token_acc': 1.0, 'epoch': 2.0, 'global_step/max_steps': '20/20', 'percentage': '100.00%', 'elapsed_time': '6s', 'remaining_time': '0s', 'memory(GiB)': 34.19, 'train_speed(iter/s)': 2.996872}
+{'train_runtime': 6.6776, 'train_samples_per_second': 2.995, 'train_steps_per_second': 2.995, 'train_loss': 1.75215435, 'epoch': 2.0, 'global_step/max_steps': '20/20', 'percentage': '100.00%', 'elapsed_time': '6s', 'remaining_time': '0s', 'memory(GiB)': 34.19, 'train_speed(iter/s)': 2.99663}
+[INFO:swift] last_model_checkpoint: None
+[INFO:swift] best_model_checkpoint: None
+[INFO:swift] End time of running main: 2026-11-25 03:40:39.988165

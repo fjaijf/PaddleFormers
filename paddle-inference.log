@@ -1,0 +1,31 @@
+PyTorch was not found. Models won't be available and only tokenizers, configuration and file/data utilities can be used.
+[2026-11-25 03:05:54,634] [ WARNING] - Due to potential compatibility issues between PaddlePaddle and PyTorch in PaddleFormers, PaddleFormers defaults `transformers.utils.import_utils.is_torch_available` and `transformers.utils.import_utils.is_torchvision_available` to False. If you need to use PyTorch in transformers or torchvision, please add `del sys.modules['transformers']` before using them.
+[2026-11-25 03:05:54,975] [ WARNING] __init__.py:78 - [cptr_cache] Patched 18 CUTLASS DSL types
+[2026-11-25 03:05:54,985] [ WARNING] __init__.py:359 - paddlefleet_ops.deep_gemm not supported: paddlefleet_ops.deep_gemm requires GPU compute capability >= 9.0 (Hopper). Current capability: 8.0.
+[2026-11-25 03:05:54,985] [ WARNING] __init__.py:370 - paddlefleet_ops.deep_ep not supported: paddlefleet_ops.deep_ep requires GPU compute capability >= 9.0 (Hopper). Current capability: 8.0.
+[2026-11-25 03:05:54,985] [ WARNING] __init__.py:381 - paddlefleet_ops.hybrid_ep not supported: paddlefleet_ops.hybrid_ep requires GPU compute capability >= 9.0 (Hopper). Current capability: 8.0.
+[2026-11-25 03:05:54,985] [ WARNING] __init__.py:394 - paddlefleet_ops.sonicmoe not supported: CUDA >= 12.9 required (current 11.8); GPU compute capability >= 10.0 (Blackwell) required (current 8.0)
+[2026-11-25 03:05:54,985] [ WARNING] __init__.py:404 - paddlefleet_ops.flash_mla not supported: paddlefleet_ops.flash_mla requires GPU compute capability >= 9.0 (Hopper). Current capability: 8.0.
+[2026-11-25 03:05:54,985] [ WARNING] __init__.py:413 - paddlefleet_ops.flash_mask not supported: paddlefleet_ops.flash_mask requires GPU compute capability >= 10.0 (Blackwell). Current capability: 8.0.
+[2026-11-25 03:05:55,062] [    INFO] __init__.py:329 - Successfully loaded ecosystem library: fast_hadamard_transform
+[2026-11-25 03:05:55,255] [    INFO] __init__.py:329 - Successfully loaded ecosystem library: cudnn
+[2026-11-25 03:05:55,965] [    INFO] - Using download source: huggingface
+[2026-11-25 03:05:55,965] [    INFO] - Loading configuration file /data/minicpm4.1-8b/config.json
+[2026-11-25 03:05:55,966] [ WARNING] - You are using a model of type minicpm to instantiate a model of type minicpm4_1. This is not supported for all configurations of models and can yield errors.
+[2026-11-25 03:05:55,966] [ WARNING] - You are using a model of type minicpm to instantiate a model of type minicpm4_1. This is not supported for all configurations of models and can yield errors.
+[2026-11-25 03:05:55,966] [    INFO] - Loading weights file /data/minicpm4.1-8b/model.safetensors.index.json
+W1125 03:05:58.507390  4700 gpu_resources.cc:116] Please NOTE: device: 0, GPU Compute Capability: 8.0, Driver API Version: 12.0, Runtime API Version: 12.9
+[2026-11-25 03:05:58,669] [    INFO] - loss_subbatch_sequence_length: -1 , use_fused_head_and_loss_fn: False, use_filtered_label_loss: False
+[2026-11-25 03:05:58,671] [    INFO] - Getting fuse_actions for determine expected keys set succeed, number of fuse actions: 0
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:09<00:28,  9.40s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:17<00:17,  8.88s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:27<00:09,  9.08s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:30<00:00,  6.94s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:30<00:00,  7.73s/it]
+[2026-11-25 03:06:29,576] [    INFO] - All model checkpoint weights were used when initializing MiniCPM4_1ForCausalLM.
+
+[2026-11-25 03:06:29,576] [    INFO] - All the weights of MiniCPM4_1ForCausalLM were initialized from the model checkpoint at /data/minicpm4.1-8b.
+If your task is similar to the task the model of the checkpoint was trained on, you can already use MiniCPM4_1ForCausalLM for predictions without further training.
+[2026-11-25 03:06:29,578] [    INFO] - Using download source: huggingface
+[2026-11-25 03:06:29,578] [    INFO] - Loading configuration file /data/minicpm4.1-8b/generation_config.json
+This model config has set a `rope_parameters['original_max_position_embeddings']` field, to be used together with `max_position_embeddings` to determine a scaling factor. Please set the `factor` field of `rope_parameters`with this ratio instead -- we recommend the use of this field over `original_max_position_embeddings`, as it is compatible with most model architectures.
+GENERATION_RAW (Tensor(shape=[1, 10], dtype=int64, place=Place(gpu:0), stop_gradient=True,
+       [[17251, 1982 , 1441 , 3374 , 1385 , 4702 , 1384 , 3122 , 1358 , 2809 ]]), Tensor(shape=[1, 1], dtype=float32, place=Place(gpu:0), stop_gradient=True,
+       [[12.69709396]]))
+RESULT {"backend": "paddle", "dtype": "float32", "input_length": 31, "logits_shape": [1, 20, 73448], "generated_ids": [[17251, 1982, 1441, 3374, 1385, 4702, 1384, 3122, 1358, 2809]], "generated_text": ["AI may be able to reason and understand the world"], "versions": {"paddle": "3.4.0.post20260728+8a1040b3d08"}, "parameter_dtypes": ["paddle.float32"]}

@@ -1,0 +1,18 @@
+{
+  "model-00001-of-00004.safetensors": {
+    "bytes": 4968335472,
+    "sha256": "d893df3a00be018df333f102251db12de40d614a39438ee9721398b272b0b9c0"
+  },
+  "model-00002-of-00004.safetensors": {
+    "bytes": 4542417008,
+    "sha256": "064bcba714ff425b660057fd2a09f9e55bbb0db75e52fc5d082ddf3fcf5af11e"
+  },
+  "model-00003-of-00004.safetensors": {
+    "bytes": 4936647824,
+    "sha256": "a23c3ad2c4c1ca4eae8cbd0fd14cbc0391096cd167bb4969dc49b52abfac7a67"
+  },
+  "model-00004-of-00004.safetensors": {
+    "bytes": 1923141264,
+    "sha256": "e3809c32918b84150715c343736a27fb4cf082473fb82505f87566d7179588ea"
+  }
+}
