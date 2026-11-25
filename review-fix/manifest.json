@@ -1,0 +1,10 @@
+{
+  "base_commit": "fe1e52bcec5f1266b0776f37ff2bcc94177ea483",
+  "files": [
+    "paddleformers/transformers/auto/configuration.py",
+    "tests/transformers/auto/test_minicpm.py",
+    "tests/fixtures/minicpm/README.md",
+    "tests/fixtures/minicpm/legacy/config.json",
+    "tests/fixtures/minicpm/minicpm4_1/config.json"
+  ]
+}

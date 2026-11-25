@@ -1,0 +1,173 @@
+..                                                                   [100%]
+=================================== FAILURES ===================================
+_ MiniCPMAutoLoadingTest.test_explicit_minicpm4_1_type_without_name_metadata (family='minicpm4_1', auto_class='AutoModel') _
+
+self = <tests.transformers.auto.test_minicpm.MiniCPMAutoLoadingTest testMethod=test_explicit_minicpm4_1_type_without_name_metadata>
+family = 'minicpm4_1'
+raw = {'architectures': ['MiniCPMForCausalLM'], 'auto_map': {'AutoConfig': 'configuration_minicpm.MiniCPMConfig', 'AutoModel...alLM', 'AutoModelForSeq2SeqLM': 'modeling_minicpm.MiniCPMForCausalLM', ...}, 'bos_token_id': 1, 'eos_token_id': 2, ...}
+remove_fusion_attributes = False
+
+    def _assert_hf_loading(self, family, raw, remove_fusion_attributes=False):
+        config_class, base_class, causal_class = FAMILIES[family]
+        with tempfile.TemporaryDirectory() as directory:
+            state = self._write_hf_checkpoint(directory, raw)
+            for auto_class, expected in [(AutoModel, base_class), (AutoModelForCausalLM, causal_class)]:
+                with self.subTest(family=family, auto_class=auto_class.__name__):
+                    config = AutoConfig.from_pretrained(directory)
+                    self.assertIs(type(config), config_class)
+                    if remove_fusion_attributes:
+                        del config.fuse_attention_qkv
+                        del config.fuse_attention_ffn
+>                   model = auto_class.from_pretrained(
+                        directory,
+                        config=config,
+                        dtype="float32",
+                        convert_from_hf=True,
+                        load_checkpoint_format="flex_checkpoint",
+                        load_via_cpu=True,
+                        _attn_implementation="eager",
+                    )
+
+tests/transformers/auto/test_minicpm.py:152: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+paddleformers/transformers/auto/modeling.py:497: in from_pretrained
+    return cls._from_pretrained(pretrained_model_name_or_path, task, *model_args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+paddleformers/transformers/auto/modeling.py:358: in _from_pretrained
+    return model_class.from_pretrained(pretrained_model_name_or_path, *model_args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+paddleformers/transformers/model_utils.py:2894: in from_pretrained
+    model = cls(config, *init_args, **model_kwargs)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <[AttributeError("'MiniCPMModel' object has no attribute '_sub_layers'") raised in repr()] MiniCPMModel object at 0x7ff80e24e4b0>
+args = (MiniCPM4_1Config {
+  "architectures": [
+    "MiniCPMForCausalLM"
+  ],
+  "attention_bias": false,
+  "attention_dropout...word_embeddings": false,
+  "torch_dtype": "float32",
+  "use_bias": false,
+  "use_cache": true,
+  "vocab_size": 128
+}
+,)
+kwargs = {'_attn_implementation': 'eager'}
+
+    @functools.wraps(init_func)
+    def __impl__(self, *args, **kwargs):
+        # registered helper by `pre_init_func`
+        if pre_init_func:
+            pre_init_func(self, init_func, *args, **kwargs)
+        # keep full configuration
+>       init_func(self, *args, **kwargs)
+E       TypeError: MiniCPMModel.__init__() got an unexpected keyword argument '_attn_implementation'
+
+paddleformers/transformers/utils.py:287: TypeError
+_ MiniCPMAutoLoadingTest.test_explicit_minicpm4_1_type_without_name_metadata (family='minicpm4_1', auto_class='AutoModelForCausalLM') _
+
+self = <tests.transformers.auto.test_minicpm.MiniCPMAutoLoadingTest testMethod=test_explicit_minicpm4_1_type_without_name_metadata>
+family = 'minicpm4_1'
+raw = {'architectures': ['MiniCPMForCausalLM'], 'auto_map': {'AutoConfig': 'configuration_minicpm.MiniCPMConfig', 'AutoModel...alLM', 'AutoModelForSeq2SeqLM': 'modeling_minicpm.MiniCPMForCausalLM', ...}, 'bos_token_id': 1, 'eos_token_id': 2, ...}
+remove_fusion_attributes = False
+
+    def _assert_hf_loading(self, family, raw, remove_fusion_attributes=False):
+        config_class, base_class, causal_class = FAMILIES[family]
+        with tempfile.TemporaryDirectory() as directory:
+            state = self._write_hf_checkpoint(directory, raw)
+            for auto_class, expected in [(AutoModel, base_class), (AutoModelForCausalLM, causal_class)]:
+                with self.subTest(family=family, auto_class=auto_class.__name__):
+                    config = AutoConfig.from_pretrained(directory)
+                    self.assertIs(type(config), config_class)
+                    if remove_fusion_attributes:
+                        del config.fuse_attention_qkv
+                        del config.fuse_attention_ffn
+>                   model = auto_class.from_pretrained(
+                        directory,
+                        config=config,
+                        dtype="float32",
+                        convert_from_hf=True,
+                        load_checkpoint_format="flex_checkpoint",
+                        load_via_cpu=True,
+                        _attn_implementation="eager",
+                    )
+
+tests/transformers/auto/test_minicpm.py:152: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+paddleformers/transformers/auto/modeling.py:819: in from_pretrained
+    return cls._from_pretrained(pretrained_model_name_or_path, *model_args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+paddleformers/transformers/auto/modeling.py:358: in _from_pretrained
+    return model_class.from_pretrained(pretrained_model_name_or_path, *model_args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+paddleformers/transformers/model_utils.py:2894: in from_pretrained
+    model = cls(config, *init_args, **model_kwargs)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <[AttributeError("'MiniCPMForCausalLM' object has no attribute '_sub_layers'") raised in repr()] MiniCPMForCausalLM object at 0x7ff80e279f40>
+args = (MiniCPM4_1Config {
+  "architectures": [
+    "MiniCPMForCausalLM"
+  ],
+  "attention_bias": false,
+  "attention_dropout...word_embeddings": false,
+  "torch_dtype": "float32",
+  "use_bias": false,
+  "use_cache": true,
+  "vocab_size": 128
+}
+,)
+kwargs = {'_attn_implementation': 'eager'}
+
+    @functools.wraps(init_func)
+    def __impl__(self, *args, **kwargs):
+        # registered helper by `pre_init_func`
+        if pre_init_func:
+            pre_init_func(self, init_func, *args, **kwargs)
+        # keep full configuration
+>       init_func(self, *args, **kwargs)
+E       TypeError: MiniCPMForCausalLM.__init__() got an unexpected keyword argument '_attn_implementation'
+
+paddleformers/transformers/utils.py:287: TypeError
+_ MiniCPMAutoLoadingTest.test_from_config_preserves_minicpm4_1_class (auto_class='AutoModel') _
+
+self = <tests.transformers.auto.test_minicpm.MiniCPMAutoLoadingTest testMethod=test_from_config_preserves_minicpm4_1_class>
+
+    def test_from_config_preserves_minicpm4_1_class(self):
+        # AutoConfig resolves upstream model_type="minicpm" to MiniCPM4_1Config,
+        # while the upstream architectures entry still says MiniCPMForCausalLM.
+        with tempfile.TemporaryDirectory() as directory:
+            self._write_config(directory, self._config("minicpm4_1", tiny=True))
+            config = AutoConfig.from_pretrained(directory)
+            for auto_class, expected in [(AutoModel, MiniCPM4_1Model), (AutoModelForCausalLM, MiniCPM4_1ForCausalLM)]:
+                with self.subTest(auto_class=auto_class.__name__):
+                    model = auto_class.from_config(config)
+>                   self.assertIs(type(model), expected)
+E                   AssertionError: <class 'paddleformers.transformers.minicpm.modeling.MiniCPMModel'> is not <class 'paddleformers.transformers.minicpm4_1.modeling.MiniCPM4_1Model'>
+
+tests/transformers/auto/test_minicpm.py:132: AssertionError
+_ MiniCPMAutoLoadingTest.test_from_config_preserves_minicpm4_1_class (auto_class='AutoModelForCausalLM') _
+
+self = <tests.transformers.auto.test_minicpm.MiniCPMAutoLoadingTest testMethod=test_from_config_preserves_minicpm4_1_class>
+
+    def test_from_config_preserves_minicpm4_1_class(self):
+        # AutoConfig resolves upstream model_type="minicpm" to MiniCPM4_1Config,
+        # while the upstream architectures entry still says MiniCPMForCausalLM.
+        with tempfile.TemporaryDirectory() as directory:
+            self._write_config(directory, self._config("minicpm4_1", tiny=True))
+            config = AutoConfig.from_pretrained(directory)
+            for auto_class, expected in [(AutoModel, MiniCPM4_1Model), (AutoModelForCausalLM, MiniCPM4_1ForCausalLM)]:
+                with self.subTest(auto_class=auto_class.__name__):
+                    model = auto_class.from_config(config)
+>                   self.assertIs(type(model), expected)
+E                   AssertionError: <class 'paddleformers.transformers.minicpm.modeling.MiniCPMForCausalLM'> is not <class 'paddleformers.transformers.minicpm4_1.modeling.MiniCPM4_1ForCausalLM'>
+
+tests/transformers/auto/test_minicpm.py:132: AssertionError
+=========================== short test summary info ============================
+SUBFAILED(family='minicpm4_1', auto_class='AutoModel') tests/transformers/auto/test_minicpm.py::MiniCPMAutoLoadingTest::test_explicit_minicpm4_1_type_without_name_metadata
+SUBFAILED(family='minicpm4_1', auto_class='AutoModelForCausalLM') tests/transformers/auto/test_minicpm.py::MiniCPMAutoLoadingTest::test_explicit_minicpm4_1_type_without_name_metadata
+SUBFAILED(auto_class='AutoModel') tests/transformers/auto/test_minicpm.py::MiniCPMAutoLoadingTest::test_from_config_preserves_minicpm4_1_class
+SUBFAILED(auto_class='AutoModelForCausalLM') tests/transformers/auto/test_minicpm.py::MiniCPMAutoLoadingTest::test_from_config_preserves_minicpm4_1_class

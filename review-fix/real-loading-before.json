@@ -1,0 +1,54 @@
+[
+  {
+    "checkpoint": "/data/minicpm4_0.5b",
+    "config_class": "MiniCPMConfig",
+    "auto_class": "AutoModel",
+    "model_class": "MiniCPMModel",
+    "output_shape": [
+      1,
+      3,
+      1024
+    ],
+    "finite": true,
+    "seconds": 4.79282283782959
+  },
+  {
+    "checkpoint": "/data/minicpm4_0.5b",
+    "config_class": "MiniCPMConfig",
+    "auto_class": "AutoModelForCausalLM",
+    "model_class": "MiniCPMForCausalLM",
+    "output_shape": [
+      1,
+      3,
+      73448
+    ],
+    "finite": true,
+    "seconds": 1.5134098529815674
+  },
+  {
+    "checkpoint": "/data/minicpm4.1-8b",
+    "config_class": "MiniCPM4_1Config",
+    "auto_class": "AutoModel",
+    "model_class": "MiniCPM4_1Model",
+    "output_shape": [
+      1,
+      3,
+      4096
+    ],
+    "finite": true,
+    "seconds": 25.593359231948853
+  },
+  {
+    "checkpoint": "/data/minicpm4.1-8b",
+    "config_class": "MiniCPM4_1Config",
+    "auto_class": "AutoModelForCausalLM",
+    "model_class": "MiniCPM4_1ForCausalLM",
+    "output_shape": [
+      1,
+      3,
+      73448
+    ],
+    "finite": true,
+    "seconds": 19.907837390899658
+  }
+]
